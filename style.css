@@ -1,4 +1,4 @@
-/* style.css - Improved Styles for Basic Loaf - v5 */
+/* style.css - Improved Styles for Basic Loaf - v6 */
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap');
@@ -10,10 +10,11 @@
     --text-color: #333a40;     /* Dark grey/blue text */
     --heading-color: #2c3e50;  /* Darker blue-grey for headings */
     --accent-color: #e85a4f;    /* A warm reddish accent */
-    --accent-light-tint: #f9d6d3; /* Very light tint of accent for summary bg */
+    /* --accent-light-tint: #f9d6d3; /* Removed as potentially harsh */
     --secondary-color: #8e8d8a; /* Muted grey for secondary text/borders */
     --light-grey: #ecf0f1;      /* Light grey for backgrounds/borders */
-    --very-light-grey: #f8f9fa; /* Very light grey */
+    --very-light-grey: #f8f9fa; /* Very light grey - NEW summary bg */
+    /* --summary-box-bg: #e9ecef; /* Alternative slightly darker grey */
     --link-color: #3498db;      /* Blue for links */
     --font-body: 'Lato', sans-serif;
     --font-heading: 'Poppins', sans-serif;
@@ -192,30 +193,37 @@ article section {
 #method li {
     counter-increment: step-counter;
     margin-bottom: 2em;
-    padding-left: 3em;
+    padding-left: 3.2em; /* Increased padding slightly for number */
     position: relative;
+    min-height: 2.5em; /* Ensure li has enough height for the circle */
 }
 
+/* Custom step number style */
 #method li::before {
     content: counter(step-counter);
     position: absolute;
     left: 0;
-    top: -2px;
+    /* --- ADJUSTED VERTICAL POSITIONING --- */
+    top: 0.1em; /* Adjust this value to align vertically with text */
+    /* --- END ADJUSTMENT --- */
     background-color: var(--accent-color);
     color: white;
     width: 2em;
     height: 2em;
     border-radius: 50%;
-    display: inline-block;
-    text-align: center;
-    line-height: 2em;
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
     font-weight: bold;
     font-family: var(--font-heading);
+    line-height: 1; /* Remove line-height affecting flex centering */
 }
 
 #method li strong {
     font-weight: 700;
     color: var(--heading-color);
+    display: block; /* Ensure strong tag takes block level */
+    line-height: 1.4; /* Adjust line-height of text */
 }
 
 #method li p {
@@ -271,23 +279,26 @@ aside p:last-child {
     font-size: 1em;
 }
 
-/* --- UPDATED RULES for Method Summary Box (v5 - More Prominent) --- */
+/* --- UPDATED RULES for Method Summary Box (v6 - Less Harsh BG) --- */
 #method-summary {
-    background-color: var(--accent-light-tint); /* Light tint of accent color */
+    /* --- CHANGED BACKGROUND COLOR --- */
+    background-color: var(--very-light-grey); /* Use neutral light grey */
+    /* --- END CHANGE --- */
     padding: 20px 25px;
-    border-radius: 8px; /* Match main content boxes */
+    border-radius: 6px;
     margin: 2em 0 3em 0;
-    border: 2px solid var(--accent-color); /* Use accent color for border */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.07); /* Slightly adjusted shadow */
+    border: 1px solid var(--light-grey); /* Use light grey border */
+    border-left: 4px solid var(--accent-color); /* Keep accent left border */
+    box-shadow: none; /* Remove shadow for flatter look */
 }
 
 #method-summary h4 {
     margin-top: 0;
     margin-bottom: 0.8em;
     color: var(--heading-color);
-    font-size: 1.3em; /* Slightly larger heading */
+    font-size: 1.25em;
     font-weight: 700;
-    border-bottom: 1px solid rgba(232, 90, 79, 0.3); /* Fainter accent separator */
+    border-bottom: 1px solid var(--light-grey);
     padding-bottom: 0.5em;
 }
 
@@ -299,20 +310,20 @@ aside p:last-child {
 
 #method-summary li {
     margin-bottom: 0.7em;
-    font-size: 1em; /* Slightly larger list items */
-    padding-left: 1.5em;
+    font-size: 0.98em;
+    padding-left: 1.5em; /* Increased padding for marker */
     position: relative;
 }
 
 /* Use a different marker for summary list */
 #method-summary li::before {
-    content: '✓'; /* Checkmark character */
+    content: '▸'; /* Use a right-pointing triangle */
     color: var(--accent-color);
     position: absolute;
     left: 0;
-    top: 1px;
-    font-weight: bold;
-    font-size: 1.1em; /* Make checkmark slightly bigger */
+    top: 1px; /* Adjust alignment */
+    font-weight: normal; /* Normal weight for triangle */
+    font-size: 1.1em;
 }
 /* --- END UPDATED RULES --- */
 
@@ -440,7 +451,7 @@ img {
         height: 1.8em;
         line-height: 1.8em;
         font-size: 0.9em;
-        top: 0;
+        top: 0.1em; /* Match adjustment */
     }
 
     .button {

@@ -1,4 +1,4 @@
-/* style.css - Improved Styles for Basic Loaf - v6 */
+/* style.css - Improved Styles for Basic Loaf - v7 */
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap');
@@ -10,11 +10,9 @@
     --text-color: #333a40;     /* Dark grey/blue text */
     --heading-color: #2c3e50;  /* Darker blue-grey for headings */
     --accent-color: #e85a4f;    /* A warm reddish accent */
-    /* --accent-light-tint: #f9d6d3; /* Removed as potentially harsh */
     --secondary-color: #8e8d8a; /* Muted grey for secondary text/borders */
     --light-grey: #ecf0f1;      /* Light grey for backgrounds/borders */
     --very-light-grey: #f8f9fa; /* Very light grey - NEW summary bg */
-    /* --summary-box-bg: #e9ecef; /* Alternative slightly darker grey */
     --link-color: #3498db;      /* Blue for links */
     --font-body: 'Lato', sans-serif;
     --font-heading: 'Poppins', sans-serif;
@@ -183,47 +181,56 @@ article section {
 }
 
 
-/* Method List (Ordered Steps) */
+/* --- Method List (Ordered Steps) - v7 FIXES --- */
 #method ol {
     list-style: none;
     counter-reset: step-counter;
-    margin-left: 10px;
+    margin-left: 10px; /* Keep overall list indented */
+    padding-left: 0; /* Remove padding from ol itself */
 }
 
 #method li {
     counter-increment: step-counter;
     margin-bottom: 2em;
-    padding-left: 3.2em; /* Increased padding slightly for number */
+    /* --- INCREASED PADDING to push text further right --- */
+    padding-left: 3.8em;
     position: relative;
-    min-height: 2.5em; /* Ensure li has enough height for the circle */
+    min-height: 2.2em; /* Ensure height matches circle */
 }
 
-/* Custom step number style */
+/* Custom step number style - Simplified centering */
 #method li::before {
     content: counter(step-counter);
     position: absolute;
     left: 0;
-    /* --- ADJUSTED VERTICAL POSITIONING --- */
-    top: 0.1em; /* Adjust this value to align vertically with text */
-    /* --- END ADJUSTMENT --- */
+    /* --- ADJUSTED vertical alignment --- */
+    top: 0;
     background-color: var(--accent-color);
     color: white;
-    width: 2em;
-    height: 2em;
+    /* --- Slightly larger circle --- */
+    width: 2.2em;
+    height: 2.2em;
     border-radius: 50%;
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
+    /* --- REMOVED Flexbox centering --- */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* --- ADDED traditional centering --- */
+    text-align: center;
+    line-height: 2.2em; /* Match height for vertical center */
     font-weight: bold;
     font-family: var(--font-heading);
-    line-height: 1; /* Remove line-height affecting flex centering */
+    /* --- Slightly smaller font inside circle --- */
+    font-size: 0.9em;
 }
+/* --- END v7 FIXES --- */
+
 
 #method li strong {
     font-weight: 700;
     color: var(--heading-color);
-    display: block; /* Ensure strong tag takes block level */
-    line-height: 1.4; /* Adjust line-height of text */
+    display: block;
+    line-height: 1.4;
 }
 
 #method li p {
@@ -279,17 +286,15 @@ aside p:last-child {
     font-size: 1em;
 }
 
-/* --- UPDATED RULES for Method Summary Box (v6 - Less Harsh BG) --- */
+/* Method Summary Box Styles */
 #method-summary {
-    /* --- CHANGED BACKGROUND COLOR --- */
     background-color: var(--very-light-grey); /* Use neutral light grey */
-    /* --- END CHANGE --- */
     padding: 20px 25px;
     border-radius: 6px;
     margin: 2em 0 3em 0;
-    border: 1px solid var(--light-grey); /* Use light grey border */
-    border-left: 4px solid var(--accent-color); /* Keep accent left border */
-    box-shadow: none; /* Remove shadow for flatter look */
+    border: 1px solid var(--light-grey);
+    border-left: 4px solid var(--accent-color);
+    box-shadow: none;
 }
 
 #method-summary h4 {
@@ -311,21 +316,19 @@ aside p:last-child {
 #method-summary li {
     margin-bottom: 0.7em;
     font-size: 0.98em;
-    padding-left: 1.5em; /* Increased padding for marker */
+    padding-left: 1.5em;
     position: relative;
 }
 
-/* Use a different marker for summary list */
 #method-summary li::before {
     content: '▸'; /* Use a right-pointing triangle */
     color: var(--accent-color);
     position: absolute;
     left: 0;
-    top: 1px; /* Adjust alignment */
-    font-weight: normal; /* Normal weight for triangle */
+    top: 1px;
+    font-weight: normal;
     font-size: 1.1em;
 }
-/* --- END UPDATED RULES --- */
 
 
 /* Call to Action Buttons (Improved Styling) */
@@ -444,14 +447,14 @@ img {
     nav a { display: block; }
 
     #method li {
-        padding-left: 2.5em;
+        padding-left: 3em; /* Adjusted padding for mobile */
     }
     #method li::before {
-        width: 1.8em;
+        width: 1.8em; /* Smaller circle */
         height: 1.8em;
-        line-height: 1.8em;
-        font-size: 0.9em;
-        top: 0.1em; /* Match adjustment */
+        line-height: 1.8em; /* Match height */
+        font-size: 0.85em; /* Smaller font inside */
+        top: 0.1em;
     }
 
     .button {

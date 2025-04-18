@@ -1,4 +1,4 @@
-/* style.css - Improved Styles for Basic Loaf - v8 */
+/* style.css - Complete Styles for Basic Loaf (v3) */
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap');
@@ -9,10 +9,9 @@
     --content-bg: #ffffff;     /* White for content boxes */
     --text-color: #333a40;     /* Dark grey/blue text */
     --heading-color: #2c3e50;  /* Darker blue-grey for headings */
-    --accent-color: #e85a4f;    /* A warm reddish accent */
+    --accent-color: #e85a4f;    /* A warm reddish accent (adjust as desired) */
     --secondary-color: #8e8d8a; /* Muted grey for secondary text/borders */
     --light-grey: #ecf0f1;      /* Light grey for backgrounds/borders */
-    --very-light-grey: #f8f9fa; /* Very light grey - summary bg */
     --link-color: #3498db;      /* Blue for links */
     --font-body: 'Lato', sans-serif;
     --font-heading: 'Poppins', sans-serif;
@@ -109,8 +108,30 @@ a:hover {
     text-decoration: none;
 }
 
-/* Header & Navigation */
-nav ul {
+/* --- Header, Navigation & Hamburger Menu --- */
+
+header {
+    position: relative; /* Needed for absolute positioning of menu button */
+}
+
+/* Hamburger Menu Button (Hidden on Desktop) */
+#menu-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 25px; /* Adjust as needed */
+    z-index: 1001;
+    color: var(--heading-color);
+    padding: 5px; /* Add padding for easier clicking */
+    line-height: 1; /* Prevent extra height */
+}
+
+/* Desktop Navigation */
+nav#main-nav ul#main-nav-list {
     list-style: none;
     text-align: center;
     padding-bottom: 1em;
@@ -118,39 +139,55 @@ nav ul {
     margin-bottom: 2em;
 }
 
-nav li {
+nav#main-nav li {
     display: inline-block;
-    margin: 0 6px;
+    margin: 0 6px; /* Spacing between items */
 }
 
-nav a {
-    padding: 8px 8px;
+nav#main-nav a {
+    padding: 8px 8px; /* Padding inside links */
     border-radius: 5px;
     transition: background-color 0.2s ease, color 0.2s ease;
     font-family: var(--font-heading);
     font-weight: 500;
     color: var(--secondary-color);
-    font-size: 0.9em;
+    font-size: 0.9em; /* Adjusted font size */
 }
 
-
-nav a:hover {
+nav#main-nav a:hover {
     background-color: var(--light-grey);
     color: var(--heading-color);
 }
 
-/* Style for the 'active' page link */
-nav a.active {
+/* Desktop Active link style */
+nav#main-nav a.active {
     background-color: var(--accent-color);
     color: #fff;
 }
-nav a.active:hover {
+nav#main-nav a.active:hover {
     background-color: #d73a2e;
      color: #fff;
 }
 
+/* Mobile Menu - Triggered by adding .menu-open class to nav#main-nav */
+/* This rule applies when the menu is open on mobile */
+nav#main-nav.menu-open ul#main-nav-list {
+    display: block; /* Show the list */
+    position: absolute;
+    top: 100%; /* Position below the header area */
+    left: 0;
+    width: 100%; /* Full width */
+    background-color: var(--content-bg);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 10px 0;
+    z-index: 1000;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
 
-/* Main Recipe Content Sections */
+
+/* --- Main Content Sections --- */
+
 article section {
     margin-bottom: 3em;
 }
@@ -181,47 +218,40 @@ article section {
 }
 
 
-/* Method List (Ordered Steps) - Includes v7 Fix Attempt */
+/* Method List (Ordered Steps) */
 #method ol {
     list-style: none;
     counter-reset: step-counter;
     margin-left: 10px;
-    padding-left: 0;
 }
 
 #method li {
     counter-increment: step-counter;
     margin-bottom: 2em;
-    padding-left: 3.8em; /* Increased padding */
+    padding-left: 3em;
     position: relative;
-    min-height: 2.2em;
 }
 
-/* Custom step number style - Simplified centering */
 #method li::before {
     content: counter(step-counter);
     position: absolute;
     left: 0;
-    top: 0; /* Adjusted vertical alignment */
+    top: -2px;
     background-color: var(--accent-color);
     color: white;
-    width: 2.2em; /* Slightly larger circle */
-    height: 2.2em;
+    width: 2em;
+    height: 2em;
     border-radius: 50%;
+    display: inline-block;
     text-align: center;
-    line-height: 2.2em; /* Match height for vertical center */
+    line-height: 2em;
     font-weight: bold;
     font-family: var(--font-heading);
-    font-size: 0.9em; /* Slightly smaller font inside circle */
 }
-/* --- NOTE: The above rules for step numbers might still need debugging --- */
-
 
 #method li strong {
     font-weight: 700;
     color: var(--heading-color);
-    display: block;
-    line-height: 1.4;
 }
 
 #method li p {
@@ -231,9 +261,44 @@ article section {
     color: var(--text-color);
 }
 
+/* Recipe Quick Overview Box */
+#method-summary {
+    background-color: #f8f9fa;
+    padding: 20px; /* More padding */
+    border-radius: 5px;
+    margin-bottom: 2.5em; /* More space below */
+    border: 1px solid var(--light-grey); /* Subtle border */
+}
+#method-summary h4 { /* Style heading inside summary */
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    color: var(--heading-color);
+    font-size: 1.2em;
+    border-bottom: 1px solid var(--light-grey);
+    padding-bottom: 0.4em;
+}
+#method-summary ul {
+    list-style: none;
+    padding-left: 5px;
+}
+#method-summary li {
+    margin-bottom: 0.6em;
+    padding-left: 1.2em;
+    position: relative;
+}
+#method-summary li::before { /* Simple arrow bullet */
+    content: '›';
+    color: var(--accent-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: -1px; /* Adjust alignment */
+}
+
+
 /* Notes / Aside */
 aside {
-    background-color: var(--very-light-grey);
+    background-color: var(--light-grey);
     padding: 20px;
     border-radius: 5px;
     font-size: 0.95em;
@@ -277,57 +342,8 @@ aside p:last-child {
     font-size: 1em;
 }
 
-/* Method Summary Box Styles (v8 - Markers Removed) */
-#method-summary {
-    background-color: var(--very-light-grey);
-    padding: 20px 25px;
-    border-radius: 6px;
-    margin: 2em 0 3em 0;
-    border: 1px solid var(--light-grey);
-    border-left: 4px solid var(--accent-color);
-    box-shadow: none;
-}
 
-#method-summary h4 {
-    margin-top: 0;
-    margin-bottom: 0.8em;
-    color: var(--heading-color);
-    font-size: 1.25em;
-    font-weight: 700;
-    border-bottom: 1px solid var(--light-grey);
-    padding-bottom: 0.5em;
-}
-
-#method-summary ul {
-    list-style: none; /* Ensure no default bullets */
-    padding-left: 0; /* Remove padding */
-    margin-top: 1em;
-}
-
-#method-summary li {
-    margin-bottom: 0.7em;
-    font-size: 0.98em;
-    /* --- REMOVED padding-left and position relative --- */
-    /* padding-left: 1.5em; */
-    /* position: relative; */
-}
-
-/* --- REMOVED ::before rule for summary list markers --- */
-/*
-#method-summary li::before {
-    content: '▸';
-    color: var(--accent-color);
-    position: absolute;
-    left: 0;
-    top: 1px;
-    font-weight: normal;
-    font-size: 1.1em;
-}
-*/
-/* --- END v8 CHANGES --- */
-
-
-/* Call to Action Buttons (Improved Styling) */
+/* Call to Action Buttons */
 .button {
     display: inline-block;
     padding: 12px 25px;
@@ -409,7 +425,8 @@ img {
 }
 */
 
-/* Responsive Adjustments */
+/* --- Responsive Adjustments & Mobile Menu --- */
+
 @media (max-width: 768px) {
      header, main, footer {
         padding: 20px 20px;
@@ -418,7 +435,55 @@ img {
      h2 { font-size: 1.8em; }
      h3 { font-size: 1.4em; }
      h4 { font-size: 1.15em; }
-}
+
+    /* Hamburger Menu Activation */
+    #menu-toggle {
+        display: block; /* Show hamburger */
+    }
+
+    nav#main-nav ul#main-nav-list {
+        display: none; /* Hide desktop nav list by default */
+        /* Mobile menu appearance defined by .menu-open class added via JS */
+    }
+
+    nav#main-nav ul { /* Reset desktop nav list bottom border/margin */
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
+     /* Mobile menu list item styling (when open) */
+    nav#main-nav.menu-open ul#main-nav-list li {
+        display: block;
+        margin: 0;
+        text-align: center;
+        border-bottom: 1px solid var(--light-grey);
+    }
+     nav#main-nav.menu-open ul#main-nav-list li:last-child {
+        border-bottom: none;
+    }
+
+    /* Mobile menu link styling (when open) */
+     nav#main-nav.menu-open ul#main-nav-list a {
+        display: block;
+        padding: 15px 20px;
+        color: var(--heading-color);
+        font-size: 1.1em;
+        /* Reset desktop styles if needed */
+        background-color: transparent;
+    }
+     nav#main-nav.menu-open ul#main-nav-list a:hover {
+        background-color: var(--light-grey);
+    }
+     nav#main-nav.menu-open ul#main-nav-list a.active {
+        background-color: var(--accent-color);
+        color: #fff;
+    }
+     nav#main-nav.menu-open ul#main-nav-list a.active:hover {
+        background-color: #d73a2e;
+     }
+
+} /* End of @media (max-width: 768px) */
 
 
 @media (max-width: 600px) {
@@ -435,22 +500,27 @@ img {
     h2 { font-size: 1.7em; }
     h3 { font-size: 1.3em; }
 
-    nav ul { padding-bottom: 0.5em; margin-bottom: 1.5em;}
-    nav li {
-        display: block;
-        margin: 8px 0;
+    #menu-toggle {
+        top: 15px;
+        right: 15px;
+        font-size: 1.8em;
     }
-    nav a { display: block; }
+
+     /* Further adjust mobile menu link padding/font if needed */
+     nav#main-nav.menu-open ul#main-nav-list a {
+         padding: 12px 15px;
+         font-size: 1em;
+     }
 
     #method li {
-        padding-left: 3em; /* Adjusted padding for mobile */
+        padding-left: 2.5em;
     }
     #method li::before {
-        width: 1.8em; /* Smaller circle */
+        width: 1.8em;
         height: 1.8em;
-        line-height: 1.8em; /* Match height */
-        font-size: 0.85em; /* Smaller font inside */
-        top: 0.1em;
+        line-height: 1.8em;
+        font-size: 0.9em;
+        top: 0;
     }
 
     .button {
@@ -462,4 +532,4 @@ img {
         margin-left: auto;
         margin-right: auto;
     }
-}
+} /* End of @media (max-width: 600px) */

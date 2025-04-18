@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Loaf - Simple Guide to Foolproof Sourdough</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header>
+        <h1>Basic Loaf</h1>
+        <p>Your simple guide to foolproof sourdough bread with minimal effort.</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="recipe.html">The Recipe</a></li>
+                <li><a href="gear.html">Things You Need</a></li>
+                <li><a href="starter.html">Starter Guide</a></li>
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="ideas.html">Recipe Ideas</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>Basic Loaf: My simple guide to foolproof Sourdough bread.</h2>
+            <p>
+                Right then, let's talk sourdough. Fancy making ridiculously tasty bread that looks like it came from some artisan bakery, but without chaining yourself to the kitchen? You're in the right place. Forget complicated schedules and weird rituals. This is sourdough for normal people – people with jobs, kids, lives! My method is all about letting time (and a bit of bubbly magic) do the heavy lifting. Simple steps, minimal faff, maximum deliciousness. Sound good? Let's get baking!
+            </p>
+            </section>
+
+        <section id="who-its-for">
+            <h3>Who is this For?</h3>
+            <p>This method is perfect for sourdough beginners, busy people, or anyone previously scared off by complicated recipes. If you want great bread without the stress, stick around!</p>
+        </section>
+
+        <section id="overview">
+            <h3>The Basic Loaf Approach</h3>
+            <p>We use a simple 2-day process, but most of that time is completely hands-off, letting the dough slowly ferment and develop amazing flavour while you get on with your life. Day 1 involves a quick mix, then Day 2 is baking day!</p>
+        </section>
+
+        <section id="call-to-action">
+            <h3>Ready to Start?</h3>
+            <p><a href="recipe.html" class="button primary">Get the Foolproof Recipe!</a></p>
+            <p><a href="gear.html" class="button secondary">See What You Need</a></p>
+            <p><a href="starter.html" class="button">Sourdough Starter Guide</a></p>
+            </section>
+
+        <aside id="about-author">
+            <h4>A Bit About Me...</h4>
+            <p>
+                So, who's behind Basic Loaf? Just a Dad of two based here in Dublin, juggling a tech job and a serious obsession with baking bread. Like loads of people, I properly got the bug during the lockdowns, went down the sourdough rabbit hole, made some *very* questionable loaves (ask my family!), but eventually figured out a way that actually works without demanding my soul. I started sharing tips with mates, and now I'm putting it all here. Hopefully, it helps you skip the disaster phase and get straight to the good stuff!
+            </p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> BasicLoaf.com - All Rights Reserved.</p>
+        </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Ensure the element exists before trying to set its content
+        const yearElement = document.getElementById('year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>

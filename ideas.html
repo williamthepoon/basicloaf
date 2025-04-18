@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourdough Recipe Ideas - BasicLoaf.com</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+
+    <header>
+        <h1>Basic Loaf</h1>
+        <p>Your simple guide to foolproof sourdough bread with minimal effort.</p>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recipe.html">The Recipe</a></li>
+                <li><a href="gear.html">Things You Need</a></li>
+                <li><a href="starter.html">Starter Guide</a></li>
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="ideas.html" class="active">Recipe Ideas</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Ways to Enjoy Your Basic Loaf</h2>
+        <p>So you've baked a beautiful loaf! Here are some ideas for enjoying it fresh, and making the most of it if it starts to go a bit stale. Content coming soon!</p>
+        <p>We'll cover:</p>
+        <ul>
+            <li>Fresh Bread Ideas (Toast toppings, sandwiches, with soup...)</li>
+            <li>Stale Bread Ideas (Croutons, breadcrumbs, French toast, Panzanella...)</li>
+        </ul>
+         </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> BasicLoaf.com - All Rights Reserved.</p>
+        </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Ensure the element exists before trying to set its content
+        const yearElement = document.getElementById('year');
+        if (yearElement) {
+            yearElement.textContent = new Date().getFullYear();
+        }
+    </script>
+</body>
+</html>

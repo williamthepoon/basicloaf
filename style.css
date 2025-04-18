@@ -12,6 +12,7 @@
     --accent-color: #e85a4f;    /* A warm reddish accent (adjust as desired) */
     --secondary-color: #8e8d8a; /* Muted grey for secondary text/borders */
     --light-grey: #ecf0f1;      /* Light grey for backgrounds/borders */
+    --very-light-grey: #f8f9fa; /* Very light grey */
     --link-color: #3498db;      /* Blue for links */
     --font-body: 'Lato', sans-serif;
     --font-heading: 'Poppins', sans-serif;
@@ -123,14 +124,15 @@ nav li {
 }
 
 nav a {
-    padding: 8px 8px; /* Keep padding reduced */
+    padding: 8px 8px; /* REDUCED horizontal padding */
     border-radius: 5px;
     transition: background-color 0.2s ease, color 0.2s ease;
     font-family: var(--font-heading);
     font-weight: 500;
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Muted color for nav links */
     font-size: 0.9em; /* REDUCED font size from 0.95em */
 }
+
 
 nav a:hover {
     background-color: var(--light-grey);
@@ -226,7 +228,7 @@ article section {
 
 /* Notes / Aside */
 aside {
-    background-color: #f8f9fa; /* Even lighter grey */
+    background-color: var(--very-light-grey); /* Use variable */
     padding: 20px;
     border-radius: 5px;
     font-size: 0.95em;
@@ -269,6 +271,34 @@ aside p:last-child {
     border-radius: 4px;
     font-size: 1em;
 }
+
+/* --- NEW RULES for Method Summary Box --- */
+#method-summary {
+    background-color: var(--very-light-grey); /* Use variable */
+    padding: 20px;
+    border-radius: 5px;
+    margin: 1.5em 0 2.5em 0; /* Adjust margins */
+    border: 1px solid var(--light-grey); /* Lighter border */
+    border-left: 4px solid var(--accent-color); /* Accent color left border */
+}
+
+#method-summary h4 {
+    margin-top: 0; /* Remove extra top margin */
+    margin-bottom: 0.7em;
+    color: var(--heading-color); /* Use standard heading color */
+    font-size: 1.2em; /* Slightly smaller than H4 */
+}
+
+#method-summary ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 5px; /* Align with other lists maybe */
+}
+
+#method-summary li {
+    margin-bottom: 0.6em;
+    font-size: 0.95em;
+}
+/* --- END NEW RULES --- */
 
 
 /* Call to Action Buttons (Improved Styling) */

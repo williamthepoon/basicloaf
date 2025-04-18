@@ -1,4 +1,4 @@
-/* style.css - Improved Styles for Basic Loaf */
+/* style.css - Improved Styles for Basic Loaf - v4 */
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap');
@@ -13,6 +13,7 @@
     --secondary-color: #8e8d8a; /* Muted grey for secondary text/borders */
     --light-grey: #ecf0f1;      /* Light grey for backgrounds/borders */
     --very-light-grey: #f8f9fa; /* Very light grey */
+    --summary-box-bg: #e9ecef;  /* Different background for summary box */
     --link-color: #3498db;      /* Blue for links */
     --font-body: 'Lato', sans-serif;
     --font-heading: 'Poppins', sans-serif;
@@ -27,7 +28,7 @@
 
 body {
     font-family: var(--font-body);
-    line-height: 1.7; /* Slightly increased line height */
+    line-height: 1.7;
     color: var(--text-color);
     background-color: var(--bg-color);
     padding: 20px;
@@ -35,12 +36,12 @@ body {
 
 /* Limit content width and center it */
 header, main, footer {
-    max-width: 850px; /* Slightly wider */
+    max-width: 850px;
     margin: 25px auto;
-    padding: 25px 30px; /* Increased padding */
+    padding: 25px 30px;
     background-color: var(--content-bg);
-    border-radius: 8px; /* Smoother corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Slightly softer shadow */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 /* Headings */
@@ -49,14 +50,14 @@ h1, h2, h3, h4 {
     margin-bottom: 0.8em;
     line-height: 1.3;
     color: var(--heading-color);
-    font-weight: 500; /* Medium weight for headings */
+    font-weight: 500;
 }
 
 h1 {
-    font-size: 2.8em; /* Larger main title */
+    font-size: 2.8em;
     text-align: center;
     margin-bottom: 0.3em;
-    font-weight: 700; /* Bolder H1 */
+    font-weight: 700;
 }
 
 header h1 + p { /* Tagline */
@@ -69,32 +70,32 @@ header h1 + p { /* Tagline */
 
 h2 {
     font-size: 2.2em;
-    border-bottom: 2px solid var(--accent-color); /* Accent color border */
+    border-bottom: 2px solid var(--accent-color);
     padding-bottom: 0.4em;
     margin-top: 1.5em;
-    font-weight: 700; /* Bolder H2 */
+    font-weight: 700;
 }
 
 main > *:first-child {
- margin-top: 0; /* Remove top margin from first element in main */
+ margin-top: 0;
 }
 
 h3 {
     font-size: 1.6em;
     color: var(--heading-color);
-    margin-top: 2em; /* More space above H3 */
+    margin-top: 2em;
 }
 
 h4 {
     font-size: 1.3em;
     margin-top: 1.8em;
-    color: var(--accent-color); /* Use accent color for step headings */
+    color: var(--accent-color);
     font-weight: 500;
 }
 
 /* Paragraphs */
 p {
-    margin-bottom: 1.2em; /* Slightly more space below paragraphs */
+    margin-bottom: 1.2em;
 }
 
 /* Links */
@@ -106,7 +107,7 @@ a {
 
 a:hover {
     color: var(--accent-color);
-    text-decoration: none; /* Keep underline off on hover generally */
+    text-decoration: none;
 }
 
 /* Header & Navigation */
@@ -115,67 +116,66 @@ nav ul {
     text-align: center;
     padding-bottom: 1em;
     border-bottom: 1px solid var(--light-grey);
-    margin-bottom: 2em; /* More space after nav */
+    margin-bottom: 2em;
 }
 
 nav li {
     display: inline-block;
-    margin: 0 6px; /* Slightly reduced margin */
+    margin: 0 6px;
 }
 
 nav a {
-    padding: 8px 8px; /* REDUCED horizontal padding */
+    padding: 8px 8px;
     border-radius: 5px;
     transition: background-color 0.2s ease, color 0.2s ease;
     font-family: var(--font-heading);
     font-weight: 500;
-    color: var(--secondary-color); /* Muted color for nav links */
-    font-size: 0.9em; /* REDUCED font size from 0.95em */
+    color: var(--secondary-color);
+    font-size: 0.9em;
 }
 
 
 nav a:hover {
     background-color: var(--light-grey);
-    color: var(--heading-color); /* Darken text on hover */
+    color: var(--heading-color);
 }
 
 /* Style for the 'active' page link */
 nav a.active {
     background-color: var(--accent-color);
-    color: #fff; /* White text on active */
+    color: #fff;
 }
 nav a.active:hover {
-    background-color: #d73a2e; /* Darker accent on hover */
+    background-color: #d73a2e;
      color: #fff;
 }
 
 
 /* Main Recipe Content Sections */
 article section {
-    margin-bottom: 3em; /* More space between main sections */
+    margin-bottom: 3em;
 }
 
 /* Ingredients List */
 #ingredients ul {
-    list-style: none; /* Remove default bullets */
-    margin-left: 5px; /* Adjust indentation */
+    list-style: none;
+    margin-left: 5px;
     margin-bottom: 1em;
 }
 
 #ingredients li {
-    margin-bottom: 0.8em; /* Space between ingredients */
-    padding-left: 1.5em; /* Space for custom bullet */
-    position: relative; /* Needed for custom bullet positioning */
+    margin-bottom: 0.8em;
+    padding-left: 1.5em;
+    position: relative;
 }
 
-/* Custom bullet point style */
 #ingredients li::before {
-    content: '•'; /* Bullet character */
+    content: '•';
     color: var(--accent-color);
     font-weight: bold;
     display: inline-block;
     width: 1em;
-    margin-left: -1.5em; /* Position bullet */
+    margin-left: -1.5em;
     position: absolute;
     left: 0;
     top: 0;
@@ -184,42 +184,41 @@ article section {
 
 /* Method List (Ordered Steps) */
 #method ol {
-    list-style: none; /* Remove default numbers */
-    counter-reset: step-counter; /* Initiate a counter */
-    margin-left: 10px; /* Adjust indentation */
+    list-style: none;
+    counter-reset: step-counter;
+    margin-left: 10px;
 }
 
 #method li {
-    counter-increment: step-counter; /* Increment the counter */
-    margin-bottom: 2em; /* More space between steps */
-    padding-left: 3em; /* Space for custom number */
-    position: relative; /* Needed for custom number positioning */
+    counter-increment: step-counter;
+    margin-bottom: 2em;
+    padding-left: 3em;
+    position: relative;
 }
 
-/* Custom step number style */
 #method li::before {
-    content: counter(step-counter); /* Display the counter value */
+    content: counter(step-counter);
     position: absolute;
     left: 0;
-    top: -2px; /* Fine-tune vertical alignment */
+    top: -2px;
     background-color: var(--accent-color);
     color: white;
-    width: 2em; /* Circle size */
-    height: 2em; /* Circle size */
-    border-radius: 50%; /* Make it a circle */
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
     display: inline-block;
     text-align: center;
-    line-height: 2em; /* Vertically center number in circle */
+    line-height: 2em;
     font-weight: bold;
     font-family: var(--font-heading);
 }
 
-#method li strong { /* Make step titles bolder */
+#method li strong {
     font-weight: 700;
     color: var(--heading-color);
 }
 
-#method li p { /* Paragraphs within method steps */
+#method li p {
     margin-top: 0.8em;
     margin-bottom: 0.8em;
     font-size: 1em;
@@ -228,16 +227,16 @@ article section {
 
 /* Notes / Aside */
 aside {
-    background-color: var(--very-light-grey); /* Use variable */
+    background-color: var(--very-light-grey);
     padding: 20px;
     border-radius: 5px;
     font-size: 0.95em;
     margin-top: 1.5em;
-    border-left: 4px solid var(--link-color); /* Use link color for border */
+    border-left: 4px solid var(--link-color);
     line-height: 1.6;
 }
 
-aside h4 { /* Specific style for heading within aside */
+aside h4 {
     margin-top: 0;
     margin-bottom: 0.7em;
     font-size: 1.15em;
@@ -252,19 +251,19 @@ aside p:last-child {
 }
 
 /* Recipe Scaler Input Area */
-#recipe-scaler-ui { /* Changed ID selector */
+#recipe-scaler-ui {
     background-color: var(--light-grey);
     padding: 15px;
     margin-bottom: 1.5em;
     border-radius: 5px;
-    display: inline-block; /* Make it wrap content */
+    display: inline-block;
 }
 #recipe-scaler-ui label {
     margin-right: 8px;
     font-weight: bold;
     color: var(--heading-color);
 }
-#recipe-scaler-ui input[type="number"] { /* Style the number input */
+#recipe-scaler-ui input[type="number"] {
     width: 70px;
     padding: 8px;
     border: 1px solid #ccc;
@@ -272,40 +271,57 @@ aside p:last-child {
     font-size: 1em;
 }
 
-/* --- NEW RULES for Method Summary Box --- */
+/* --- UPDATED RULES for Method Summary Box (v4) --- */
 #method-summary {
-    background-color: var(--very-light-grey); /* Use variable */
-    padding: 20px;
-    border-radius: 5px;
-    margin: 1.5em 0 2.5em 0; /* Adjust margins */
-    border: 1px solid var(--light-grey); /* Lighter border */
-    border-left: 4px solid var(--accent-color); /* Accent color left border */
+    background-color: var(--summary-box-bg); /* Use variable */
+    padding: 20px 25px; /* Adjust padding */
+    border-radius: 6px; /* Slightly more rounded */
+    margin: 2em 0 3em 0; /* Adjust margins */
+    border: none; /* Remove all borders */
+    border-top: 3px solid var(--accent-color); /* Add accent top border */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Subtle shadow */
 }
 
 #method-summary h4 {
-    margin-top: 0; /* Remove extra top margin */
-    margin-bottom: 0.7em;
-    color: var(--heading-color); /* Use standard heading color */
-    font-size: 1.2em; /* Slightly smaller than H4 */
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    color: var(--heading-color);
+    font-size: 1.25em; /* Slightly larger */
+    font-weight: 700; /* Bolder */
+    border-bottom: 1px solid var(--light-grey); /* Add separator below heading */
+    padding-bottom: 0.5em;
 }
 
 #method-summary ul {
-    list-style: none; /* Remove default bullets */
-    padding-left: 5px; /* Align with other lists maybe */
+    list-style: none;
+    padding-left: 0; /* No padding */
+    margin-top: 1em;
 }
 
 #method-summary li {
-    margin-bottom: 0.6em;
-    font-size: 0.95em;
+    margin-bottom: 0.7em;
+    font-size: 0.98em; /* Slightly larger */
+    padding-left: 1.2em; /* Space for new icon */
+    position: relative;
 }
-/* --- END NEW RULES --- */
+
+/* Add a simple icon/marker */
+#method-summary li::before {
+    content: '»'; /* Use a different marker */
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 1px; /* Adjust alignment */
+    font-weight: bold;
+}
+/* --- END UPDATED RULES --- */
 
 
 /* Call to Action Buttons (Improved Styling) */
 .button {
     display: inline-block;
-    padding: 12px 25px; /* More padding */
-    margin: 8px 5px; /* More margin */
+    padding: 12px 25px;
+    margin: 8px 5px;
     border: none;
     border-radius: 6px;
     text-decoration: none;
@@ -321,29 +337,29 @@ aside p:last-child {
 .button:hover {
     text-decoration: none;
     color: white;
-    transform: translateY(-2px); /* Slight lift on hover */
+    transform: translateY(-2px);
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .button.primary {
-    background-color: var(--accent-color); /* Use accent color */
+    background-color: var(--accent-color);
 }
 .button.primary:hover {
-    background-color: #d73a2e; /* Darker accent */
+    background-color: #d73a2e;
 }
 
 .button.secondary {
     background-color: var(--secondary-color);
 }
 .button.secondary:hover {
-    background-color: #73726f; /* Darker secondary */
+    background-color: #73726f;
 }
 
 .button.disabled {
     background-color: #bdc3c7;
     cursor: not-allowed;
     opacity: 0.7;
-    transform: none; /* No lift for disabled */
+    transform: none;
     box-shadow: none;
 }
 
@@ -356,7 +372,7 @@ footer {
     border-top: 1px solid var(--light-grey);
     font-size: 0.9em;
     color: var(--secondary-color);
-    background-color: var(--bg-color); /* Match body background */
+    background-color: var(--bg-color);
     box-shadow: none;
 }
 
@@ -364,7 +380,7 @@ footer p {
     margin-bottom: 0.5em;
 }
 footer a {
-    color: var(--secondary-color); /* Muted link color in footer */
+    color: var(--secondary-color);
 }
 footer a:hover {
     color: var(--accent-color);
@@ -386,7 +402,7 @@ img {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
      header, main, footer {
-        padding: 20px 20px; /* Adjust padding */
+        padding: 20px 20px;
     }
      h1 { font-size: 2.4em; }
      h2 { font-size: 1.8em; }
@@ -398,7 +414,7 @@ img {
 @media (max-width: 600px) {
     body {
         padding: 10px;
-        font-size: 15px; /* Slightly smaller base font on mobile */
+        font-size: 15px;
     }
     header, main, footer {
         padding: 15px;
@@ -411,16 +427,16 @@ img {
 
     nav ul { padding-bottom: 0.5em; margin-bottom: 1.5em;}
     nav li {
-        display: block; /* Stack nav links vertically */
+        display: block;
         margin: 8px 0;
     }
-    nav a { display: block; } /* Make link area fill width */
+    nav a { display: block; }
 
     #method li {
-        padding-left: 2.5em; /* Adjust for smaller number */
+        padding-left: 2.5em;
     }
     #method li::before {
-        width: 1.8em; /* Smaller circle */
+        width: 1.8em;
         height: 1.8em;
         line-height: 1.8em;
         font-size: 0.9em;
@@ -430,10 +446,11 @@ img {
     .button {
         padding: 10px 15px;
         font-size: 0.95em;
-        display: block; /* Make buttons full width */
+        display: block;
         width: 100%;
-        max-width: 300px; /* Optional max width */
+        max-width: 300px;
         margin-left: auto;
         margin-right: auto;
     }
 }
+

@@ -1,0 +1,6 @@
+# Allow all ethical crawlers full access
+User-agent: *
+Allow: /
+
+# Point crawlers to the sitemap
+Sitemap: https://basicloaf.com/sitemap.xml

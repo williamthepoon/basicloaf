@@ -1,20 +1,21 @@
-/* style.css - Complete Styles for Basic Loaf (v3) */
+/* style.css - Professional Styles for Basic Loaf (v4) */
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@500;700&display=swap');
+/* Import Google Font: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
-/* Define Color Palette using CSS Variables */
+/* Define Refined Color Palette & Fonts */
 :root {
-    --bg-color: #fdfdfd;        /* Slightly off-white background */
+    --font-main: 'Inter', sans-serif;
+    --bg-color: #f9f9f9;        /* Very light grey background */
     --content-bg: #ffffff;     /* White for content boxes */
-    --text-color: #333a40;     /* Dark grey/blue text */
-    --heading-color: #2c3e50;  /* Darker blue-grey for headings */
-    --accent-color: #e85a4f;    /* A warm reddish accent (adjust as desired) */
-    --secondary-color: #8e8d8a; /* Muted grey for secondary text/borders */
-    --light-grey: #ecf0f1;      /* Light grey for backgrounds/borders */
-    --link-color: #3498db;      /* Blue for links */
-    --font-body: 'Lato', sans-serif;
-    --font-heading: 'Poppins', sans-serif;
+    --text-color: #333333;     /* Dark charcoal text */
+    --heading-color: #202020;  /* Very dark grey/black for headings */
+    --accent-color: #b07d62;    /* Muted terracotta/rust accent */
+    --secondary-color: #757575; /* Medium grey for secondary text */
+    --border-color: #e0e0e0;     /* Light grey for borders */
+    --link-color: #a06d52;      /* Link color derived from accent */
+    --link-hover-color: var(--accent-color);
+    --button-text-color: #ffffff;
 }
 
 /* Basic Reset & Defaults */
@@ -24,197 +25,227 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth; /* Smooth scrolling for jump links */
+}
+
 body {
-    font-family: var(--font-body);
-    line-height: 1.7;
+    font-family: var(--font-main);
+    font-weight: 400; /* Regular weight */
+    line-height: 1.75; /* Increased for readability */
     color: var(--text-color);
     background-color: var(--bg-color);
     padding: 20px;
+    -webkit-font-smoothing: antialiased; /* Smoother fonts on Mac */
+    -moz-osx-font-smoothing: grayscale; /* Smoother fonts on Firefox */
 }
 
-/* Limit content width and center it */
+/* Limit content width and center it - Increased width */
 header, main, footer {
-    max-width: 850px;
-    margin: 25px auto;
-    padding: 25px 30px;
+    max-width: 900px; /* Wider for more whitespace */
+    margin: 30px auto;
+    padding: 35px 45px; /* More generous padding */
     background-color: var(--content-bg);
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 10px; /* Slightly larger radius */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07); /* Refined shadow */
 }
 
-/* Headings */
+/* Headings - Using Inter */
 h1, h2, h3, h4 {
-    font-family: var(--font-heading);
-    margin-bottom: 0.8em;
+    font-family: var(--font-main); /* Use Inter */
+    margin-bottom: 0.7em;
     line-height: 1.3;
     color: var(--heading-color);
-    font-weight: 500;
+    font-weight: 700; /* Bold weight for headings */
 }
 
 h1 {
-    font-size: 2.8em;
+    font-size: 2.6em; /* Slightly adjusted */
     text-align: center;
     margin-bottom: 0.3em;
-    font-weight: 700;
+    letter-spacing: -0.5px; /* Subtle tightening */
 }
 
 header h1 + p { /* Tagline */
     text-align: center;
     color: var(--secondary-color);
-    margin-top: -0.5em;
-    margin-bottom: 2em;
+    margin-top: 0em; /* Closer to H1 */
+    margin-bottom: 2.5em; /* More space below tagline */
     font-size: 1.1em;
+    font-weight: 400;
 }
 
 h2 {
-    font-size: 2.2em;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.4em;
-    margin-top: 1.5em;
+    font-size: 2.1em; /* Adjusted */
+    border-bottom: 1px solid var(--border-color); /* Thinner border */
+    padding-bottom: 0.5em;
+    margin-top: 2em; /* Consistent top margin */
     font-weight: 700;
+    letter-spacing: -0.3px;
 }
 
-main > *:first-child {
- margin-top: 0;
+main > *:first-child, main > section:first-child > *:first-child {
+ margin-top: 0; /* Remove top margin from first element/heading in main */
 }
 
 h3 {
-    font-size: 1.6em;
+    font-size: 1.6em; /* Adjusted */
     color: var(--heading-color);
-    margin-top: 2em;
+    margin-top: 2.5em; /* More space above H3 */
+    font-weight: 700;
 }
 
 h4 {
-    font-size: 1.3em;
-    margin-top: 1.8em;
-    color: var(--accent-color);
-    font-weight: 500;
+    font-size: 1.25em; /* Adjusted */
+    margin-top: 2em;
+    color: var(--heading-color); /* Use main heading color */
+    font-weight: 500; /* Medium weight */
+    letter-spacing: 0.2px;
 }
 
 /* Paragraphs */
 p {
-    margin-bottom: 1.2em;
+    margin-bottom: 1.4em; /* Consistent paragraph spacing */
 }
 
 /* Links */
 a {
     color: var(--link-color);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease-in-out;
 }
 
 a:hover {
-    color: var(--accent-color);
-    text-decoration: none;
+    color: var(--link-hover-color);
+    text-decoration: underline; /* Add underline on hover for clarity */
 }
+
+/* Horizontal Rule */
+hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 3em 0; /* Generous spacing around separators */
+}
+
 
 /* --- Header, Navigation & Hamburger Menu --- */
 
 header {
-    position: relative; /* Needed for absolute positioning of menu button */
+    position: relative;
+    padding-bottom: 15px; /* Adjust padding */
 }
 
-/* Hamburger Menu Button (Hidden on Desktop) */
+/* Hamburger Menu Button */
 #menu-toggle {
-    display: none; /* Hidden by default */
+    display: none;
     background: none;
     border: none;
     font-size: 2em;
     cursor: pointer;
     position: absolute;
-    top: 20px; /* Adjust as needed */
-    right: 25px; /* Adjust as needed */
+    top: 30px; /* Adjusted position */
+    right: 35px; /* Adjusted position */
     z-index: 1001;
     color: var(--heading-color);
-    padding: 5px; /* Add padding for easier clicking */
-    line-height: 1; /* Prevent extra height */
+    padding: 5px;
+    line-height: 1;
 }
 
 /* Desktop Navigation */
+nav#main-nav {
+    margin-top: 1.5em; /* Space above nav */
+}
+
 nav#main-nav ul#main-nav-list {
     list-style: none;
     text-align: center;
-    padding-bottom: 1em;
-    border-bottom: 1px solid var(--light-grey);
-    margin-bottom: 2em;
+    padding-bottom: 0; /* Remove padding */
+    border-bottom: none; /* Remove border */
+    margin-bottom: 0; /* Remove margin */
 }
 
 nav#main-nav li {
     display: inline-block;
-    margin: 0 6px; /* Spacing between items */
+    margin: 0 10px; /* Increased spacing slightly */
 }
 
 nav#main-nav a {
-    padding: 8px 8px; /* Padding inside links */
+    padding: 8px 10px; /* Adjusted padding */
     border-radius: 5px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    font-family: var(--font-heading);
-    font-weight: 500;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    font-family: var(--font-main); /* Use Inter */
+    font-weight: 500; /* Medium weight */
     color: var(--secondary-color);
-    font-size: 0.9em; /* Adjusted font size */
+    font-size: 0.95em; /* Adjusted */
+    letter-spacing: 0.3px; /* Slight spacing */
 }
 
 nav#main-nav a:hover {
-    background-color: var(--light-grey);
-    color: var(--heading-color);
+    background-color: transparent; /* No background on hover */
+    color: var(--link-hover-color); /* Use accent for hover */
+    text-decoration: none;
 }
 
 /* Desktop Active link style */
 nav#main-nav a.active {
-    background-color: var(--accent-color);
-    color: #fff;
+    background-color: transparent;
+    color: var(--accent-color); /* Use accent color for active */
+    font-weight: 700; /* Bold active link */
+    border-bottom: 2px solid var(--accent-color); /* Underline effect */
+    padding-bottom: 6px; /* Adjust padding for border */
 }
 nav#main-nav a.active:hover {
-    background-color: #d73a2e;
-     color: #fff;
+     color: var(--accent-color);
 }
 
 /* Mobile Menu - Triggered by adding .menu-open class to nav#main-nav */
-/* This rule applies when the menu is open on mobile */
 nav#main-nav.menu-open ul#main-nav-list {
-    display: block; /* Show the list */
+    display: block;
     position: absolute;
     top: 100%; /* Position below the header area */
     left: 0;
-    width: 100%; /* Full width */
+    right: 0; /* Ensure it spans width */
+    width: calc(100% - 60px); /* Adjust width considering parent padding */
+    max-width: 900px; /* Match container width */
+    margin: 0 auto; /* Center */
     background-color: var(--content-bg);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     padding: 10px 0;
     z-index: 1000;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+    border-top: 1px solid var(--border-color);
 }
 
 
 /* --- Main Content Sections --- */
 
 article section {
-    margin-bottom: 3em;
+    margin-bottom: 3.5em; /* More space between sections */
 }
 
 /* Ingredients List */
 #ingredients ul {
     list-style: none;
-    margin-left: 5px;
-    margin-bottom: 1em;
+    margin-left: 0; /* Remove default indent */
+    margin-bottom: 1.5em;
 }
 
 #ingredients li {
-    margin-bottom: 0.8em;
-    padding-left: 1.5em;
+    margin-bottom: 0.9em;
+    padding-left: 1.8em; /* Space for custom bullet */
     position: relative;
 }
 
 #ingredients li::before {
-    content: '•';
-    color: var(--accent-color);
-    font-weight: bold;
+    content: ''; /* Use empty content */
+    background-color: var(--accent-color);
+    width: 6px; /* Small square/circle */
+    height: 6px;
+    border-radius: 50%; /* Make it a circle */
     display: inline-block;
-    width: 1em;
-    margin-left: -1.5em;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0.6em; /* Adjust vertical alignment */
 }
 
 
@@ -222,13 +253,13 @@ article section {
 #method ol {
     list-style: none;
     counter-reset: step-counter;
-    margin-left: 10px;
+    margin-left: 0; /* Remove default indent */
 }
 
 #method li {
     counter-increment: step-counter;
-    margin-bottom: 2em;
-    padding-left: 3em;
+    margin-bottom: 2.5em; /* More space between steps */
+    padding-left: 3.5em; /* Space for custom number */
     position: relative;
 }
 
@@ -236,75 +267,81 @@ article section {
     content: counter(step-counter);
     position: absolute;
     left: 0;
-    top: -2px;
-    background-color: var(--accent-color);
-    color: white;
-    width: 2em;
-    height: 2em;
+    top: -3px;
+    background-color: var(--bg-color); /* Match body background */
+    color: var(--accent-color);
+    width: 2.2em;
+    height: 2.2em;
     border-radius: 50%;
+    border: 1px solid var(--border-color); /* Subtle border */
     display: inline-block;
     text-align: center;
-    line-height: 2em;
-    font-weight: bold;
-    font-family: var(--font-heading);
+    line-height: 2.1em; /* Adjust for border */
+    font-weight: 700; /* Bold number */
+    font-size: 0.9em; /* Slightly smaller number */
+    font-family: var(--font-main);
 }
 
 #method li strong {
     font-weight: 700;
     color: var(--heading-color);
+    display: block; /* Make title block */
+    margin-bottom: 0.3em;
 }
 
 #method li p {
-    margin-top: 0.8em;
-    margin-bottom: 0.8em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
     font-size: 1em;
     color: var(--text-color);
 }
 
 /* Recipe Quick Overview Box */
 #method-summary {
-    background-color: #f8f9fa;
-    padding: 20px; /* More padding */
-    border-radius: 5px;
-    margin-bottom: 2.5em; /* More space below */
-    border: 1px solid var(--light-grey); /* Subtle border */
+    background-color: var(--bg-color); /* Match body background */
+    padding: 25px; /* More padding */
+    border-radius: 8px;
+    margin-bottom: 3em;
+    border: 1px solid var(--border-color);
 }
-#method-summary h4 { /* Style heading inside summary */
+#method-summary h4 {
     margin-top: 0;
-    margin-bottom: 0.8em;
+    margin-bottom: 1em;
     color: var(--heading-color);
-    font-size: 1.2em;
-    border-bottom: 1px solid var(--light-grey);
-    padding-bottom: 0.4em;
+    font-size: 1.3em;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5em;
 }
 #method-summary ul {
     list-style: none;
-    padding-left: 5px;
+    padding-left: 0;
 }
 #method-summary li {
-    margin-bottom: 0.6em;
-    padding-left: 1.2em;
+    margin-bottom: 0.7em;
+    padding-left: 1.5em;
     position: relative;
+    font-size: 0.95em;
 }
-#method-summary li::before { /* Simple arrow bullet */
-    content: '›';
+#method-summary li::before {
+    content: '→'; /* Arrow bullet */
     color: var(--accent-color);
     font-weight: bold;
     position: absolute;
     left: 0;
-    top: -1px; /* Adjust alignment */
+    top: 0px;
 }
 
 
 /* Notes / Aside */
 aside {
-    background-color: var(--light-grey);
-    padding: 20px;
-    border-radius: 5px;
+    background-color: var(--bg-color);
+    padding: 25px;
+    border-radius: 8px;
     font-size: 0.95em;
-    margin-top: 1.5em;
-    border-left: 4px solid var(--link-color);
-    line-height: 1.6;
+    margin-top: 2em;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--accent-color); /* Use accent color */
+    line-height: 1.7;
 }
 
 aside h4 {
@@ -323,68 +360,78 @@ aside p:last-child {
 
 /* Recipe Scaler Input Area */
 #recipe-scaler-ui {
-    background-color: var(--light-grey);
-    padding: 15px;
+    background-color: transparent; /* Remove background */
+    padding: 10px 0; /* Adjust padding */
     margin-bottom: 1.5em;
-    border-radius: 5px;
-    display: inline-block;
+    border-radius: 0;
+    display: block; /* Make it block */
+    border: none;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 #recipe-scaler-ui label {
-    margin-right: 8px;
-    font-weight: bold;
+    margin-right: 10px;
+    font-weight: 500; /* Medium weight */
     color: var(--heading-color);
 }
 #recipe-scaler-ui input[type="number"] {
-    width: 70px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 75px; /* Slightly wider */
+    padding: 10px; /* More padding */
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
     font-size: 1em;
+    font-family: var(--font-main);
 }
 
 
 /* Call to Action Buttons */
 .button {
     display: inline-block;
-    padding: 12px 25px;
-    margin: 8px 5px;
-    border: none;
+    padding: 14px 30px; /* Increased padding */
+    margin: 10px 5px;
+    border: 1px solid transparent; /* Start with transparent border */
     border-radius: 6px;
     text-decoration: none;
-    color: white;
+    color: var(--button-text-color);
+    background-color: var(--accent-color); /* Use accent color */
     cursor: pointer;
     text-align: center;
-    font-family: var(--font-heading);
-    font-weight: 500;
+    font-family: var(--font-main); /* Use main font */
+    font-weight: 500; /* Medium weight */
     font-size: 1em;
-    transition: background-color 0.2s ease, transform 0.1s ease;
+    letter-spacing: 0.5px; /* Slight spacing */
+    transition: all 0.2s ease-in-out; /* Smooth transition */
 }
 
 .button:hover {
     text-decoration: none;
-    color: white;
+    color: var(--button-text-color);
+    background-color: #966b54; /* Darker accent */
     transform: translateY(-2px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.button.primary {
-    background-color: var(--accent-color);
+.button.primary { /* Already using accent, maybe make secondary different */
+     background-color: var(--accent-color);
 }
 .button.primary:hover {
-    background-color: #d73a2e;
+    background-color: #966b54; /* Darker accent */
 }
 
 .button.secondary {
-    background-color: var(--secondary-color);
+    background-color: var(--heading-color); /* Use dark heading color */
+    color: var(--content-bg); /* White text */
 }
 .button.secondary:hover {
-    background-color: #73726f;
+    background-color: #000000; /* Black on hover */
+     color: var(--content-bg);
 }
 
 .button.disabled {
-    background-color: #bdc3c7;
+    background-color: var(--border-color);
+    color: var(--secondary-color);
     cursor: not-allowed;
-    opacity: 0.7;
+    opacity: 0.8;
     transform: none;
     box-shadow: none;
 }
@@ -393,9 +440,9 @@ aside p:last-child {
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 40px;
-    padding-top: 25px;
-    border-top: 1px solid var(--light-grey);
+    margin-top: 50px; /* More space above footer */
+    padding: 30px;
+    border-top: 1px solid var(--border-color);
     font-size: 0.9em;
     color: var(--secondary-color);
     background-color: var(--bg-color);
@@ -419,9 +466,9 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 1.5em auto;
+    margin: 2em auto; /* More margin */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.07);
 }
 */
 
@@ -429,35 +476,30 @@ img {
 
 @media (max-width: 768px) {
      header, main, footer {
-        padding: 20px 20px;
+        padding: 25px 25px; /* Adjust padding */
     }
-     h1 { font-size: 2.4em; }
-     h2 { font-size: 1.8em; }
-     h3 { font-size: 1.4em; }
-     h4 { font-size: 1.15em; }
+     h1 { font-size: 2.2em; }
+     h2 { font-size: 1.9em; }
+     h3 { font-size: 1.5em; }
+     h4 { font-size: 1.2em; }
 
     /* Hamburger Menu Activation */
     #menu-toggle {
-        display: block; /* Show hamburger */
+        display: block;
+        top: 25px; /* Adjust */
+        right: 25px;
     }
 
     nav#main-nav ul#main-nav-list {
         display: none; /* Hide desktop nav list by default */
-        /* Mobile menu appearance defined by .menu-open class added via JS */
     }
 
-    nav#main-nav ul { /* Reset desktop nav list bottom border/margin */
-        border-bottom: none;
-        margin-bottom: 0;
-        padding-bottom: 0;
-    }
-
-     /* Mobile menu list item styling (when open) */
+    /* Mobile menu list item styling (when open) */
     nav#main-nav.menu-open ul#main-nav-list li {
         display: block;
         margin: 0;
-        text-align: center;
-        border-bottom: 1px solid var(--light-grey);
+        text-align: left; /* Align left on mobile */
+        border-bottom: 1px solid var(--border-color);
     }
      nav#main-nav.menu-open ul#main-nav-list li:last-child {
         border-bottom: none;
@@ -466,22 +508,26 @@ img {
     /* Mobile menu link styling (when open) */
      nav#main-nav.menu-open ul#main-nav-list a {
         display: block;
-        padding: 15px 20px;
+        padding: 15px 25px; /* Adjust padding */
         color: var(--heading-color);
-        font-size: 1.1em;
-        /* Reset desktop styles if needed */
-        background-color: transparent;
+        font-size: 1.05em;
+        font-weight: 500;
     }
      nav#main-nav.menu-open ul#main-nav-list a:hover {
-        background-color: var(--light-grey);
-    }
+        background-color: var(--bg-color); /* Use body bg for hover */
+     }
      nav#main-nav.menu-open ul#main-nav-list a.active {
         background-color: var(--accent-color);
         color: #fff;
-    }
-     nav#main-nav.menu-open ul#main-nav-list a.active:hover {
-        background-color: #d73a2e;
+        border-bottom: none; /* Remove desktop border */
+        padding-bottom: 15px; /* Reset padding */
      }
+     nav#main-nav.menu-open ul#main-nav-list a.active:hover {
+        background-color: #966b54; /* Darker accent */
+     }
+
+     /* Reset desktop nav styles */
+     nav#main-nav ul { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
 } /* End of @media (max-width: 768px) */
 
@@ -489,47 +535,47 @@ img {
 @media (max-width: 600px) {
     body {
         padding: 10px;
-        font-size: 15px;
+        font-size: 16px; /* Ensure readable base font */
+        line-height: 1.7;
     }
     header, main, footer {
-        padding: 15px;
+        padding: 20px 15px; /* Adjust padding */
         margin: 15px auto;
-        border-radius: 5px;
+        border-radius: 8px;
     }
-    h1 { font-size: 2.1em; }
+    h1 { font-size: 2em; }
     h2 { font-size: 1.7em; }
-    h3 { font-size: 1.3em; }
+    h3 { font-size: 1.4em; }
+    h4 { font-size: 1.15em; }
 
     #menu-toggle {
-        top: 15px;
+        top: 22px; /* Adjust */
         right: 15px;
-        font-size: 1.8em;
+        font-size: 1.9em;
     }
 
-     /* Further adjust mobile menu link padding/font if needed */
      nav#main-nav.menu-open ul#main-nav-list a {
-         padding: 12px 15px;
+         padding: 12px 20px;
          font-size: 1em;
      }
 
     #method li {
-        padding-left: 2.5em;
+        padding-left: 3em; /* Adjust for number */
     }
     #method li::before {
-        width: 1.8em;
-        height: 1.8em;
-        line-height: 1.8em;
+        width: 2em; /* Adjust number size */
+        height: 2em;
+        line-height: 1.9em; /* Adjust */
         font-size: 0.9em;
         top: 0;
     }
 
     .button {
-        padding: 10px 15px;
-        font-size: 0.95em;
+        padding: 12px 20px;
+        font-size: 1em;
         display: block;
         width: 100%;
-        max-width: 300px;
-        margin-left: auto;
-        margin-right: auto;
+        max-width: none; /* Allow full width */
     }
 } /* End of @media (max-width: 600px) */
+

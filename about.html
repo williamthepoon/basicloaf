@@ -3,34 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Basic Loaf - BasicLoaf.com</title>
+    <meta name="description" content="Meet the baker behind Basic Loaf! Learn about the simple, foolproof sourdough philosophy developed in Dublin to make great bread achievable for busy lives.">
+    <title>About Basic Loaf | Simple Sourdough Philosophy</title>
     <link rel="stylesheet" href="style.css">
     </head>
 <body>
 
     <header>
         <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+
         <h1>Basic Loaf</h1>
         <p>Your simple guide to foolproof sourdough bread with minimal effort.</p>
 
         <nav id="main-nav">
-            <ul id="main-nav-list">
+             <ul id="main-nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipe.html">The Recipe</a></li>
                 <li><a href="gear.html">Things You Need</a></li>
                 <li><a href="starter.html">Starter Guide</a></li>
                 <li><a href="techniques.html">Techniques</a></li>
                 <li><a href="ideas.html">Recipe Ideas</a></li>
-                <li><a href="about.html class="active">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>About Basic Loaf</h2>
-        <p>More about the story behind the site, the simple sourdough philosophy, and the baker. Content coming soon!</p>
-        <p>You can also find me occasionally posting questionable baking experiments on Instagram: <a href="https://instagram.com/william_the_poon" target="_blank">@william_the_poon</a></p>
-         </main>
+        <h2>About Basic Loaf (and Me!)</h2>
+
+        <section id="about-me">
+            <p>I'm not a fancy professional baker with a secret ancestral starter passed down through generations. I've a full time job in tech, a lovely wife and two small humans. I'm a big fan of baking and cooking.</p>
+            <p>Like many, I jumped headfirst into the sourdough craze during the pandemic lockdowns. My initial attempts? Let's just say they ranged from 'interestingly dense' to 'potential doorstop'. There were frisbees. There were bricks. My family politely endured my experiments.</p>
+            <p>But I persisted and kept tweaking, reading, simplifying, and trying to figure out a way to make genuinely great sourdough that *didn't* require me to quit my job or sacrifice sleep to follow some ridiculously complex schedule. I needed something that fit around real life – school runs, work calls and busy kids social calendars on the weekends.</p>
+            <p>Eventually, through trial, error, and probably too much flour, I perfected a method that worked for me. It's reliable, tasty and produces a consistent loaf every day for my family. And crucially, it didn't demand constant attention. I started sharing the method with friends and family who'd previously been scared off by sourdough, and seeing them succeed was brilliant. That's what led to this site – a place to share this simple, foolproof approach more widely.</p>
+        </section>
+        <hr style="margin: 2em 0;">
+
+        <section id="philosophy">
+            <h3>The Basic Loaf Philosophy: Keep it Simple!</h3>
+            <p>Sourdough has this reputation for being difficult, temperamental, almost mystical. It doesn't have to be!</p>
+            <p>The core ideas here are:</p>
+            <ul>
+                <li><strong>Simplicity:</strong> Minimal steps, minimal fuss. We focus on what *really* matters.</li>
+                <li><strong>Low Effort:</strong> Your time is precious. This method relies on long, slow fermentation where time does the hard work, not you.</li>
+                <li><strong>Foolproof:</strong> Designed to be reliable and forgiving, reducing the chances of those early 'doorstop' loaves.</li>
+                <li><strong>No Waste:</strong> We use the 'scrapings' method for feeding the starter – no unnecessary discarding!</li>
+            </ul>
+            <p>The goal isn't just to give you a recipe, but to demystify the process and empower you to bake amazing sourdough bread confidently, even with a busy life.</p>
+        </section>
+
+        <hr style="margin: 2em 0;">
+
+        <section id="connect">
+            <h3>Follow Along / Get in Touch</h3>
+            <p>While this site covers the core method, you can sometimes find me sharing random baking thoughts or questionable experiments over on Instagram.</p>
+            <p style="text-align: center;"> <a href="https://instagram.com/william_the_poon" target="_blank" class="button secondary">Follow @william_the_poon on Instagram</a>
+            </p>
+            <p>Happy baking!</p>
+        </section>
+
+    </main>
 
     <footer>
         <p>&copy; <span id="year"></span> BasicLoaf.com - All Rights Reserved.</p>
@@ -39,7 +71,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Ensure the element exists before trying to set its content
         const yearElement = document.getElementById('year');
         if (yearElement) {
             yearElement.textContent = new Date().getFullYear();

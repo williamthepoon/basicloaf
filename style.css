@@ -135,21 +135,7 @@ header {
     padding-bottom: 15px; /* Adjust padding */
 }
 
-/* Hamburger Menu Button */
-#menu-toggle {
-    display: none; /* <<<< HIDDEN BY DEFAULT ON DESKTOP */
-    background: none;
-    border: none;
-    font-size: 2em;
-    cursor: pointer;
-    position: absolute;
-    top: 30px; /* Position relative to header padding */
-    right: 35px; /* Position relative to header padding */
-    z-index: 1001;
-    color: var(--heading-color);
-    padding: 5px;
-    line-height: 1;
-}
+
 
 /* Desktop Navigation */
 nav#main-nav {

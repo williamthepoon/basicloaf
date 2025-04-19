@@ -1,4 +1,4 @@
-/* style.css - Complete Styles for Basic Loaf (No Summary Arrows) */
+/* style.css - Complete Styles for Basic Loaf (Burger Fix) */
 
 /* Import Google Font: Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
@@ -137,14 +137,14 @@ header {
 
 /* Hamburger Menu Button */
 #menu-toggle {
-    display: none;
+    display: none; /* Hidden by default on desktop */
     background: none;
     border: none;
     font-size: 2em;
     cursor: pointer;
     position: absolute;
-    top: 30px; /* Adjusted position */
-    right: 35px; /* Adjusted position */
+    top: 30px; /* Position relative to header padding */
+    right: 35px; /* Position relative to header padding */
     z-index: 1001;
     color: var(--heading-color);
     padding: 5px;
@@ -159,9 +159,9 @@ nav#main-nav {
 nav#main-nav ul#main-nav-list {
     list-style: none;
     text-align: center;
-    padding-bottom: 0; /* Remove padding */
-    border-bottom: none; /* Remove border */
-    margin-bottom: 0; /* Remove margin */
+    padding-bottom: 0;
+    border-bottom: none;
+    margin-bottom: 0;
 }
 
 nav#main-nav li {
@@ -200,7 +200,7 @@ nav#main-nav a.active:hover {
 
 /* Mobile Menu - Triggered by adding .menu-open class to nav#main-nav */
 nav#main-nav.menu-open ul#main-nav-list {
-    display: block;
+    display: block; /* This rule shows the list when .menu-open is added by JS */
     position: absolute;
     top: 100%; /* Position below the header area */
     left: 0;
@@ -503,9 +503,10 @@ img {
 
     /* Hamburger Menu Activation */
     #menu-toggle {
-        display: block; /* Show hamburger */
-        top: 30px; /* Match header padding */
-        right: 25px;
+        display: block !important; /* Show hamburger - ADDED !important FOR DEBUGGING */
+        /* Position from base styles should still apply unless overridden */
+         top: 30px; /* Ensure position is set */
+         right: 25px; /* Ensure position is set */
     }
 
     nav#main-nav ul#main-nav-list {
@@ -616,3 +617,4 @@ img {
     width: 1px;
   }
   /* --- End Accessibility Helper --- */
+

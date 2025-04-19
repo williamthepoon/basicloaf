@@ -604,4 +604,15 @@ img {
         max-width: none; /* Allow full width */
     }
 } /* End of @media (max-width: 600px) */
-
+/* --- Accessibility Helper --- */
+/* Class to visually hide content while keeping it accessible to screen readers */
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+  /* --- End Accessibility Helper --- */

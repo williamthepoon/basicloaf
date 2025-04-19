@@ -328,7 +328,17 @@ article section {
     font-weight: bold;
     position: absolute;
     left: 0;
-    top: 0px;
+    top: 0.3em;
+}
+
+/* ADD these new rules */
+#method-summary li p {
+    margin-top: 0;
+    margin-bottom: 0.2em; /* Add a small space between heading and text lines */
+}
+
+#method-summary li p:last-child {
+    margin-bottom: 0; /* Ensure no extra margin after the last line */
 }
 
 

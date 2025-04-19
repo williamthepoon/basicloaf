@@ -135,7 +135,21 @@ header {
     padding-bottom: 15px; /* Adjust padding */
 }
 
-
+/* Hamburger Menu Button */
+#menu-toggle {
+    display: none; /* <<<< HIDDEN BY DEFAULT ON DESKTOP */
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    position: absolute;
+    top: 30px; /* Position relative to header padding */
+    right: 35px; /* Position relative to header padding */
+    z-index: 1001;
+    color: var(--heading-color);
+    padding: 5px;
+    line-height: 1;
+}
 
 /* Desktop Navigation */
 nav#main-nav {
@@ -470,7 +484,7 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 2em auto; /* More margin */
+    margin: 2em auto;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.07);
 }

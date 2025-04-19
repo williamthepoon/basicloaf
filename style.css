@@ -1,4 +1,4 @@
-/* style.css - Complete Styles for Basic Loaf (Burger Fix) */
+/* style.css - Corrected Styles for Basic Loaf (Burger Visibility Fix) */
 
 /* Import Google Font: Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
@@ -503,10 +503,9 @@ img {
 
     /* Hamburger Menu Activation */
     #menu-toggle {
-        display: block !important; /* Show hamburger - ADDED !important FOR DEBUGGING */
-        /* Position from base styles should still apply unless overridden */
-         top: 30px; /* Ensure position is set */
-         right: 25px; /* Ensure position is set */
+        display: block; /* <<< THIS IS THE CRUCIAL LINE TO SHOW THE BUTTON */
+        top: 30px; /* Adjust position if needed */
+        right: 25px; /* Adjust position if needed */
     }
 
     nav#main-nav ul#main-nav-list {

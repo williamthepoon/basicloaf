@@ -315,6 +315,7 @@ article section {
 #method-summary ul {
     list-style: none;
     padding-left: 0;
+    list-style-type: none; /* Be extra explicit */
 }
 
 /* Updated rule for summary list items (using Flexbox, no bullet) */

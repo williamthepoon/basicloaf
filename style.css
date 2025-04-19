@@ -1,4 +1,4 @@
-/* style.css - Professional Styles for Basic Loaf (v4) */
+/* style.css - Complete Styles for Basic Loaf (Final Version) */
 
 /* Import Google Font: Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
@@ -166,11 +166,11 @@ nav#main-nav ul#main-nav-list {
 
 nav#main-nav li {
     display: inline-block;
-    margin: 0 10px; /* Increased spacing slightly */
+    margin: 0 10px; /* Spacing between items */
 }
 
 nav#main-nav a {
-    padding: 8px 10px; /* Adjusted padding */
+    padding: 8px 10px; /* Padding inside links */
     border-radius: 5px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     font-family: var(--font-main); /* Use Inter */
@@ -296,7 +296,7 @@ article section {
     color: var(--text-color);
 }
 
-/* Recipe Quick Overview Box */
+/* --- Recipe Quick Overview Box --- */
 #method-summary {
     background-color: var(--bg-color); /* Match body background */
     padding: 25px; /* More padding */
@@ -316,30 +316,43 @@ article section {
     list-style: none;
     padding-left: 0;
 }
+
+/* Flexbox styles for summary list items */
 #method-summary li {
-    margin-bottom: 0.7em;
-    padding-left: 1.5em;
-    position: relative;
+    display: flex; /* Use Flexbox */
+    align-items: flex-start; /* Align bullet with top of text block */
+    gap: 0.6em; /* Space between bullet and text */
+    margin-bottom: 1em; /* Increased space between items */
     font-size: 0.95em;
-}
-#method-summary li::before {
-    content: '→'; /* Arrow bullet */
-    color: var(--accent-color);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0.3em;
+    /* REMOVED: position: relative; padding-left: 1.5em; */
 }
 
-/* ADD these new rules */
+#method-summary li::before {
+    content: '→';
+    color: var(--accent-color);
+    font-weight: bold;
+    flex-shrink: 0; /* Prevent bullet from shrinking */
+    width: 1em; /* Define width for alignment */
+    text-align: center;
+    padding-top: 0.1em; /* Fine-tune vertical alignment if needed */
+    /* REMOVED: position: absolute; left: 0; top: 0.3em; */
+}
+
+/* Rule for the content wrapper inside the li */
+.summary-content {
+    flex-grow: 1; /* Allow text content to take remaining space */
+}
+
+/* Rules for paragraphs inside the li */
 #method-summary li p {
     margin-top: 0;
-    margin-bottom: 0.2em; /* Add a small space between heading and text lines */
+    margin-bottom: 0.2em;
 }
 
 #method-summary li p:last-child {
-    margin-bottom: 0; /* Ensure no extra margin after the last line */
+    margin-bottom: 0;
 }
+/* --- End of Recipe Quick Overview Box Styles --- */
 
 
 /* Notes / Aside */
@@ -421,7 +434,7 @@ aside p:last-child {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.button.primary { /* Already using accent, maybe make secondary different */
+.button.primary { /* Already using accent */
      background-color: var(--accent-color);
 }
 .button.primary:hover {
@@ -495,8 +508,8 @@ img {
 
     /* Hamburger Menu Activation */
     #menu-toggle {
-        display: block;
-        top: 25px; /* Adjust */
+        display: block; /* Show hamburger */
+        top: 30px; /* Match header padding */
         right: 25px;
     }
 
@@ -522,6 +535,10 @@ img {
         color: var(--heading-color);
         font-size: 1.05em;
         font-weight: 500;
+        /* Reset desktop styles */
+        background-color: transparent;
+        border-bottom: none;
+        padding-bottom: 15px;
     }
      nav#main-nav.menu-open ul#main-nav-list a:hover {
         background-color: var(--bg-color); /* Use body bg for hover */
@@ -529,14 +546,12 @@ img {
      nav#main-nav.menu-open ul#main-nav-list a.active {
         background-color: var(--accent-color);
         color: #fff;
-        border-bottom: none; /* Remove desktop border */
-        padding-bottom: 15px; /* Reset padding */
      }
      nav#main-nav.menu-open ul#main-nav-list a.active:hover {
         background-color: #966b54; /* Darker accent */
      }
 
-     /* Reset desktop nav styles */
+     /* Reset desktop nav wrapper styles */
      nav#main-nav ul { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
 } /* End of @media (max-width: 768px) */

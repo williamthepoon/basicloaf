@@ -616,3 +616,9 @@ img {
     width: 1px;
   }
   /* --- End Accessibility Helper --- */
+#site-logo {
+    height: 40px; /* CHANGED from 50px - Adjust as desired */
+    width: auto;  /* Maintain aspect ratio */
+    margin-bottom: 0.5em;
+    vertical-align: middle;
+  }

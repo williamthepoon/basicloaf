@@ -1,4 +1,4 @@
-/* style.css - Complete Styles for Basic Loaf (Attempting Bullet Fix on LI) */
+/* style.css - Corrected Styles for Basic Loaf (Burger Visibility Fix v3) */
 
 /* Import Google Font: Inter */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
@@ -137,7 +137,7 @@ header {
 
 /* Hamburger Menu Button */
 #menu-toggle {
-    display: none; /* Hidden by default on desktop */
+    display: none; /* <<<< HIDDEN BY DEFAULT ON DESKTOP */
     background: none;
     border: none;
     font-size: 2em;
@@ -320,20 +320,23 @@ article section {
 
 /* Updated rule for summary list items (using Flexbox, no bullet) */
 #method-summary li {
-    display: flex;
-    margin-bottom: 1em;
+    display: flex; /* Keep Flexbox */
+    /* align-items: flex-start; */ /* Alignment less critical */
+    /* gap: 0.6em; */ /* REMOVED gap */
+    margin-bottom: 1em; /* Use consistent vertical spacing */
     font-size: 0.95em;
-    list-style-type: none; /* <<< ADDED THIS LINE to target LI directly */
+    /* Removed position: relative; padding-left */
 }
 
 /* Updated rule for summary list item bullets (content removed) */
 #method-summary li::before {
     content: ''; /* REMOVED content */
+    /* Removed other properties */
 }
 
 /* Rule for the content wrapper inside the li */
 .summary-content {
-    flex-grow: 1;
+    flex-grow: 1; /* Allow text content to take remaining space */
 }
 
 /* Rules for paragraphs inside the li */
@@ -476,16 +479,15 @@ footer a:hover {
 
 
 /* Image Styling (Uncomment when adding images) */
-/*
+
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 2em auto; 
+    margin: 2em auto;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.07);
 }
-*/
 
 /* --- Responsive Adjustments & Mobile Menu --- */
 
@@ -500,9 +502,9 @@ img {
 
     /* Hamburger Menu Activation */
     #menu-toggle {
-        display: block; /* Show hamburger */
-        top: 30px; /* Match header padding */
-        right: 25px;
+        display: block; /* <<<< THIS RULE MAKES THE BUTTON VISIBLE ON MOBILE */
+        top: 30px; /* Adjust position if needed */
+        right: 25px; /* Adjust position if needed */
     }
 
     nav#main-nav ul#main-nav-list {

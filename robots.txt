@@ -2,5 +2,8 @@
 User-agent: *
 Allow: /
 
+# Block Cloudflare-specific directories from being crawled
+Disallow: /cdn-cgi/
+
 # Point crawlers to the sitemap
 Sitemap: https://basicloaf.com/sitemap.xml

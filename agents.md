@@ -11,8 +11,8 @@ Basic Loaf is a website dedicated to providing a simple, foolproof guide for beg
   - Design Style: Clean, minimalist, modern aesthetic with "refined" color palette.
 - **Scripting**: Vanilla JavaScript (ES6+).
   - Handles interactive elements like the Recipe Scaler.
-- **Build System**: None (Currently pure static files).
-  - *Note*: There may be future plans to migrate to a static site generator like Eleventy (11ty), but the current codebase is raw HTML/CSS/JS.
+- **Build System**: None. This is a pure static site.
+  - **Philosophy**: Keep the site simple, lightweight, and easy to maintain without build steps or frameworks. Avoid adding complexities like static site generators (SSGs) unless absolutely necessary for a specific future feature.
 
 ## 3. Key Features
 - **Recipe Scaler**: An interactive feature (located in `recipe.html` and `script.js`) that dynamically calculates ingredient quantities based on the user's desired number of loaves.

@@ -826,3 +826,62 @@ img {
 }
 
 /* --- End Accessibility Helper --- */
+
+/* --- Tips Page Styles --- */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 2em;
+}
+
+.tip-card {
+    background-color: var(--bg-color);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: var(--accent-color);
+}
+
+.tip-number {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    font-weight: 700;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.tip-card p {
+    margin-bottom: 0;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.tip-card strong {
+    color: var(--heading-color);
+    display: block;
+    margin-bottom: 0.2em;
+}
+
+@media (max-width: 600px) {
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- End Tips Page Styles --- */

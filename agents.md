@@ -26,6 +26,7 @@ The project is organized in the root directory:
   - `index.html`: The landing page introducing the concept.
   - `recipe.html`: The core guide with the interactive scaler.
   - `starter.html`: Instructions for creating and maintaining sourdough starter.
+  - `bought-starter.html`: Specific activation instructions for customers who purchased a fresh starter.
   - `techniques.html`: Explanations of baking techniques (folding, proving, etc.).
   - `gear.html`: Recommendations for baking equipment.
   - `ideas.html`: Additional inspiration or variations.

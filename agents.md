@@ -37,8 +37,12 @@ The project is organized in the root directory:
   - `images/`: Directory containing visual assets (SVGs, JPGs).
 
 - **Config/Meta**:
-  - `robots.txt`: Directives for search engine crawlers.
+  - `robots.txt`: Directives for search engine crawlers, including specific rules for AI agents (GPTBot, etc.).
   - `sitemap.xml`: XML map of site content for indexing.
+  - `llms.txt`: Machine-readable summary of the site for LLMs.
+
+- **Structured Data**:
+  - Uses JSON-LD for `Recipe`, `HowTo` (Starter), `Organization`, and `BreadcrumbList`.
 
 ## 5. Development Workflow
 Since this is currently a static site without a build step:

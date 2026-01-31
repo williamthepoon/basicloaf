@@ -2,6 +2,16 @@
 User-agent: *
 Allow: /
 
+# Specifically invite AI crawlers to help LLMs understand the site
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 # Block Cloudflare-specific directories from being crawled
 Disallow: /cdn-cgi/
 

@@ -1,0 +1,21 @@
+# Basic Loaf
+
+> Your simple guide to foolproof sourdough bread with minimal effort.
+
+A project dedicated to making sourdough baking accessible for beginners and busy people. This site provides a hands-off approach to baking bakery-quality bread at home.
+
+## Documentation
+- [The Recipe](https://basicloaf.com/recipe.html): Core guide with interactive recipe scaler for sourdough bread.
+- [Starter Guide](https://basicloaf.com/starter.html): Creating and maintaining your own wild yeast starter.
+- [Techniques](https://basicloaf.com/techniques.html): Visual and textual explanations of folding, proving, and baking.
+- [Essential Gear](https://basicloaf.com/gear.html): Minimal equipment list for success.
+- [Recipe Ideas](https://basicloaf.com/ideas.html): Variations and inspiration.
+- [About](https://basicloaf.com/about.html): Background on the project and author.
+
+## Interactive Features
+- **Recipe Scaler**: Found on the [Recipe Page](https://basicloaf.com/recipe.html), this JS-powered tool recalculates ingredient weights (flour, water, starter, salt) based on the number of loaves.
+
+## Technical Details
+- **Stack**: Semantic HTML5, Vanilla CSS, Vanilla JS.
+- **Structure**: Static site, no build tools.
+- **Microdata**: Uses Schema.org JSON-LD for Recipes, HowTo (Starter), and Organizations.

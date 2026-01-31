@@ -1,7 +1,7 @@
 # Basic Loaf - Project Documentation
 
 ## 1. Overview
-Basic Loaf is a website dedicated to providing a simple, foolproof guide for beginners to bake sourdough bread. The project focuses on accessibility, reliability, and high performance, featuring a clean design and user-friendly tools.
+Basic Loaf is a website dedicated to providing a simple, foolproof guide for beginners to bake sourdough bread. The project focuses on accessibility, reliability, and high performance, featuring a clean design and user-friendly tools. It specializes in supporting bakers who use the "Basic Loaf" mature sourdough starter (a resilient 5+ year-old culture).
 
 ## 2. Technology Stack
 - **Core**: Semantic HTML5.
@@ -16,8 +16,10 @@ Basic Loaf is a website dedicated to providing a simple, foolproof guide for beg
 
 ## 3. Key Features
 - **Recipe Scaler**: An interactive feature (located in `recipe.html` and `script.js`) that dynamically calculates ingredient quantities based on the user's desired number of loaves.
+- **Guided Starter Activation**: Tailored instructions in `bought-starter.html` that handle different scenarios for a mature starter (Collected in-person vs. Received by post), including recovery steps and baking schedules.
+- **Visual Equipment Tiers**: The `gear.html` page uses distinct visual guides (Essentials vs. Nice-to-Haves) to help beginners start with minimal financial barrier while showing a clear upgrade path.
 - **Responsive Design**: Fully responsive layout ensuring readability on mobile, tablet, and desktop devices.
-- **SEO Optimization**: Comprehensive implementation of meta tags, canonical links, Open Graph (OG) tags, and semantic markup for better search engine visibility.
+- **SEO & AI Optimization**: Comprehensive implementation of meta tags, Schema.org (JSON-LD), and AI-specific directives (`robots.txt`, `llms.txt`) for better visibility across search engines and LLM agents.
 
 ## 4. File Structure
 The project is organized in the root directory:
@@ -35,7 +37,7 @@ The project is organized in the root directory:
 - **Assets**:
   - `style.css`: The central stylesheet containing all design tokens and rules.
   - `script.js`: Contains logic for the recipe scaler and other DOM interactions.
-  - `images/`: Directory containing visual assets (SVGs, JPGs).
+  - `images/`: Directory containing visual assets (SVGs, JPGs, PNGs).
 
 - **Config/Meta**:
   - `robots.txt`: Directives for search engine crawlers, including specific rules for AI agents (GPTBot, etc.).

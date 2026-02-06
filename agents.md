@@ -56,10 +56,10 @@ Since this is currently a static site without a build step:
 3.  **Deployment**: Push changes to the repository. The hosting provider (e.g., GitHub Pages, Netlify) serves the static files directly.
 
 ## 6. Maintenance Instructions for AI Agents
-**CRITICAL**: This file (`agents.md`) is the PRIMARY source of truth for any AI working on this project. It ensures continuity and context awareness.
+**CRITICAL**: This file (`agents.md`) is the PRIMARY source of truth for any AI working on this project. It ensures continuity and context awareness. **Updating this file is a MANDATORY part of the development process.** Any task involving code changes must conclude with an update to `agents.md` to reflect the new project state.
 
 ### When to Update
-You MUST update this file if you:
+You MUST update this file after EVERY change that affects:
 1.  **Add/Remove Pages**: Update the "File Structure" section.
 2.  **Change Tech Stack**: If you introduce a build tool (like Eleventy), CSS framework (like Tailwind), or new library, you *must* rewrite the "Technology Stack" and "Development Workflow" sections.
 3.  **Add Features**: Document new interactive features in "Key Features".

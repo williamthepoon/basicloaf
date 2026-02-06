@@ -16,15 +16,25 @@ document.addEventListener('DOMContentLoaded', function () {
         if (isNaN(scaleFactor) || scaleFactor <= 0) {
             return;
         }
+
+        // Update loaf count if the element exists (for main recipe)
         if (loafCountSpan) {
-            loafCountSpan.textContent = `${scaleFactor} ${scaleFactor === 1 ? 'Loaf' : 'Loaves'}`;
+            const unit = loafCountSpan.getAttribute('data-unit') || 'Loaf';
+            const pluralUnit = loafCountSpan.getAttribute('data-plural-unit') || 'Loaves';
+            loafCountSpan.textContent = `${scaleFactor} ${scaleFactor === 1 ? unit : pluralUnit}`;
         }
-        [starterMinQtySpan, starterMaxQtySpan, waterQtySpan, flourQtySpan, saltQtySpan].forEach(span => {
+
+        // Update all ingredient quantities
+        const quantitySpans = [starterMinQtySpan, starterMaxQtySpan, waterQtySpan, flourQtySpan, saltQtySpan, ...document.querySelectorAll('.extra-qty')];
+
+        quantitySpans.forEach(span => {
             if (span) {
                 const baseQty = parseFloat(span.getAttribute('data-base-qty'));
                 if (!isNaN(baseQty)) {
                     const newQty = baseQty * scaleFactor;
-                    if (span === saltQtySpan && newQty < 10) {
+
+                    // Special handling for salt/small quantities to show 1 decimal place if < 10
+                    if ((span.id === 'salt-qty' || span.classList.contains('small-qty')) && newQty < 10) {
                         span.textContent = newQty.toFixed(1);
                     } else {
                         span.textContent = Math.round(newQty);

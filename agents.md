@@ -15,7 +15,8 @@ Basic Loaf is a website dedicated to providing a simple, foolproof guide for beg
   - **Philosophy**: Keep the site simple, lightweight, and easy to maintain without build steps or frameworks. Avoid adding complexities like static site generators (SSGs) unless absolutely necessary for a specific future feature.
 
 ## 3. Key Features
-- **Recipe Scaler**: An interactive feature (located in `recipe.html` and `script.js`) that dynamically calculates ingredient quantities based on the user's desired number of loaves.
+- **Recipe Scaler**: An interactive feature (located in `recipe.html`, `focaccia.html` and `script.js`) that dynamically calculates ingredient quantities based on the user's desired output (loaves or trays).
+- **Easy Focaccia Recipe**: A dedicated beginner-friendly page (`focaccia.html`) designed to lower the barrier for new sourdough bakers.
 - **Guided Starter Activation**: Tailored instructions in `bought-starter.html` that handle different scenarios for a mature starter (Collected in-person vs. Received by post), including recovery steps and baking schedules.
 - **Visual Equipment Tiers**: The `gear.html` page uses distinct visual guides (Essentials vs. Nice-to-Haves) to help beginners start with minimal financial barrier while showing a clear upgrade path.
 - **Responsive Design**: Fully responsive layout ensuring readability on mobile, tablet, and desktop devices.
@@ -27,6 +28,7 @@ The project is organized in the root directory:
 - **Pages**:
   - `index.html`: The landing page introducing the concept.
   - `recipe.html`: The core guide with the interactive scaler.
+  - `focaccia.html`: A simplified, no-shape sourdough focaccia recipe for beginners.
   - `starter.html`: Instructions for creating and maintaining sourdough starter.
   - `bought-starter.html`: Specific activation instructions for customers who purchased a fresh starter.
   - `techniques.html`: Explanations of baking techniques (folding, proving, etc.).

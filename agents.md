@@ -21,7 +21,12 @@ Basic Loaf is a website dedicated to providing a simple, foolproof guide for beg
 - **Guided Starter Activation**: Tailored instructions in `bought-starter.html` that handle different scenarios for a mature starter (Collected in-person vs. Received by post), including recovery steps and baking schedules.
 - **Visual Equipment Tiers**: The `gear.html` page uses distinct visual guides (Essentials vs. Nice-to-Haves) to help beginners start with minimal financial barrier while showing a clear upgrade path.
 - **Responsive Design**: Fully responsive layout ensuring readability on mobile, tablet, and desktop devices.
-- **SEO & AI Optimization**: Comprehensive implementation of meta tags, Schema.org (JSON-LD), and AI-specific directives (`robots.txt`, `llms.txt`) for better visibility across search engines and LLM agents.
+- **Expert Branding (E-E-A-T)**: Rebranded site-wide author identity to "Will Poon" to build personal authority and trust with readers and search engines.
+- **Advanced Schema implementation**:
+  - `Recipe` schema optimized with specific author and timing data.
+  - `FAQPage` schema on `tips.html` and `starter.html` to capture search result real-estate.
+  - Consistent `BreadcrumbList` across the journey.
+- **Strategic Internal Linking**: Content siloed to guide users from foundation (Starter/Gear) to execution (Recipe/Techniques).
 
 ## 4. File Structure
 The project is organized in the root directory:

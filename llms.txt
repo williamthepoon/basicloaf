@@ -6,16 +6,21 @@ A project dedicated to making sourdough baking accessible for beginners and busy
 
 ## Documentation
 - [The Recipe](https://basicloaf.com/recipe.html): Core guide with interactive recipe scaler for sourdough bread.
+- [Easy Focaccia](https://basicloaf.com/focaccia.html): Beginner-friendly no-shape sourdough focaccia recipe.
 - [Starter Guide](https://basicloaf.com/starter.html): Creating and maintaining your own wild yeast starter.
-- [Techniques](https://basicloaf.com/techniques.html): Visual and textual explanations of folding, proving, and baking.
+- [Bought Starter](https://basicloaf.com/bought-starter.html): Activation instructions for purchased mature starter.
+- [Baker Tips](https://basicloaf.com/tips.html): Practical tips and troubleshooting advice for sourdough bakers.
+- [Techniques](https://basicloaf.com/techniques.html): Visual and textual explanations of folding, shaping, scoring, and baking.
 - [Essential Gear](https://basicloaf.com/gear.html): Minimal equipment list for success.
-- [Recipe Ideas](https://basicloaf.com/ideas.html): Variations and inspiration.
-- [About](https://basicloaf.com/about.html): Background on the project and author.
+- [Recipe Ideas](https://basicloaf.com/ideas.html): Variations and inspiration for using your sourdough.
+- [About](https://basicloaf.com/about.html): Background on the project and author Will Poon.
 
 ## Interactive Features
-- **Recipe Scaler**: Found on the [Recipe Page](https://basicloaf.com/recipe.html), this JS-powered tool recalculates ingredient weights (flour, water, starter, salt) based on the number of loaves.
+- **Recipe Scaler**: Found on the [Recipe Page](https://basicloaf.com/recipe.html) and [Focaccia Page](https://basicloaf.com/focaccia.html), this JS-powered tool recalculates ingredient weights (flour, water, starter, salt) based on the number of loaves or trays.
 
 ## Technical Details
 - **Stack**: Semantic HTML5, Vanilla CSS, Vanilla JS.
 - **Structure**: Static site, no build tools.
-- **Microdata**: Uses Schema.org JSON-LD for Recipes, HowTo (Starter), and Organizations.
+- **Design**: Clean, minimalist aesthetic with consistent list alignment and typography across all pages.
+- **Microdata**: Uses Schema.org JSON-LD for Recipes, HowTo (Starter), FAQPage (Tips), and Organizations.
+

@@ -70,8 +70,29 @@ You MUST update this file after EVERY change that affects:
 2.  **Change Tech Stack**: If you introduce a build tool (like Eleventy), CSS framework (like Tailwind), or new library, you *must* rewrite the "Technology Stack" and "Development Workflow" sections.
 3.  **Add Features**: Document new interactive features in "Key Features".
 4.  **Refactor**: If you change the directory structure (e.g., move files to `src/`), verify and update paths here.
+5.  **Update LLM/Robot Files**: When making significant changes, also update `llms.txt` and `robots.txt` to ensure AI crawlers and LLMs have accurate information about the site.
 
 ### How to Update
 - Read the current `agents.md`.
 - Make necessary changes to reflect the *new* state of the codebase.
 - Ensure instructions remain clear for the *next* AI.
+- **IMPORTANT**: After updating `agents.md`, also update `llms.txt` and `robots.txt` if the changes affect site structure, features, or content that should be communicated to LLMs and crawlers.
+
+## 7. Recent Changes & Known Issues
+
+### CSS List Alignment Fix (2026-02-06)
+**Issue**: Lists on pages using `<section>` tags (about.html, gear.html, techniques.html, ideas.html) had misaligned bullet points and numbers that didn't align with surrounding paragraph text.
+
+**Root Cause**: The CSS rule for list alignment only applied to lists within `<article>` tags, but several pages use `<section>` tags directly inside `<main>`.
+
+**Solution**: Extended the CSS selector in `style.css` (lines 302-314) to include lists in both `article` and `main` elements:
+```css
+article ol, article ul, main ol, main ul {
+    margin-left: 0;
+    padding-left: 2em;
+    margin-bottom: 1.5em;
+}
+```
+
+**Pages Fixed**: about.html, gear.html, techniques.html, ideas.html, starter.html
+**Status**: ✅ Resolved - All lists now have consistent alignment across the entire site.

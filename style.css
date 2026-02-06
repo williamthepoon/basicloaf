@@ -299,6 +299,21 @@ article section {
     /* More space between sections */
 }
 
+/* General list styling for article sections */
+article ol,
+article ul,
+main ol,
+main ul {
+    margin-left: 0;
+    padding-left: 2em;
+    margin-bottom: 1.5em;
+}
+
+article li,
+main li {
+    margin-bottom: 0.8em;
+}
+
 /* Ingredients List */
 #ingredients ul {
     list-style: none;
@@ -480,6 +495,47 @@ aside p {
 
 aside p:last-child {
     margin-bottom: 0;
+}
+
+/* Page Table of Contents */
+.page-toc {
+    background-color: var(--bg-color);
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-bottom: 2em;
+    border: 1px solid var(--border-color);
+}
+
+.page-toc strong {
+    display: block;
+    margin-bottom: 0.8em;
+    color: var(--heading-color);
+    font-weight: 700;
+}
+
+.page-toc ul {
+    list-style: disc;
+    margin-left: 1.5em;
+    padding-left: 0;
+}
+
+.page-toc li {
+    margin-bottom: 0.6em;
+    padding-left: 0.3em;
+}
+
+.page-toc li:last-child {
+    margin-bottom: 0;
+}
+
+.page-toc a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.page-toc a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
 }
 
 /* Recipe Scaler Input Area */

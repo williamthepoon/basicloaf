@@ -688,6 +688,15 @@ img {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
+/* Site Logo Specific Styles */
+#site-logo {
+    width: 500px;
+    max-width: 90%;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 auto 1em auto;
+}
+
 /* --- Responsive Adjustments & Mobile Menu --- */
 
 @media (max-width: 768px) {

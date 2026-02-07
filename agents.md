@@ -27,7 +27,7 @@ Basic Loaf is a website dedicated to providing a simple, foolproof guide for beg
   - `FAQPage` schema on `tips.html` and `starter.html` to capture search result real-estate.
   - Consistent `BreadcrumbList` across the journey.
 - **Strategic Internal Linking**: Content siloed to guide users from foundation (Starter/Gear) to execution (Recipe/Techniques).
-- **Subtle Etsy Shop Integration**: Integrated links to the `Basicloafsourdough` Etsy shop across the global navigation and footer. Includes context-aware "soft-sell" links in the Starter Guide (as a time-saving tip), Gear list, and Recipe ingredients to offer a helpful alternative to making a starter from scratch.
+- **Subtle Etsy Shop Integration**: Integrated links to the `Basicloafsourdough` Etsy shop (`https://basicloafsourdough.etsy.com`) across the global navigation and footer. Includes context-aware "soft-sell" links in the Starter Guide (as a time-saving tip), Gear list, and Recipe ingredients to offer a helpful alternative to making a starter from scratch.
 
 ## 4. File Structure
 The project is organized in the root directory:
@@ -99,7 +99,7 @@ article ol, article ul, main ol, main ul {
 **Status**: ✅ Resolved - All lists now have consistent alignment across the entire site.
 
 ### Etsy Shop Integration (2026-02-07)
-**Feature**: Integrated a link to the user's Etsy shop (`Basicloafsourdough`) to sell mature sourdough starter.
+**Feature**: Integrated a link to the user's Etsy shop (`Basicloafsourdough` / `https://basicloafsourdough.etsy.com`) to sell mature sourdough starter.
 
 **Implementation**:
 - **Global**: Added "Shop" link to main navigation and "Shop: Buy Mature Starter" to footer on all pages.

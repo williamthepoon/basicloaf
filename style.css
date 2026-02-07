@@ -657,6 +657,17 @@ footer p {
     margin-bottom: 0.5em;
 }
 
+/* Make links side-by-side, but keep copyright on top */
+footer p:not(:first-child) {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer p:first-child {
+    display: block;
+    margin-bottom: 1em;
+}
+
 footer a {
     color: var(--secondary-color);
 }

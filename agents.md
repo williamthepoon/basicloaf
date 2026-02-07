@@ -120,3 +120,10 @@ article ol, article ul, main ol, main ul {
 **Feature**: Merged "Baker Tips" and "Techniques" into a single "Advice" page (`advice.html`).
 - **Goal**: Simplify navigation and group related information.
 - **Changes**: Created `advice.html`, updated all navigation links, redirected internal links to new anchors, and deleted `tips.html` and `techniques.html`.
+### Footer Styling Update (2026-02-07)
+**Feature**: Aligned footer links horizontally.
+- **Change**: Updated `style.css` to display "Buy Mature Starter", "Book a Coaching Session", and "Follow on Instagram" side-by-side on desktop, while keeping the copyright notice on its own line at the top.
+
+### Logo Update (2026-02-07)
+**Feature**: Replaced the SVG logo with a new PNG version (`logo.png`).
+- **Change**: Updated references in all HTML files from `logo.svg` to `logo.png` and adjusted the favicon type accordingly.

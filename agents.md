@@ -38,8 +38,8 @@ The project is organized in the root directory:
   - `focaccia.html`: A simplified, no-shape sourdough focaccia recipe for beginners.
   - `starter.html`: Instructions for creating and maintaining sourdough starter.
   - `bought-starter.html`: Specific activation instructions for customers who purchased a fresh starter.
-  - `techniques.html`: Explanations of baking techniques (folding, proving, etc.).
-  - `gear.html`: Recommendations for baking equipment.
+  - `advice.html`: **[NEW]** Consolidates "Baker Tips" and "Techniques" into a single advice hub.
+
   - `ideas.html`: Additional inspiration or variations.
   - `about.html`: Information about the author and project.
 
@@ -115,3 +115,8 @@ article ol, article ul, main ol, main ul {
 **Feature**: Updated global footer and added 1:1 Coaching offering.
 - **Footer**: Removed "Shop:" prefix from starter link. Added new link for "Book a Coaching Session".
 - **Coaching**: Integrated 1:1 coaching offering into `index.html` (CTA), `about.html`, `tips.html`, and `recipe.html`.
+
+### Content Consolidation (2026-02-07)
+**Feature**: Merged "Baker Tips" and "Techniques" into a single "Advice" page (`advice.html`).
+- **Goal**: Simplify navigation and group related information.
+- **Changes**: Created `advice.html`, updated all navigation links, redirected internal links to new anchors, and deleted `tips.html` and `techniques.html`.

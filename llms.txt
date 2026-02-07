@@ -9,8 +9,7 @@ A project dedicated to making sourdough baking accessible for beginners and busy
 - [Easy Focaccia](https://basicloaf.com/focaccia.html): Beginner-friendly no-shape sourdough focaccia recipe.
 - [Starter Guide](https://basicloaf.com/starter.html): Creating and maintaining your own wild yeast starter.
 - [Bought Starter](https://basicloaf.com/bought-starter.html): Activation instructions for purchased mature starter.
-- [Baker Tips](https://basicloaf.com/tips.html): Practical tips and troubleshooting advice for sourdough bakers.
-- [Techniques](https://basicloaf.com/techniques.html): Visual and textual explanations of folding, shaping, scoring, and baking.
+- [Advice](https://basicloaf.com/advice.html): Expert advice including key techniques (shaping, scoring) and troubleshooting tips.
 - [Essential Gear](https://basicloaf.com/gear.html): Minimal equipment list for success.
 - [Recipe Ideas](https://basicloaf.com/ideas.html): Variations and inspiration for using your sourdough.
 - [About](https://basicloaf.com/about.html): Background on the project and author Will Poon.

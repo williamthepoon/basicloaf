@@ -125,5 +125,6 @@ article ol, article ul, main ol, main ul {
 - **Change**: Updated `style.css` to display "Buy Mature Starter", "Book a Coaching Session", and "Follow on Instagram" side-by-side on desktop, while keeping the copyright notice on its own line at the top.
 
 ### Logo Update (2026-02-07)
-**Feature**: Replaced the SVG logo with a new PNG version (`logo.png`).
+**Feature**: Replaced the SVG logo with a new PNG version (`logo.png`) and increased its size.
 - **Change**: Updated references in all HTML files from `logo.svg` to `logo.png` and adjusted the favicon type accordingly.
+- **Styling**: Increased logo width to `700px` in `style.css` for better visibility.

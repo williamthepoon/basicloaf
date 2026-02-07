@@ -110,3 +110,8 @@ article ol, article ul, main ol, main ul {
 - **Design**: Kept styling subtle to maintain informational credibility and avoid aggressive upselling.
 
 **Status**: ✅ Deployed - Links are active and consistent across all pages.
+
+### Footer & Coaching Update (2026-02-07)
+**Feature**: Updated global footer and added 1:1 Coaching offering.
+- **Footer**: Removed "Shop:" prefix from starter link. Added new link for "Book a Coaching Session".
+- **Coaching**: Integrated 1:1 coaching offering into `index.html` (CTA), `about.html`, `tips.html`, and `recipe.html`.

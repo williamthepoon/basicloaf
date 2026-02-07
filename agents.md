@@ -1,7 +1,7 @@
 # Basic Loaf - Project Documentation
 
 ## 1. Overview
-Basic Loaf is a website dedicated to providing a simple, foolproof guide for beginners to bake sourdough bread. The project focuses on accessibility, reliability, and high performance, featuring a clean design and user-friendly tools. It specializes in supporting bakers who use the "Basic Loaf" mature sourdough starter (a resilient 5+ year-old culture).
+Basic Loaf is a website dedicated to providing a simple, foolproof guide for beginners to bake sourdough bread. The project focuses on accessibility, reliability, and high performance, featuring a clean design and user-friendly tools. It specializes in supporting bakers who use the "Basic Loaf" mature sourdough starter (a resilient 5+ year-old culture), which is also available for purchase via the integrated Etsy shop.
 
 ## 2. Technology Stack
 - **Core**: Semantic HTML5.
@@ -27,6 +27,7 @@ Basic Loaf is a website dedicated to providing a simple, foolproof guide for beg
   - `FAQPage` schema on `tips.html` and `starter.html` to capture search result real-estate.
   - Consistent `BreadcrumbList` across the journey.
 - **Strategic Internal Linking**: Content siloed to guide users from foundation (Starter/Gear) to execution (Recipe/Techniques).
+- **Subtle Etsy Shop Integration**: Integrated links to the `Basicloafsourdough` Etsy shop across the global navigation and footer. Includes context-aware "soft-sell" links in the Starter Guide (as a time-saving tip), Gear list, and Recipe ingredients to offer a helpful alternative to making a starter from scratch.
 
 ## 4. File Structure
 The project is organized in the root directory:
@@ -96,3 +97,16 @@ article ol, article ul, main ol, main ul {
 
 **Pages Fixed**: about.html, gear.html, techniques.html, ideas.html, starter.html
 **Status**: ✅ Resolved - All lists now have consistent alignment across the entire site.
+
+### Etsy Shop Integration (2026-02-07)
+**Feature**: Integrated a link to the user's Etsy shop (`Basicloafsourdough`) to sell mature sourdough starter.
+
+**Implementation**:
+- **Global**: Added "Shop" link to main navigation and "Shop: Buy Mature Starter" to footer on all pages.
+- **Contextual**: Added "soft-sell" links in specific context-appropriate locations:
+  - `index.html`: "Short on time?" helper link below the main CTA.
+  - `starter.html`: A tip box in the "Create from Scratch" section offering a purchase alternative.
+  - `gear.html` & `recipe.html`: Hyperlinked "Sourdough Starter" in the ingredients lists directly to the shop listing.
+- **Design**: Kept styling subtle to maintain informational credibility and avoid aggressive upselling.
+
+**Status**: ✅ Deployed - Links are active and consistent across all pages.

@@ -127,4 +127,4 @@ article ol, article ul, main ol, main ul {
 ### Logo Update (2026-02-07)
 **Feature**: Replaced the SVG logo with a new PNG version (`logo.png`) and increased its size.
 - **Change**: Updated references in all HTML files from `logo.svg` to `logo.png` and adjusted the favicon type accordingly.
-- **Styling**: Increased logo width to `900px` in `style.css` for better visibility.
+- **Styling**: Increased logo width to `900px` and applied `mix-blend-mode: multiply` to fix background color mismatches.

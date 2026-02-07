@@ -695,6 +695,8 @@ img {
     border-radius: 0;
     box-shadow: none;
     margin: 0 auto 1em auto;
+    mix-blend-mode: multiply;
+    /* Blends white background to transparent */
 }
 
 /* --- Responsive Adjustments & Mobile Menu --- */

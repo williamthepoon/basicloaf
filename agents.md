@@ -23,7 +23,7 @@ Basic Loaf is a website dedicated to providing a simple, foolproof guide for beg
 - **Responsive Design**: Fully responsive layout ensuring readability on mobile, tablet, and desktop devices.
 - **Expert Branding (E-E-A-T)**: Rebranded site-wide author identity to "Will Poon" to build personal authority and trust with readers and search engines.
 - **Advanced Schema implementation**:
-  - `Recipe` schema optimized with specific author and timing data.
+  - `Recipe` schema optimized with specific author, timing data, nutrition facts, and step-by-step deep links (`url` + `name`).
   - `FAQPage` schema on `tips.html` and `starter.html` to capture search result real-estate.
   - Consistent `BreadcrumbList` across the journey.
 - **Strategic Internal Linking**: Content siloed to guide users from foundation (Starter/Gear) to execution (Recipe/Techniques).
@@ -128,3 +128,10 @@ article ol, article ul, main ol, main ul {
 **Feature**: Replaced the SVG logo with a new PNG version (`logo.png`) and increased its size.
 - **Change**: Updated references in all HTML files from `logo.svg` to `logo.png` and adjusted the favicon type accordingly.
 - **Styling**: Increased logo width to `900px` and applied `mix-blend-mode: multiply` to fix background color mismatches.
+
+### Structured Data Improvements (2026-02-08)
+**Feature**: Enhanced `Recipe` schema on `recipe.html` and `focaccia.html` to eliminate Google Search Console warnings and improve rich results.
+- **Changes**: 
+  - Added unique `id` attributes to all method steps in HTML.
+  - Updated JSON-LD to include `name` and `url` for each `HowToStep`, enabling "Guidance" features in search results.
+  - Added `nutrition` schema with estimated calorie and macro data.

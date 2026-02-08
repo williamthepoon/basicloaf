@@ -21,5 +21,5 @@ A project dedicated to making sourdough baking accessible for beginners and busy
 - **Stack**: Semantic HTML5, Vanilla CSS, Vanilla JS.
 - **Structure**: Static site, no build tools.
 - **Design**: Clean, minimalist aesthetic with consistent list alignment and typography across all pages.
-- **Microdata**: Uses Schema.org JSON-LD for Recipes, HowTo (Starter), FAQPage (Tips), and Organizations.
+- **Microdata**: Uses Schema.org JSON-LD for Recipes (including Nutrition and Step interactions), HowTo (Starter), FAQPage (Tips), and Organizations.
 

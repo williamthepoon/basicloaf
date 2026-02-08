@@ -61,17 +61,59 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuToggle = document.getElementById('menu-toggle');
     const mainNav = document.getElementById('main-nav');
 
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', function () {
-            mainNav.classList.toggle('menu-open');
+    function closeMenu() {
+        if (mainNav && mainNav.classList.contains('menu-open')) {
+            mainNav.classList.remove('menu-open');
+            menuToggle.innerHTML = '☰';
+            menuToggle.setAttribute('aria-expanded', 'false');
+        }
+    }
 
+    function openMenu() {
+        if (mainNav && !mainNav.classList.contains('menu-open')) {
+            mainNav.classList.add('menu-open');
+            menuToggle.innerHTML = '✕';
+            menuToggle.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    if (menuToggle && mainNav) {
+        // Toggle menu on button click
+        menuToggle.addEventListener('click', function () {
             if (mainNav.classList.contains('menu-open')) {
-                menuToggle.innerHTML = '✕';
-                menuToggle.setAttribute('aria-expanded', 'true');
+                closeMenu();
             } else {
-                menuToggle.innerHTML = '☰';
-                menuToggle.setAttribute('aria-expanded', 'false');
+                openMenu();
             }
+        });
+
+        // Close menu when clicking navigation links (mobile)
+        const navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                if (window.innerWidth <= 768) {
+                    closeMenu();
+                }
+            });
+        });
+
+        // Close menu on Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && mainNav.classList.contains('menu-open')) {
+                closeMenu();
+                menuToggle.focus(); // Return focus to toggle button
+            }
+        });
+
+        // Fix menu state on window resize (mobile to desktop)
+        let resizeTimer;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+                if (window.innerWidth > 768 && mainNav.classList.contains('menu-open')) {
+                    closeMenu();
+                }
+            }, 250);
         });
     }
 

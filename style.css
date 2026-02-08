@@ -42,6 +42,23 @@
     top: 0;
 }
 
+/* Focus Styles for Keyboard Navigation */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Remove default outline for mouse users but keep for keyboard */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+input:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible) {
+    outline: none;
+}
+
 /* Basic Reset & Defaults */
 * {
     box-sizing: border-box;
@@ -188,6 +205,17 @@ hr {
 
 /* --- Header, Navigation & Hamburger Menu --- */
 
+/* Logo Container */
+.logo-container {
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.logo-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
 header {
     position: relative;
     padding-bottom: 15px;
@@ -309,6 +337,31 @@ nav#main-nav.menu-open ul#main-nav-list {
 
 
 /* --- Main Content Sections --- */
+
+/* Hero Images */
+.hero-image {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Page Table of Contents */
+.page-toc {
+    margin-bottom: 2em;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+/* Centered Block Images */
+.centered-image {
+    display: block;
+    margin: 2em auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
 
 article section {
     margin-bottom: 3.5em;
@@ -445,25 +498,16 @@ main li {
     /* Be extra explicit */
 }
 
-/* Updated rule for summary list items (using Flexbox, no bullet) */
+/* Summary list items use Flexbox without bullets */
 #method-summary li {
     display: flex;
-    /* Keep Flexbox */
-    /* align-items: flex-start; */
-    /* Alignment less critical */
-    /* gap: 0.6em; */
-    /* REMOVED gap */
     margin-bottom: 1em;
-    /* Use consistent vertical spacing */
     font-size: 0.95em;
-    /* Removed position: relative; padding-left */
 }
 
-/* Updated rule for summary list item bullets (content removed) */
+/* Empty pseudo-element (no bullet needed) */
 #method-summary li::before {
     content: '';
-    /* REMOVED content */
-    /* Removed other properties */
 }
 
 /* Rule for the content wrapper inside the li */

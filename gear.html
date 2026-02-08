@@ -9,6 +9,10 @@
         content="What sourdough gear do you <em>really</em> need? Basic Loaf breaks down the essential equipment for beginners vs. nice-to-haves. Start baking without the fuss!"
         itemprop="description">
     <title itemprop="name">Essential Sourdough Gear for Beginners | Basic Loaf</title>
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/logo.png">
     <meta property="og:title" content="Essential Sourdough Gear for Beginners | Basic Loaf" />
@@ -21,9 +25,10 @@
 </head>
 
 <body itemscope itemtype="https://schema.org/WebPage">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header>
-        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">☰</button>
         <h1 class="visually-hidden">Basic Loaf</h1>
 
         <div style="text-align: center; margin-bottom: 0.5em;">
@@ -50,7 +55,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <h1>Things You Need (and things that are nice!)</h1>
 
         <p>You don't need a professional bakery setup. You probably have most of this stuff already. Here is the

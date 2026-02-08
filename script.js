@@ -13,8 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateQuantities() {
         if (!scaleInput) return;
         const scaleFactor = parseFloat(scaleInput.value);
-        if (isNaN(scaleFactor) || scaleFactor <= 0) {
+        const minScale = parseFloat(scaleInput.getAttribute('min')) || 0.25;
+        const maxScale = parseFloat(scaleInput.getAttribute('max')) || 100;
+
+        // Validate input and provide visual feedback
+        if (isNaN(scaleFactor) || scaleFactor < minScale || scaleFactor > maxScale) {
+            scaleInput.style.borderColor = '#d32f2f';
+            scaleInput.style.outline = '2px solid #d32f2f';
             return;
+        } else {
+            scaleInput.style.borderColor = '';
+            scaleInput.style.outline = '';
         }
 
         // Update loaf count if the element exists (for main recipe)

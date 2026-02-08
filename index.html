@@ -44,10 +44,15 @@
       }]
     }
     </script>
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body itemscope itemtype="https://schema.org/WebPage">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header>
         <h1 class="visually-hidden">Basic Loaf</h1>
@@ -58,7 +63,7 @@
             </a>
         </div>
 
-        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">☰</button>
 
         <p>Your simple guide to foolproof sourdough bread with minimal effort.</p>
 
@@ -78,7 +83,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section id="introduction">
             <h2>Introduction to Sourdough Bread</h2>
             <p>Sourdough uses wild yeast and time to create bread with incredible flavour and texture. No commercial

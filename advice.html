@@ -9,6 +9,10 @@
         content="Expert sourdough advice: Master key techniques like shaping and scoring, plus 20 proven tips for better bread. Your complete guide to sourdough success."
         itemprop="description">
     <title itemprop="name">Sourdough Advice: Techniques & Expert Tips | Basic Loaf</title>
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="images/logo.png">
     <meta property="og:title" content="Sourdough Advice: Techniques & Expert Tips | Basic Loaf" />
@@ -49,9 +53,10 @@
 </head>
 
 <body itemscope itemtype="https://schema.org/WebPage">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header>
-        <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+        <button id="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">☰</button>
         <h1 class="visually-hidden">Basic Loaf</h1>
 
         <div style="text-align: center; margin-bottom: 0.5em;">
@@ -78,7 +83,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <h1>Sourdough Advice: Techniques & Expert Tips</h1>
         <p>Whether you're looking to master a specific technique or just need a quick tip to improve your loaf, you're
             in the right place. This page combines essential techniques with my top 20 tips for sourdough success.</p>

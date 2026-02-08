@@ -1,249 +1,170 @@
-# Basic Loaf - Project Documentation
+# Basic Loaf - AI Agent Instructions
 
-## 1. Overview
-Basic Loaf is a website dedicated to providing a simple, foolproof guide for beginners to bake sourdough bread. The project focuses on accessibility, reliability, and high performance, featuring a clean design and user-friendly tools. It specializes in supporting bakers who use the "Basic Loaf" mature sourdough starter (a resilient 5+ year-old culture), which is also available for purchase via the integrated Etsy shop.
+## Quick Start (30-Second TL;DR)
+This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No build tools. No exceptions.** Edit files directly, test in browser, push to GitHub. Primary files: 9 HTML pages, `style.css`, `script.js`. Check TODO.md for current tasks. Update this file, `sitemap.xml`, and `llms.txt` after making changes.
 
-## 2. Technology Stack
-- **Core**: Semantic HTML5.
-- **Styling**: Vanilla CSS (No framework).
-  - Uses CSS Custom Properties (Variables) for consistent theming.
-  - Typography: 'Inter' from Google Fonts.
-  - Design Style: Clean, minimalist, modern aesthetic with "refined" color palette.
-- **Scripting**: Vanilla JavaScript (ES6+).
-  - Handles interactive elements like the Recipe Scaler.
-- **Build System**: None. This is a pure static site.
-  - **Philosophy**: Keep the site simple, lightweight, and easy to maintain without build steps or frameworks. Avoid adding complexities like static site generators (SSGs) unless absolutely necessary for a specific future feature.
+## Critical Rules (Non-Negotiable)
+1. **NO frameworks or build tools** - Keep it vanilla HTML/CSS/JS
+2. **Update agents.md** after every change that affects structure, features, or tech stack
+3. **Update sitemap.xml** when adding/removing pages or changing URLs (refresh `lastmod` dates)
+4. **Update llms.txt** when making significant content or feature changes
+5. **ALWAYS prefer editing existing files** over creating new ones
+6. **No emojis** unless user explicitly requests them
+7. **Read files before editing** - Understand existing code first
 
-## 3. Key Features
-- **Recipe Scaler**: An interactive feature (located in `recipe.html`, `focaccia.html` and `script.js`) that dynamically calculates ingredient quantities based on the user's desired output (loaves or trays).
-- **Easy Focaccia Recipe**: A dedicated beginner-friendly page (`focaccia.html`) designed to lower the barrier for new sourdough bakers, featuring a high-quality community-provided photo.
-- **Refined Navigation**: Site-wide navigation layout optimized to prevent wrapping on desktop and a fully responsive hamburger menu for mobile.
-- **Guided Starter Activation**: Tailored instructions in `bought-starter.html` that handle different scenarios for a mature starter (Collected in-person vs. Received by post), including recovery steps and baking schedules.
-- **Visual Equipment Tiers**: The `gear.html` page uses distinct visual guides (Essentials vs. Nice-to-Haves) to help beginners start with minimal financial barrier while showing a clear upgrade path.
-- **Responsive Design**: Fully responsive layout ensuring readability on mobile, tablet, and desktop devices.
-- **Expert Branding (E-E-A-T)**: Rebranded site-wide author identity to "Will Poon" to build personal authority and trust with readers and search engines.
-- **Advanced Schema implementation**:
-  - `Recipe` schema optimized with specific author, timing data, nutrition facts, and step-by-step deep links (`url` + `name`).
-  - `FAQPage` schema on `tips.html` and `starter.html` to capture search result real-estate.
-  - Consistent `BreadcrumbList` across the journey.
-- **Strategic Internal Linking**: Content siloed to guide users from foundation (Starter/Gear) to execution (Recipe/Techniques).
-- **Subtle Etsy Shop Integration**: Integrated links to the `Basicloafsourdough` Etsy shop (`https://basicloafsourdough.etsy.com`) across the global navigation and footer. Includes context-aware "soft-sell" links in the Starter Guide (as a time-saving tip), Gear list, and Recipe ingredients to offer a helpful alternative to making a starter from scratch.
+## Technology Stack
 
-## 4. File Structure
-The project is organized in the root directory:
+| Category | Technology | Details |
+|----------|-----------|---------|
+| **HTML** | Semantic HTML5 | No templating, no frameworks |
+| **CSS** | Vanilla CSS | Custom properties for theming, 'Inter' font from Google Fonts |
+| **JavaScript** | Vanilla ES6+ | Recipe scaler, mobile menu, no libraries |
+| **Build System** | None | Static site, no compilation |
+| **Deployment** | Git push | GitHub Pages or similar static host |
+| **Schema** | JSON-LD | Recipe, HowTo, FAQPage, Organization, BreadcrumbList |
 
-- **Pages**:
-  - `index.html`: The landing page introducing the concept.
-  - `recipe.html`: The core guide with the interactive scaler.
-  - `focaccia.html`: A simplified, no-shape sourdough focaccia recipe for beginners.
-  - `starter.html`: Instructions for creating and maintaining sourdough starter.
-  - `bought-starter.html`: Specific activation instructions for customers who purchased a fresh starter.
-  - `advice.html`: **[NEW]** Consolidates "Baker Tips" and "Techniques" into a single advice hub.
-
-  - `ideas.html`: Additional inspiration or variations.
-  - `about.html`: Information about the author and project.
-
-- **Assets**:
-  - `style.css`: The central stylesheet containing all design tokens and rules.
-  - `script.js`: Contains logic for the recipe scaler and other DOM interactions.
-  - `images/`: Directory containing visual assets (SVGs, JPGs, PNGs).
-
-- **Config/Meta**:
-  - `robots.txt`: Directives for search engine crawlers, including specific rules for AI agents (GPTBot, etc.).
-  - `sitemap.xml`: XML map of site content for indexing.
-  - `llms.txt`: Machine-readable summary of the site for LLMs.
-
-- **Structured Data**:
-  - Uses JSON-LD for `Recipe`, `HowTo` (Starter), `Organization`, and `BreadcrumbList`.
-
-## 5. Development Workflow
-Since this is currently a static site without a build step:
-1.  **Editing**: Modify `.html`, `.css`, or `.js` files directly.
-2.  **Testing**: Open `index.html` locally in a browser or use a simple local server (e.g., specific VS Code extensions or `python3 -m http.server`).
-3.  **Deployment**: Push changes to the repository. The hosting provider (e.g., GitHub Pages, Netlify) serves the static files directly.
-
-## 6. Maintenance Instructions for AI Agents
-**CRITICAL**: This file (`agents.md`) is the PRIMARY source of truth for any AI working on this project. It ensures continuity and context awareness. **Updating this file is a MANDATORY part of the development process.** Any task involving code changes must conclude with an update to `agents.md` to reflect the new project state.
-
-### When to Update
-You MUST update this file after EVERY change that affects:
-1.  **Add/Remove Pages**: Update the "File Structure" section.
-2.  **Change Tech Stack**: If you introduce a build tool (like Eleventy), CSS framework (like Tailwind), or new library, you *must* rewrite the "Technology Stack" and "Development Workflow" sections.
-3.  **Add Features**: Document new interactive features in "Key Features".
-4.  **Refactor**: If you change the directory structure (e.g., move files to `src/`), verify and update paths here.
-5.  **Update Config/Meta Files**: When adding/removing pages or changing URLs, you MUST update `sitemap.xml` and refresh the `lastmod` dates for updated files.
-6.  **Update LLM/Robot Files**: When making significant changes, also update `llms.txt` and `robots.txt` to ensure AI crawlers and LLMs have accurate information about the site.
-
-### How to Update
-- Read the current `agents.md`.
-- Make necessary changes to reflect the *new* state of the codebase.
-- Ensure instructions remain clear for the *next* AI.
-- **IMPORTANT**: After updating `agents.md`, also update `sitemap.xml`, `llms.txt`, and `robots.txt` if the changes affect site structure, features, or content that should be communicated to humans, LLMs, and crawlers.
-
-## 7. Recent Changes & Known Issues
-
-### CSS List Alignment Fix (2026-02-06)
-**Issue**: Lists on pages using `<section>` tags (about.html, gear.html, techniques.html, ideas.html) had misaligned bullet points and numbers that didn't align with surrounding paragraph text.
-
-**Root Cause**: The CSS rule for list alignment only applied to lists within `<article>` tags, but several pages use `<section>` tags directly inside `<main>`.
-
-**Solution**: Extended the CSS selector in `style.css` (lines 302-314) to include lists in both `article` and `main` elements:
-```css
-article ol, article ul, main ol, main ul {
-    margin-left: 0;
-    padding-left: 2em;
-    margin-bottom: 1.5em;
-}
+## File Structure
+```
+/basicloaf/
+├── index.html              # Landing page
+├── recipe.html             # Classic sourdough recipe with scaler
+├── focaccia.html           # Beginner-friendly focaccia recipe
+├── advice.html             # Techniques & tips (merged from old tips/techniques)
+├── starter.html            # Starter creation & maintenance
+├── bought-starter.html     # Activation guide for purchased starter
+├── gear.html               # Equipment recommendations
+├── ideas.html              # Recipe variations
+├── about.html              # About the author
+├── style.css               # All styles
+├── script.js               # All interactivity
+├── sitemap.xml             # SEO sitemap
+├── llms.txt                # Machine-readable site summary
+├── robots.txt              # Crawler directives
+├── agents.md               # This file
+├── TODO.md                 # Task tracking
+└── /images/                # Visual assets (optimized)
 ```
 
-**Pages Fixed**: about.html, gear.html, techniques.html, ideas.html, starter.html
-**Status**: ✅ Resolved - All lists now have consistent alignment across the entire site.
+## Key Features
+- **Recipe Scaler**: Dynamic ingredient calculator in `recipe.html` and `focaccia.html`
+- **Mobile Menu**: Hamburger navigation with escape key, auto-close, and resize handlers
+- **Skip Links**: WCAG 2.1 Level A compliant keyboard navigation
+- **Etsy Integration**: Subtle shop links for mature starter sales
+- **Coaching Links**: 1:1 sourdough coaching offering
+- **Schema Markup**: Optimized for Google rich results
+- **Image Optimization**: All images compressed (<600KB, most <300KB)
 
-### Etsy Shop Integration (2026-02-07)
-**Feature**: Integrated a link to the user's Etsy shop (`Basicloafsourdough` / `https://basicloafsourdough.etsy.com`) to sell mature sourdough starter.
+## Design Principles
+- **Clean & Simple**: No gradients, minimal borders, authentic feel (not "AI-generated looking")
+- **User Intent First**: Classic loaf is primary goal, focaccia is alternative
+- **Empowerment Over Prescription**: No skill-level labels, users choose their path
+- **Accessibility**: Keyboard navigation, skip links, focus indicators
+- **Performance**: Optimized images, no blocking resources, minimal page weight
 
-**Implementation**:
-- **Global**: Added "Shop" link to main navigation and "Shop: Buy Mature Starter" to footer on all pages.
-- **Contextual**: Added "soft-sell" links in specific context-appropriate locations:
-  - `index.html`: "Short on time?" helper link below the main CTA.
-  - `starter.html`: A tip box in the "Create from Scratch" section offering a purchase alternative.
-  - `gear.html` & `recipe.html`: Hyperlinked "Sourdough Starter" in the ingredients lists directly to the shop listing.
-- **Design**: Kept styling subtle to maintain informational credibility and avoid aggressive upselling.
+## Common Tasks
 
-**Status**: ✅ Deployed - Links are active and consistent across all pages.
+### Adding a New Page
+1. Create `newpage.html` following existing structure (header, nav, main, footer)
+2. Add to navigation in all 9 HTML files (`<nav id="main-nav">`)
+3. Add to `sitemap.xml` with current date in `<lastmod>`
+4. Update `llms.txt` if content is significant
+5. Test mobile menu and skip-to-content link
+6. Update this file's "File Structure" section
 
-### Footer & Coaching Update (2026-02-07)
-**Feature**: Updated global footer and added 1:1 Coaching offering.
-- **Footer**: Removed "Shop:" prefix from starter link. Added new link for "Book a Coaching Session".
-- **Coaching**: Integrated 1:1 coaching offering into `index.html` (CTA), `about.html`, `tips.html`, and `recipe.html`.
+### Editing Styles
+1. Check if utility class exists in `style.css` (e.g., `.centered-image`, `.hero-image`)
+2. If not, add to CSS (avoid inline styles)
+3. Use CSS custom properties for colors/spacing (see `:root` section)
+4. Test responsive behavior on mobile/tablet/desktop
 
-### Content Consolidation (2026-02-07)
-**Feature**: Merged "Baker Tips" and "Techniques" into a single "Advice" page (`advice.html`).
-- **Goal**: Simplify navigation and group related information.
-- **Changes**: Created `advice.html`, updated all navigation links, redirected internal links to new anchors, and deleted `tips.html` and `techniques.html`.
-### Footer Styling Update (2026-02-07)
-**Feature**: Aligned footer links horizontally.
-- **Change**: Updated `style.css` to display "Buy Mature Starter", "Book a Coaching Session", and "Follow on Instagram" side-by-side on desktop, while keeping the copyright notice on its own line at the top.
+### Fixing Broken Links
+1. Use global search to find all instances
+2. Update internal links format: `advice.html#anchor` (not `/advice.html#anchor`)
+3. Test navigation works on all pages
+4. Update `sitemap.xml` `lastmod` dates for affected pages
 
-### Logo Update (2026-02-07)
-**Feature**: Replaced the SVG logo with a new PNG version (`logo.png`) and increased its size.
-- **Change**: Updated references in all HTML files from `logo.svg` to `logo.png` and adjusted the favicon type accordingly.
-- **Styling**: Increased logo width to `900px` and applied `mix-blend-mode: multiply` to fix background color mismatches.
+### Updating Recipe Schema
+1. Add unique `id` attributes to each step in HTML
+2. Update JSON-LD `HowToStep` array with `name` and `url` for each step
+3. Validate with Google's Rich Results Test
+4. Include nutrition data if adding new recipe
 
-### Structured Data Improvements (2026-02-08)
-**Feature**: Enhanced `Recipe` schema on `recipe.html` and `focaccia.html` to eliminate Google Search Console warnings and improve rich results.
-- **Changes**: 
-  - Added unique `id` attributes to all method steps in HTML.
-  - Updated JSON-LD to include `name` and `url` for each `HowToStep`, enabling "Guidance" features in search results.
-  - Added `nutrition` schema with estimated calorie and macro data.
+### Optimizing Images
+1. Resize large images: `sips -Z 900 image.jpg`
+2. Compress PNGs: `pngquant --quality=65-80 image.png`
+3. Convert large PNGs to JPG if no transparency needed
+4. Add `width`, `height`, `loading="lazy"`, `alt` to `<img>` tags
+5. Back up originals with `-original-backup` suffix
 
-### Sitemap & Metadata Update (2026-02-08)
-**Feature**: Updated `sitemap.xml` and added mandatory update rules to `agents.md`.
-- **Changes**:
-  - Added `focaccia.html` to `sitemap.xml`.
-  - Refreshed all `lastmod` dates in the sitemap to reflect recent content updates.
-  - Updated Section 6 of `agents.md` to explicitly require `sitemap.xml` updates whenever URLs change.
-**Status**: ✅ Complete.
+### Committing Changes
+1. Run `git status` and `git diff` to review changes
+2. Stage specific files: `git add file1.html file2.css`
+3. Commit with descriptive message + co-author:
+   ```
+   git commit -m "$(cat <<'EOF'
+   Add troubleshooting guide page
 
-### Code Quality & Performance Improvements (2026-02-08)
-**Feature**: Comprehensive code review and implementation of accessibility, performance, and code quality improvements.
+   Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
+   EOF
+   )"
+   ```
+4. Push to remote: `git push`
 
-#### Accessibility Enhancements
-- **Skip-to-Content Links**: Added skip links on all 9 HTML pages for WCAG 2.1 Level A compliance. Users can now press Tab to reveal "Skip to main content" link.
-- **ARIA Improvements**: Added `aria-expanded="false"` to all hamburger menu toggle buttons in initial HTML (not just via JavaScript).
-- **Keyboard Focus Styles**: Added visible focus indicators (2px accent-color outline) for all focusable elements with `:focus-visible` support.
-- **Heading Hierarchy**: Fixed `about.html` by adding `<h3>About Me</h3>` to about-me section for proper semantic structure.
+## Development Workflow
+1. **Edit**: Modify HTML/CSS/JS files directly
+2. **Test**: Open in browser or run `python3 -m http.server 8001`
+3. **Validate**: Check responsive design, test interactive features
+4. **Commit**: Stage files, commit with message, push to GitHub
+5. **Update Docs**: Modify `agents.md`, `sitemap.xml`, `llms.txt` as needed
 
-#### Performance Optimizations
-- **Logo Optimization**: Reduced `logo.png` from 297KB to 21KB (93% reduction) via resize (1535×424 → 600×166) and pngquant compression.
-- **Image Optimization**: Optimized 5 large images, saving ~1.5MB total:
-  - `sourdough-gear-nice-to-haves`: 1.1MB → 602KB (PNG → JPG, 45% reduction)
-  - `sourdough-gear-essentials`: 771KB → 330KB (PNG → JPG, 57% reduction)
-  - `sourdough-welcome-hero.jpg`: 730KB → 297KB (59% reduction)
-  - `focaccia.jpg`: 565KB → 416KB (26% reduction)
-  - `tips-hero.jpg`: 334KB → 295KB (12% reduction)
-  - Updated `gear.html` to reference new JPG versions of gear images
-  - All original images backed up with `-original-backup` suffix
-- **Font Loading**: Moved Google Fonts from blocking CSS `@import` to HTML `<link>` tags with `preconnect` hints for faster page rendering.
+## Troubleshooting
 
-#### Code Quality Fixes
-- **HTML Validation**: Fixed duplicate `<ol>` tag in `recipe.html` (line 232-233).
-- **Input Validation**: Enhanced recipe scaler with min/max validation, visual feedback (red border for invalid input), and added `max="100"` attributes.
-- **Mobile Menu UX**: Implemented multiple improvements in `script.js`:
-  - Auto-close menu when clicking navigation links
-  - Escape key handler to close menu
-  - Fix menu state persistence on window resize (mobile → desktop)
-  - Refactored with `openMenu()` and `closeMenu()` helper functions
-- **CSS Cleanup**:
-  - Removed dead/commented code from `#method-summary` styles
-  - Created utility classes: `.logo-container`, `.logo-link`, `.hero-image`, `.page-toc`, `.centered-image`
-  - Extracted 40+ inline styles to CSS classes for better maintainability
-  - Removed redundant inline style overrides
+### Port Already in Use
+```bash
+# If port 8000 is in use, try another:
+python3 -m http.server 8001
+```
 
-#### Files Changed
-- **HTML**: All 9 pages updated (accessibility, inline styles removed, image references)
-- **CSS**: `style.css` - Added utility classes, focus styles, removed dead code
-- **JavaScript**: `script.js` - Enhanced validation and mobile menu UX
-- **Images**: 5 optimized images + 8 backup files created
+### Mobile Menu Not Closing
+- Check `script.js` has `closeMenu()` called on link clicks
+- Verify escape key handler is attached
+- Test window resize handler resets menu state
 
-**Impact**:
-- ~2MB+ reduction in page weight per load
-- WCAG 2.1 Level A compliance achieved
-- Improved Time to First Contentful Paint
-- Better code maintainability and separation of concerns
+### Images Not Loading
+- Check file paths are relative (no leading `/`)
+- Verify image exists in `/images/` directory
+- Check capitalization matches exactly (case-sensitive on Linux hosts)
 
-**Status**: ✅ Complete.
+### Schema Validation Errors
+- Use Google's Rich Results Test tool
+- Ensure all required properties present (author, datePublished, etc.)
+- Check `url` fields are absolute URLs (https://basicloaf.com/...)
 
-### Landing Page CTA Redesign (2026-02-08)
-**Feature**: Redesigned "Ready to Start?" section to improve user journey clarity and reduce decision paralysis.
+### Skip Links Not Visible on Focus
+- Check `.skip-link:focus` styles in `style.css`
+- Verify `position: fixed` when focused, not `absolute`
+- Test with Tab key on keyboard
 
-#### UX Strategy & User Research
-- Consulted with UX content designer and baking domain expert via specialized agents
-- Analyzed user intent: visitors want to make sourdough LOAVES, not focaccia as primary goal
-- Identified issue: 6 competing CTAs with unclear hierarchy causing decision paralysis
-- Determined optimal path: Classic loaf primary, focaccia as easier alternative (not prerequisite)
+## Recent Major Changes
+- **2026-02-08**: Landing page CTA redesign - classic loaf primary, focaccia alternative
+- **2026-02-08**: Code quality improvements - accessibility, performance, validation fixes
+- **2026-02-08**: Image optimization - ~2MB savings across 6 images
+- **2026-02-07**: Content consolidation - merged tips.html + techniques.html → advice.html
+- **2026-02-07**: Etsy shop integration - global nav + contextual soft-sell links
+- **2026-02-07**: Footer update - added coaching session link
 
-#### Visual Hierarchy Improvements
-- **Primary CTA**: Classic Sourdough Loaf
-  - Clean white background (removed AI-looking gradient)
-  - Simple left accent border (4px) instead of rounded card design
-  - Removed hover animations for more authentic feel
-  - 70% of visual attention
-- **Secondary Alternative**: Focaccia
-  - Subtle banner format (not equal card)
-  - Positioned as backup option: "New to sourdough? This version skips shaping and scoring"
-  - Text link instead of prominent button
-  - 20% of visual attention
-- **Prerequisites Section**: Three separate cards
-  - Equipment: Added reassurance "(you don't need much)"
-  - Starter: Buy vs Make options with highlighted card
-  - Help: Personalized copy "Get 1:1 expert guidance with me" + changed CTA from "Book Coaching" to "Get Started"
+## Maintenance Checklist
+**After every significant change:**
+- [ ] Update this file if structure/features/tech changed
+- [ ] Update `sitemap.xml` if pages added/removed/modified
+- [ ] Update `llms.txt` if content significantly changed
+- [ ] Test on mobile and desktop
+- [ ] Validate HTML (no duplicate IDs, proper nesting)
+- [ ] Check accessibility (skip links, keyboard nav, focus indicators)
+- [ ] Commit changes with clear message
 
-#### Content Strategy Changes
-- Removed prescriptive labels: No "Step 1/Step 2", no "Beginner/Intermediate" badges
-- Removed numbered progression language: No "Graduate to..." or "Recommended First Step"
-- Empowerment-based copy: Users choose based on situation, not skill level labels
-- Clear benefit statements: "skips shaping and scoring" instead of vague "easier"
+---
 
-#### Accessibility Improvements
-- Fixed skip-to-content links: Now properly hidden (only visible on keyboard focus)
-- Updated CSS to use screen-reader-friendly positioning
-- Maintains WCAG 2.1 Level A compliance while improving visual presentation
-
-#### Design Philosophy
-- Removed "AI-generated" aesthetic: No gradients, excessive rounded corners, or corporate polish
-- More authentic, hand-crafted feel with simpler borders and layouts
-- Less marketing speak, more conversational tone
-- Respects user intent while offering alternatives
-
-#### Files Modified
-- `index.html`: Complete restructure of call-to-action section
-- `style.css`: New `.recipe-primary`, `.recipe-alternative`, updated `.prereq-card` styles, fixed `.skip-link` positioning
-
-**Impact**:
-- Clearer user journey with obvious primary path
-- Reduced cognitive load (6 CTAs → 1 primary + 1 alternative + 3 prerequisites)
-- More authentic design that doesn't look AI-generated
-- Better accessibility with properly hidden skip links
-
-**Status**: ✅ Complete.
+**Last Updated**: 2026-02-08
+**Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
+**Known Issues**: None blocking. See TODO.md for planned improvements.

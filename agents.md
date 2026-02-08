@@ -71,13 +71,14 @@ You MUST update this file after EVERY change that affects:
 2.  **Change Tech Stack**: If you introduce a build tool (like Eleventy), CSS framework (like Tailwind), or new library, you *must* rewrite the "Technology Stack" and "Development Workflow" sections.
 3.  **Add Features**: Document new interactive features in "Key Features".
 4.  **Refactor**: If you change the directory structure (e.g., move files to `src/`), verify and update paths here.
-5.  **Update LLM/Robot Files**: When making significant changes, also update `llms.txt` and `robots.txt` to ensure AI crawlers and LLMs have accurate information about the site.
+5.  **Update Config/Meta Files**: When adding/removing pages or changing URLs, you MUST update `sitemap.xml` and refresh the `lastmod` dates for updated files.
+6.  **Update LLM/Robot Files**: When making significant changes, also update `llms.txt` and `robots.txt` to ensure AI crawlers and LLMs have accurate information about the site.
 
 ### How to Update
 - Read the current `agents.md`.
 - Make necessary changes to reflect the *new* state of the codebase.
 - Ensure instructions remain clear for the *next* AI.
-- **IMPORTANT**: After updating `agents.md`, also update `llms.txt` and `robots.txt` if the changes affect site structure, features, or content that should be communicated to LLMs and crawlers.
+- **IMPORTANT**: After updating `agents.md`, also update `sitemap.xml`, `llms.txt`, and `robots.txt` if the changes affect site structure, features, or content that should be communicated to humans, LLMs, and crawlers.
 
 ## 7. Recent Changes & Known Issues
 
@@ -135,3 +136,11 @@ article ol, article ul, main ol, main ul {
   - Added unique `id` attributes to all method steps in HTML.
   - Updated JSON-LD to include `name` and `url` for each `HowToStep`, enabling "Guidance" features in search results.
   - Added `nutrition` schema with estimated calorie and macro data.
+
+### Sitemap & Metadata Update (2026-02-08)
+**Feature**: Updated `sitemap.xml` and added mandatory update rules to `agents.md`.
+- **Changes**:
+  - Added `focaccia.html` to `sitemap.xml`.
+  - Refreshed all `lastmod` dates in the sitemap to reflect recent content updates.
+  - Updated Section 6 of `agents.md` to explicitly require `sitemap.xml` updates whenever URLs change.
+**Status**: ✅ Complete.

@@ -25,21 +25,32 @@
     --button-text-color: #ffffff;
 }
 
-/* Skip to Content Link for Accessibility */
+/* Skip to Content Link for Accessibility - Hidden by default, visible on focus */
 .skip-link {
     position: absolute;
-    top: -40px;
-    left: 0;
-    background: var(--accent-color);
-    color: white;
-    padding: 8px 16px;
-    text-decoration: none;
-    z-index: 1000;
-    border-radius: 0 0 4px 0;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -999;
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:active {
+    position: fixed;
     top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background: var(--accent-color);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 0 0 4px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Focus Styles for Keyboard Navigation */
@@ -699,6 +710,210 @@ aside p:last-child {
     box-shadow: none;
 }
 
+/* Primary Recipe Card */
+.recipe-primary {
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    background: var(--content-bg);
+    border-left: 4px solid var(--accent-color);
+    border-top: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 2em;
+    margin-bottom: 1.5em;
+}
+
+.recipe-icon {
+    font-size: 4em;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.recipe-content {
+    flex: 1;
+}
+
+.recipe-content h4 {
+    font-size: 1.6em;
+    margin: 0 0 0.5em 0;
+    color: var(--heading-color);
+}
+
+.recipe-content p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+    margin-bottom: 1.25em;
+    font-size: 1em;
+}
+
+/* Recipe Alternative - Subtle */
+.recipe-alternative {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1em 1.5em;
+    margin-bottom: 3em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.alternative-label {
+    font-size: 0.85em;
+    color: var(--secondary-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.alternative-content {
+    flex: 1;
+    font-size: 0.95em;
+    color: var(--text-color);
+}
+
+.alternative-content strong {
+    color: var(--heading-color);
+}
+
+.alternative-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.alternative-link:hover {
+    color: #966b54;
+    text-decoration: underline;
+}
+
+/* Card Buttons */
+.card-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--content-bg);
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    font-size: 1.05em;
+}
+
+.card-button:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(176, 125, 98, 0.3);
+}
+
+.card-button.primary {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.card-button.primary:hover {
+    background-color: #966b54;
+    border-color: #966b54;
+}
+
+/* Prerequisites Section */
+.prerequisites-section {
+    background: var(--bg-color);
+    border-radius: 12px;
+    padding: 2.5em 2em;
+    border: 1px solid var(--border-color);
+}
+
+.prerequisites-section h4 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 1.3em;
+    color: var(--heading-color);
+}
+
+.prereq-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5em;
+}
+
+.prereq-card {
+    background: var(--content-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5em;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.prereq-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.prereq-card.highlight {
+    border-color: var(--accent-color);
+    background: linear-gradient(135deg, #fff9f6 0%, var(--content-bg) 100%);
+}
+
+.prereq-icon {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.prereq-card h5 {
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+    color: var(--heading-color);
+}
+
+.prereq-card p {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+.prereq-link {
+    display: inline-block;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: color 0.2s ease;
+}
+
+.prereq-link:hover {
+    color: #966b54;
+    text-decoration: underline;
+}
+
+.prereq-link.primary {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    margin-right: 0.75em;
+}
+
+.prereq-link.primary:hover {
+    background: #966b54;
+    text-decoration: none;
+}
+
+.prereq-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
 
 /* Footer */
 footer {
@@ -850,9 +1065,76 @@ img {
         padding-bottom: 0;
     }
 
+    /* Recipe Cards - Adjust for Mobile */
+    .recipe-primary {
+        flex-direction: column;
+        padding: 1.5em;
+        text-align: center;
+        gap: 1em;
+    }
+
+    .recipe-icon {
+        font-size: 3em;
+    }
+
+    .recipe-content h4 {
+        font-size: 1.3em;
+    }
+
+    .card-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .recipe-alternative {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5em;
+    }
+
+    .alternative-content {
+        text-align: center;
+    }
+
+    .alternative-link {
+        display: inline-block;
+        margin-top: 0.5em;
+    }
+
+    /* Prerequisites - Stack on Mobile */
+    .prereq-cards {
+        grid-template-columns: 1fr;
+        gap: 1em;
+    }
+
+    .prerequisites-section {
+        padding: 1.5em 1em;
+    }
+
+    .prereq-links {
+        flex-direction: column;
+    }
+
+    .prereq-link.primary {
+        margin-right: 0;
+        margin-bottom: 0.5em;
+    }
+
 }
 
 /* End of @media (max-width: 768px) */
+
+/* Tablet - Adjust Prerequisites */
+@media (min-width: 769px) and (max-width: 940px) {
+    .prereq-cards {
+        grid-template-columns: 1fr;
+        gap: 1.25em;
+    }
+
+    .recipe-content h4 {
+        font-size: 1.4em;
+    }
+}
 
 
 @media (max-width: 600px) {

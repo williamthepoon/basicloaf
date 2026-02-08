@@ -193,3 +193,57 @@ article ol, article ul, main ol, main ul {
 - Better code maintainability and separation of concerns
 
 **Status**: ✅ Complete.
+
+### Landing Page CTA Redesign (2026-02-08)
+**Feature**: Redesigned "Ready to Start?" section to improve user journey clarity and reduce decision paralysis.
+
+#### UX Strategy & User Research
+- Consulted with UX content designer and baking domain expert via specialized agents
+- Analyzed user intent: visitors want to make sourdough LOAVES, not focaccia as primary goal
+- Identified issue: 6 competing CTAs with unclear hierarchy causing decision paralysis
+- Determined optimal path: Classic loaf primary, focaccia as easier alternative (not prerequisite)
+
+#### Visual Hierarchy Improvements
+- **Primary CTA**: Classic Sourdough Loaf
+  - Clean white background (removed AI-looking gradient)
+  - Simple left accent border (4px) instead of rounded card design
+  - Removed hover animations for more authentic feel
+  - 70% of visual attention
+- **Secondary Alternative**: Focaccia
+  - Subtle banner format (not equal card)
+  - Positioned as backup option: "New to sourdough? This version skips shaping and scoring"
+  - Text link instead of prominent button
+  - 20% of visual attention
+- **Prerequisites Section**: Three separate cards
+  - Equipment: Added reassurance "(you don't need much)"
+  - Starter: Buy vs Make options with highlighted card
+  - Help: Personalized copy "Get 1:1 expert guidance with me" + changed CTA from "Book Coaching" to "Get Started"
+
+#### Content Strategy Changes
+- Removed prescriptive labels: No "Step 1/Step 2", no "Beginner/Intermediate" badges
+- Removed numbered progression language: No "Graduate to..." or "Recommended First Step"
+- Empowerment-based copy: Users choose based on situation, not skill level labels
+- Clear benefit statements: "skips shaping and scoring" instead of vague "easier"
+
+#### Accessibility Improvements
+- Fixed skip-to-content links: Now properly hidden (only visible on keyboard focus)
+- Updated CSS to use screen-reader-friendly positioning
+- Maintains WCAG 2.1 Level A compliance while improving visual presentation
+
+#### Design Philosophy
+- Removed "AI-generated" aesthetic: No gradients, excessive rounded corners, or corporate polish
+- More authentic, hand-crafted feel with simpler borders and layouts
+- Less marketing speak, more conversational tone
+- Respects user intent while offering alternatives
+
+#### Files Modified
+- `index.html`: Complete restructure of call-to-action section
+- `style.css`: New `.recipe-primary`, `.recipe-alternative`, updated `.prereq-card` styles, fixed `.skip-link` positioning
+
+**Impact**:
+- Clearer user journey with obvious primary path
+- Reduced cognitive load (6 CTAs → 1 primary + 1 alternative + 3 prerequisites)
+- More authentic design that doesn't look AI-generated
+- Better accessibility with properly hidden skip links
+
+**Status**: ✅ Complete.

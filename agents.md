@@ -10,7 +10,8 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 4. **Update llms.txt** when making significant content or feature changes
 5. **ALWAYS prefer editing existing files** over creating new ones
 6. **No emojis** unless user explicitly requests them
-7. **Read files before editing** - Understand existing code first
+7. **No em dashes** - Use regular hyphens " - " instead of em dashes "—"
+8. **Read files before editing** - Understand existing code first
 
 ## Technology Stack
 

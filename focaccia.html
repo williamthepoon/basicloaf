@@ -49,23 +49,31 @@
     "8g fine sea salt",
     "20g extra virgin olive oil (plus more for the pan and topping)"
   ],
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "140 calories",
+    "carbohydrateContent": "25 g",
+    "proteinContent": "4 g",
+    "fatContent": "3 g",
+    "servingSize": "1 piece"
+  },
   "recipeInstructions": [
     {
       "@type": "HowToSection",
       "name": "Day 1: Mix & First Rise",
       "itemListElement": [
-        {"@type": "HowToStep", "text": "Whisk starter into water. Add flour and salt. Mix until no dry bits remain. Cover and rest 30 mins."},
-        {"@type": "HowToStep", "text": "Perform 3 sets of 'coil folds' every 30-45 mins. Then let rise 4-6 hours until bubbly."},
-        {"@type": "HowToStep", "text": "Pour into a well-oiled baking tray. Cover and fridge overnight."}
+        {"@type": "HowToStep", "name": "Initial Mix", "url": "https://basicloaf.com/focaccia.html#step-mix", "text": "Whisk starter into water. Add flour and salt. Mix until no dry bits remain. Cover and rest 30 mins."},
+        {"@type": "HowToStep", "name": "Build Strength", "url": "https://basicloaf.com/focaccia.html#step-strength", "text": "Perform 3 sets of 'coil folds' every 30-45 mins. Then let rise 4-6 hours until bubbly."},
+        {"@type": "HowToStep", "name": "The Pan", "url": "https://basicloaf.com/focaccia.html#step-pan", "text": "Pour into a well-oiled baking tray. Cover and fridge overnight."}
       ]
     },
     {
       "@type": "HowToSection",
       "name": "Day 2: Dimple & Bake",
       "itemListElement": [
-        {"@type": "HowToStep", "text": "Remove from fridge. Let sit at room temp for 2-3 hours until it fills the pan and is jiggly."},
-        {"@type": "HowToStep", "text": "Drizzle with olive oil, dimple with fingers, add toppings (rosemary, salt)."},
-        {"@type": "HowToStep", "text": "Bake at 220°C (430°F) for 20-25 minutes until golden brown."}
+        {"@type": "HowToStep", "name": "Final Proof", "url": "https://basicloaf.com/focaccia.html#step-final-proof", "text": "Remove from fridge. Let sit at room temp for 2-3 hours until it fills the pan and is jiggly."},
+        {"@type": "HowToStep", "name": "Dimpling", "url": "https://basicloaf.com/focaccia.html#step-dimple", "text": "Drizzle with olive oil, dimple with fingers, add toppings (rosemary, salt)."},
+        {"@type": "HowToStep", "name": "Bake", "url": "https://basicloaf.com/focaccia.html#step-bake", "text": "Bake at 220°C (430°F) for 20-25 minutes until golden brown."}
       ]
     }
   ]
@@ -191,36 +199,36 @@
 
                 <h4>Detailed Steps</h4>
                 <ol>
-                    <li>
+                    <li id="step-mix">
                         <strong>Initial Mix:</strong> In a large bowl, whisk your starter into the water. Add the flour
                         and salt. Mix until you have a sticky, shaggy dough. Cover and let rest for 30 minutes.
                     </li>
-                    <li>
+                    <li id="step-strength">
                         <strong>Build Strength:</strong> Over the next 2 hours, perform 3 sets of "folds". Since this
                         dough is wet, use wet hands to pull the edge up and fold it over. It doesn't need much—just
                         enough to give it a bit of structure. <a href="techniques.html#stretch-fold">Learn about
                             folds</a>.
                     </li>
-                    <li>
+                    <li id="step-bulk">
                         <strong>Bulk Rise:</strong> Let the dough sit covered at room temperature for 4-6 hours until
                         it's looking puffy and has some bubbles on the surface.
                     </li>
-                    <li>
+                    <li id="step-pan">
                         <strong>The Pan:</strong> Generously oil a 9x13 inch (approx) baking tray. Pour the dough into
                         the center. Don't try to stretch it yet—it will naturally spread as it relaxes. Cover and place
                         in the fridge overnight.
                     </li>
-                    <li>
+                    <li id="step-final-proof">
                         <strong>Final Proof (Day 2):</strong> Take the tray out of the fridge 2-3 hours before you want
                         to bake. It should have spread to fill most of the pan. Let it sit at room temperature until
                         it's very jiggly and full of air bubbles.
                     </li>
-                    <li>
+                    <li id="step-dimple">
                         <strong>Dimpling:</strong> Preheat oven to 220°C (430°F). Drizzle more olive oil over the top.
                         Press your fingertips deep into the dough to create those classic focaccia dimples. Sprinkle
                         with sea salt and fresh rosemary.
                     </li>
-                    <li>
+                    <li id="step-bake">
                         <strong>Bake:</strong> Bake for 20-25 minutes until the top is golden and the bottom is crispy.
                         Remove from the pan immediately and cool on a wire rack to keep that base crunchy!
                     </li>

@@ -48,29 +48,38 @@
     "280g strong white bread flour",
     "5g fine sea salt"
   ],
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "calories": "120 calories",
+    "carbohydrateContent": "25 g",
+    "proteinContent": "4 g",
+    "fatContent": "0.5 g",
+    "servingSize": "1 slice"
+  },
   "recipeInstructions": [
     {
       "@type": "HowToSection",
       "name": "Day 1: Mixing & Proofing",
       "itemListElement": [
-        {"@type": "HowToStep", "text": "Combine all ingredients in a large bowl and mix until a shaggy mass forms. Cover."},
-        {"@type": "HowToStep", "text": "After 10-15 minutes, mix for 1 minute to bring the dough together. Cover again."},
-        {"@type": "HowToStep", "text": "Let the dough bulk ferment at room temperature for 4-6 hours, until puffy and increased in size."},
-        {"@type": "HowToStep", "text": "Gently shape the dough on a lightly floured surface into a round (boule) or oval (batard)."},
-        {"@type": "HowToStep", "text": "Place the shaped dough, seam-side up, into a well-floured banneton or bowl."},
-        {"@type": "HowToStep", "text": "Cover and proof at room temperature for 1-2 hours."},
-        {"@type": "HowToStep", "text": "Transfer the covered banneton to the refrigerator for an overnight cold proof (8-24 hours)."}
+        {"@type": "HowToStep", "name": "Combine Ingredients", "url": "https://basicloaf.com/recipe.html#step-day1-mix", "text": "Combine all ingredients in a large bowl and mix until a shaggy mass forms. Cover."},
+        {"@type": "HowToStep", "name": "Short Rest & Mix", "url": "https://basicloaf.com/recipe.html#step-day1-rest", "text": "After 10-15 minutes, mix for 1 minute to bring the dough together. Cover again."},
+        {"@type": "HowToStep", "name": "Bulk Fermentation", "url": "https://basicloaf.com/recipe.html#step-day1-bulk", "text": "Let the dough bulk ferment at room temperature for 4-6 hours, until puffy and increased in size."},
+        {"@type": "HowToStep", "name": "Shape", "url": "https://basicloaf.com/recipe.html#step-day1-shape", "text": "Gently shape the dough on a lightly floured surface into a round (boule) or oval (batard)."},
+        {"@type": "HowToStep", "name": "Prepare Banneton", "url": "https://basicloaf.com/recipe.html#step-day1-banneton", "text": "Place the shaped dough, seam-side up, into a well-floured banneton or bowl."},
+        {"@type": "HowToStep", "name": "Counter Proof", "url": "https://basicloaf.com/recipe.html#step-day1-counter", "text": "Cover and proof at room temperature for 1-2 hours."},
+        {"@type": "HowToStep", "name": "Cold Proof", "url": "https://basicloaf.com/recipe.html#step-day1-cold", "text": "Transfer the covered banneton to the refrigerator for an overnight cold proof (8-24 hours)."}
       ]
     },
     {
       "@type": "HowToSection",
       "name": "Day 2: Baking",
       "itemListElement": [
-        {"@type": "HowToStep", "text": "Place a Dutch oven (with lid on) inside your main oven and preheat to 235°C (455°F)."},
-        {"@type": "HowToStep", "text": "Turn the cold dough out onto parchment paper and score the top with a lame or sharp knife."},
-        {"@type": "HowToStep", "text": "Carefully lower the dough into the hot Dutch oven, cover, and bake for 25 minutes."},
-        {"@type": "HowToStep", "text": "Remove the lid, reduce oven temperature to 220°C (430°F), and continue baking for another 20 minutes until deeply golden brown."},
-        {"@type": "HowToStep", "text": "Let the loaf cool completely on a wire rack for at least 30-60 minutes before slicing."}
+        {"@type": "HowToStep", "name": "Preheat Oven", "url": "https://basicloaf.com/recipe.html#step-day2-preheat", "text": "Place a Dutch oven (with lid on) inside your main oven and preheat to 235°C (455°F)."},
+        {"@type": "HowToStep", "name": "Prepare Dough", "url": "https://basicloaf.com/recipe.html#step-day2-prep", "text": "Turn the cold dough out onto parchment paper and score the top with a lame or sharp knife."},
+        {"@type": "HowToStep", "name": "Score the Loaf", "url": "https://basicloaf.com/recipe.html#step-day2-score", "text": "Score the top of the loaf with a lame or sharp knife."},
+        {"@type": "HowToStep", "name": "Bake (Lid On)", "url": "https://basicloaf.com/recipe.html#step-day2-bake-lid-on", "text": "Carefully lower the dough into the hot Dutch oven, cover, and bake for 25 minutes."},
+        {"@type": "HowToStep", "name": "Bake (Lid Off)", "url": "https://basicloaf.com/recipe.html#step-day2-bake-lid-off", "text": "Remove the lid, reduce oven temperature to 220°C (430°F), and continue baking for another 20 minutes until deeply golden brown."},
+        {"@type": "HowToStep", "name": "Cool Completely", "url": "https://basicloaf.com/recipe.html#step-day2-cool", "text": "Let the loaf cool completely on a wire rack for at least 30-60 minutes before slicing."}
       ]
     }
   ]
@@ -221,20 +230,21 @@
                 </div>
                 <h4>Day 1: Mixing &amp; Proofing</h4>
                 <ol>
-                    <li>
+                <ol>
+                    <li id="step-day1-mix">
                         <strong>Combine Ingredients (Morning):</strong> In a large bowl, combine your 75-100g active
                         starter with 180g lukewarm water and mix well. Then add 5g salt and the 280g strong bread flour.
                         Use your hands or a sturdy spoon to mix everything roughly until no dry flour remains. It will
                         look like a shaggy, messy ball – that's perfect! Cover the bowl (with cling film, a shower cap,
                         or a plate).
                     </li>
-                    <li>
+                    <li id="step-day1-rest">
                         <strong>Short Rest &amp; Mix:</strong> Let the covered bowl sit for about 10-15 minutes. Then,
                         spend just 1 minute using wet hands to gently fold the dough over itself in the bowl, or use
                         your spoon/spatula to bring it together more uniformly. It doesn't need kneading, just make sure
                         it's a bit more cohesive than the initial shaggy mass. Cover again.
                     </li>
-                    <li>
+                    <li id="step-day1-bulk">
                         <strong>Bulk Fermentation (The Wait):</strong> Now, leave the covered
                         bowl at room temperature. We're looking for the dough to grow and become airy. In a warm
                         kitchen, this might take 4 hours. In a cool Irish kitchen in winter, it could be 6 or 8 hours.
@@ -248,7 +258,7 @@
                             this
                             recipe. <a href="techniques.html#stretch-fold">Learn more about Stretch & Folds</a>.</p>
                     </li>
-                    <li>
+                    <li id="step-day1-shape">
                         <strong>Shape:</strong> Once the dough looks ready (increased size), gently tip it out onto a
                         lightly floured worktop. Gently press the dough out slightly into a rough rectangle. Fold the
                         top third down, the bottom third up (like a letter), then fold the left third over and the right
@@ -257,17 +267,17 @@
                         (batard). Don't handle it too roughly – keep the air inside! <a href="advice.html#shaping">See
                             shaping technique</a>.
                     </li>
-                    <li>
+                    <li id="step-day1-banneton">
                         <strong>Prepare Banneton &amp; Final Proof Prep:</strong> Generously dust your banneton (or a
                         medium bowl lined with a clean, non-fluffy tea towel) with rice flour. Rice flour is key as it
                         doesn't absorb moisture like regular flour, preventing sticking. Gently place the shaped dough
                         into the banneton, seam-side facing UP.
                     </li>
-                    <li>
+                    <li id="step-day1-counter">
                         <strong>Counter Proof:</strong> Cover the banneton (a plastic bag or shower cap works well).
                         Leave it on your worktop at room temperature for 1-2 hours. It might puff up slightly more.
                     </li>
-                    <li>
+                    <li id="step-day1-cold">
                         <strong>Cold Proof (Overnight):</strong> Transfer the covered banneton to the fridge. Let it
                         rest and develop flavour overnight. You can leave it longer, up to 24 hours if needed.
                     </li>
@@ -275,7 +285,7 @@
 
                 <h4>Day 2: Baking</h4>
                 <ol>
-                    <li>
+                    <li id="step-day2-preheat">
                         <strong>Preheat Oven &amp; Dutch Oven:</strong> When you're ready to bake, place your <a
                             href="gear.html#must-haves">Dutch oven</a>
                         (with its lid on) inside your main oven. Preheat the oven to 235°C (455°F). It's crucial the
@@ -283,33 +293,33 @@
                         oven
                         reaches temperature (30 - 40 mins total preheat time is ideal).
                     </li>
-                    <li>
+                    <li id="step-day2-prep">
                         <strong>Prepare Dough for Baking:</strong> Just before you bake, take the banneton out of the
                         fridge. Place a piece of baking parchment paper over the top of the banneton, then quickly and
                         carefully flip the whole thing over so the dough releases onto the parchment paper. Lift off the
                         banneton/bowl.
                     </li>
-                    <li>
+                    <li id="step-day2-score">
                         <strong>Score the Loaf:</strong> Using a baker's lame or a sharp knife, make one confident,
                         decisive score across the top of the loaf (about 1-2 cm or 1/2 inch deep). A simple curve or a
                         cross works well for beginners. This allows the bread to expand when baking. <a
                             href="advice.html#scoring">See scoring technique</a>.
                     </li>
-                    <li>
+                    <li id="step-day2-bake-lid-on">
                         <strong>Bake (Lid On):</strong> Carefully take the <em>very hot</em> Dutch oven out of the oven.
                         Remove
                         the lid. Using the parchment paper as a sling, carefully lower your scored dough into the hot
                         Dutch oven. Put the lid back on immediately. Place the Dutch oven back into the main oven. Bake
                         for <strong>25 minutes</strong>.
                     </li>
-                    <li>
+                    <li id="step-day2-bake-lid-off">
                         <strong>Bake (Lid Off):</strong> After 25 minutes, carefully remove the Dutch oven lid (be
                         cautious of steam!). Reduce the oven temperature to 220°C (430°F). Continue baking with the lid
                         <em>off</em> for another <strong>20 minutes</strong>, or until the crust is a deep golden brown
                         colour and feels
                         firm.
                     </li>
-                    <li>
+                    <li id="step-day2-cool">
                         <strong>Cool Completely:</strong> Using oven gloves, carefully lift the baked loaf out of the
                         Dutch oven (you can use the parchment paper) and place it on a wire rack. Now for the hardest
                         part: let it cool completely! This takes <em>at least</em> 30 to 60 minutes, ideally longer.
@@ -317,7 +327,7 @@
                         into hot bread can result in a gummy texture as the inside is still setting. Patience here is
                         rewarded!
                     </li>
-                    <li>
+                    <li id="step-day2-enjoy">
                         <strong>Enjoy!</strong> Your bread is ready to go! Check out my ideas page for some ideas on
                         sandwich fillings and other uses for your bread. You can also freeze any leftovers (if there are
                         any!) for later use. Just slice it first, then wrap it tightly in cling film or foil and place

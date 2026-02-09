@@ -55,7 +55,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 - **Coaching Links**: 1:1 sourdough coaching offering
 - **Schema Markup**: Optimized for Google rich results
 - **Image Optimization**: All images compressed (<600KB, most <300KB)
-- **Video Demonstrations**: Embedded scoring technique video (1.1MB MP4, optimized for web)
+- **Video Demonstrations**: Embedded technique videos - scoring (1.1MB) and stretch & fold (761KB)
 
 ## Design Principles
 - **Clean & Simple**: No gradients, minimal borders, authentic feel (not "AI-generated looking")
@@ -149,7 +149,9 @@ python3 -m http.server 8001
 - Test with Tab key on keyboard
 
 ## Recent Major Changes
-- **2026-02-09**: Video integration - added scoring technique demonstration (advice.html, recipe.html)
+- **2026-02-09**: Video integration - added scoring & stretch-and-fold technique demonstrations
+  - Scoring video (1.1MB) in advice.html and recipe.html
+  - Stretch & fold video (761KB) in advice.html, recipe.html, linked from focaccia.html
 - **2026-02-08**: Landing page CTA redesign - classic loaf primary, focaccia alternative
 - **2026-02-08**: Code quality improvements - accessibility, performance, validation fixes
 - **2026-02-08**: Image optimization - ~2MB savings across 6 images

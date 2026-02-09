@@ -467,7 +467,8 @@ main li {
     font-family: var(--font-main);
 }
 
-#method li strong {
+/* Step titles - only the first strong tag in each step */
+#method li > strong:first-of-type {
     font-weight: 700;
     color: var(--heading-color);
     display: block;

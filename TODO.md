@@ -11,21 +11,20 @@
 - Conduct WCAG 2.1 AA accessibility audit (currently Level A)
 
 ## Medium Priority
-- Add video tutorials for key techniques (scoring, stretching, shaping)
+- Add analytics/tracking for video views
 - Convert remaining JPGs to WebP with fallbacks
 - Create custom 404 page
 - Add Open Graph meta tags for better social sharing
-- Test recipe scaler on very small mobile screens (iPhone SE)
-- Improve touch targets (minimum 48px for buttons)
+- Expand the recipe part to include the likes of sourdough pizza dough and other sourdough related recipes. 
 
 ## Low Priority
 - Add seasonal sourdough variations (whole wheat, spelt, rye)
 - Create printable recipe PDFs
 - Add "related articles" cards at end of each page
-- Set up Lighthouse CI for performance monitoring
 - Create downloadable sourdough diary guide PDF
 
 ## Done (Recent)
+- ✅ Add video tutorials for key techniques (scoring, stretch & fold, shaping) (2026-02-09)
 - ✅ Fixed broken links to old techniques.html → advice.html (2026-02-08)
 - ✅ Landing page CTA redesign with clearer user journey (2026-02-08)
 - ✅ Skip-to-content links properly hidden until keyboard focus (2026-02-08)

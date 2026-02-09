@@ -43,7 +43,8 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 ├── robots.txt              # Crawler directives
 ├── agents.md               # This file
 ├── TODO.md                 # Task tracking
-└── /images/                # Visual assets (optimized)
+├── /images/                # Visual assets (optimized)
+└── /videos/                # Video demonstrations (optimized MP4)
 ```
 
 ## Key Features
@@ -54,6 +55,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 - **Coaching Links**: 1:1 sourdough coaching offering
 - **Schema Markup**: Optimized for Google rich results
 - **Image Optimization**: All images compressed (<600KB, most <300KB)
+- **Video Demonstrations**: Embedded scoring technique video (1.1MB MP4, optimized for web)
 
 ## Design Principles
 - **Clean & Simple**: No gradients, minimal borders, authentic feel (not "AI-generated looking")
@@ -147,6 +149,7 @@ python3 -m http.server 8001
 - Test with Tab key on keyboard
 
 ## Recent Major Changes
+- **2026-02-09**: Video integration - added scoring technique demonstration (advice.html, recipe.html)
 - **2026-02-08**: Landing page CTA redesign - classic loaf primary, focaccia alternative
 - **2026-02-08**: Code quality improvements - accessibility, performance, validation fixes
 - **2026-02-08**: Image optimization - ~2MB savings across 6 images
@@ -166,6 +169,6 @@ python3 -m http.server 8001
 
 ---
 
-**Last Updated**: 2026-02-08
+**Last Updated**: 2026-02-09
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.

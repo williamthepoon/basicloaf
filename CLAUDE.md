@@ -228,15 +228,16 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
-- **2026-02-09**: Recipe page improvements
-  - Cropped all 7 process images to portrait 900x1200 for visual consistency
-  - Updated starter amount from 75-100g to 100-125g
-  - Made stretch & folds recommended (at least 2 sets) instead of optional
-  - Added windowpane test explanation
-  - Improved CTA styling to match site color scheme (warm tan/brown)
-  - Added strategic bolding for ingredients, times, temperatures
-  - Updated cooling time to 30-45 minutes
-  - Improved content for natural, non-AI tone
+- **2026-02-09**: Recipe page improvements (multiple commits)
+  - **Images**: Cropped all 7 process images to portrait 900x1200 for visual consistency (250-380KB each)
+  - **Images**: Tightened sourdough-loaf.jpg crop to focus on just the loaf
+  - **Content**: Updated starter amount from 75-100g to 100-125g
+  - **Content**: Made stretch & folds recommended (at least 2 sets) instead of optional, added windowpane test
+  - **Content**: Updated cooling time to 30-45 minutes, improved natural tone throughout
+  - **Styling**: Fixed CSS bug - `#method li strong` now targets only first strong tag (step titles)
+  - **Styling**: Inline bold text (ingredients/times/temps) no longer creates unwanted line breaks
+  - **Styling**: Updated CTA to match site color scheme (warm tan/brown #b07d62)
+  - **Docs**: Merged agents.md into CLAUDE.md with comprehensive guidelines
 - **2026-02-09**: Video integration - added three technique demonstration videos
 - **2026-02-08**: Landing page CTA redesign - classic loaf primary, focaccia alternative
 - **2026-02-08**: Code quality improvements - accessibility, performance, validation fixes

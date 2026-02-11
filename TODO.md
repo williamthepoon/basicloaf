@@ -1,12 +1,12 @@
 # Basic Loaf - TODO
 
 ## Active Work
-- Monitor new accessibility features for bugs or user feedback
-- Test all interactions and links thoroughly after recent changes
+- Monitor GSC for canonical/duplicate issues to clear after 2026-02-11 SEO fixes
+- Request indexing for troubleshooting.html in GSC
 
 ## High Priority
-- Add troubleshooting guide page for common sourdough issues
-- Implement server-side redirects for old techniques.html URL (SEO)
+- Build backlinks - participate in r/sourdough and r/Breadit, get mentioned in food blog roundups
+- Implement server-side redirects for old /techniques and /tips URLs (still showing impressions in GSC)
 - Add lazy loading for below-fold images
 - Conduct WCAG 2.1 AA accessibility audit (currently Level A)
 
@@ -14,16 +14,22 @@
 - Add analytics/tracking for video views
 - Convert remaining JPGs to WebP with fallbacks
 - Create custom 404 page
-- Add Open Graph meta tags for better social sharing
-- Expand the recipe part to include the likes of sourdough pizza dough and other sourdough related recipes. 
+- Expand recipe content to include sourdough pizza dough and other sourdough-based recipes
+- Add "related articles" cards at bottom of each page (improves internal linking further)
 
 ## Low Priority
 - Add seasonal sourdough variations (whole wheat, spelt, rye)
 - Create printable recipe PDFs
-- Add "related articles" cards at end of each page
 - Create downloadable sourdough diary guide PDF
 
 ## Done (Recent)
+- ✅ SEO overhaul - canonical tags, og:url, sitemap all fixed to clean URLs (2026-02-11)
+- ✅ Cloudflare www redirect deployed (2026-02-11)
+- ✅ Keyword strategy: meta titles/descriptions updated to target "foolproof sourdough bread recipe" (2026-02-11)
+- ✅ Add troubleshooting guide page with FAQPage schema (2026-02-11)
+- ✅ Improve internal linking across all pages (2026-02-11)
+- ✅ Add FAQPage schema to bought-starter.html (2026-02-11)
+- ✅ Fix breadcrumb schema URLs across recipe, focaccia, starter, index pages (2026-02-11)
 - ✅ Add video tutorials for key techniques (scoring, stretch & fold, shaping) (2026-02-09)
 - ✅ Fixed broken links to old techniques.html → advice.html (2026-02-08)
 - ✅ Landing page CTA redesign with clearer user journey (2026-02-08)

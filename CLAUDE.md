@@ -1,7 +1,7 @@
 # Basic Loaf - Project Guidelines for Claude
 
 ## Quick Start (30-Second TL;DR)
-This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No build tools. No exceptions.** Primary files: 9 HTML pages, `style.css`, `script.js`. Check TODO.md for current tasks.
+This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No build tools. No exceptions.** Primary files: 10 HTML pages, `style.css`, `script.js`. Check TODO.md for current tasks.
 
 **Target Audience:** Complete beginners to sourdough baking looking for a flexible, forgiving recipe with minimal effort and maximum flavor.
 
@@ -105,10 +105,11 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 ├── recipe.html             # Classic sourdough recipe with scaler
 ├── focaccia.html           # Beginner-friendly focaccia recipe
 ├── advice.html             # Techniques & tips (merged from old tips/techniques)
+├── troubleshooting.html    # Common sourdough problems and fixes
 ├── starter.html            # Starter creation & maintenance
 ├── bought-starter.html     # Activation guide for purchased starter
 ├── gear.html               # Equipment recommendations
-├── ideas.html              # Recipe variations
+├── ideas.html              # Recipe variations and uses for bread
 ├── about.html              # About the author
 ├── style.css               # All styles
 ├── script.js               # All interactivity
@@ -149,7 +150,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 
 ### Adding a New Page
 1. Create `newpage.html` following existing structure (header, nav, main, footer)
-2. Add to navigation in all 9 HTML files (`<nav id="main-nav">`)
+2. Add to navigation in all 10 HTML files (`<nav id="main-nav">`)
 3. Add to `sitemap.xml` with current date in `<lastmod>`
 4. Update `llms.txt` if content is significant
 5. Test mobile menu and skip-to-content link
@@ -228,6 +229,19 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-02-11**: SEO overhaul (multiple commits)
+  - **Technical**: Fixed canonical and og:url tags on all pages - removed .html extensions to match Google-indexed clean URLs
+  - **Technical**: Fixed breadcrumb schema item URLs on index, recipe, focaccia, starter pages
+  - **Technical**: Cloudflare 301 redirect deployed - www.basicloaf.com now redirects to basicloaf.com
+  - **Technical**: Updated sitemap.xml with clean URLs (no .html)
+  - **SEO**: Keyword strategy pivot to "foolproof sourdough bread recipe" cluster based on GSC data
+  - **SEO**: Rewrote homepage and recipe page meta descriptions to front-load target keywords
+  - **SEO**: Updated ideas page title and H1 to target "what to do with sourdough bread" queries
+  - **SEO**: Added FAQPage JSON-LD schema to ideas.html and bought-starter.html
+  - **SEO**: Fixed ideas page section headings from H3 to H2
+  - **Content**: Added troubleshooting.html - 10 common sourdough problems with fixes and FAQPage schema
+  - **Content**: Improved internal linking across about, gear, advice, recipe, ideas pages
+  - **Nav**: Added Troubleshooting to navigation on all 10 pages
 - **2026-02-09**: Recipe page improvements (multiple commits)
   - **Images**: Cropped all 7 process images to portrait 900x1200 for visual consistency (250-380KB each)
   - **Images**: Tightened sourdough-loaf.jpg crop to focus on just the loaf
@@ -260,6 +274,14 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-02-09
+**Last Updated**: 2026-02-11
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
+
+## SEO Notes
+- **Target keyword cluster**: "foolproof sourdough bread recipe" and variants - Google already associates the site with this
+- **Canonical domain**: https://basicloaf.com/ (no www) - Cloudflare 301 redirect in place for www
+- **All URLs are clean** (no .html extension) - canonicals, og:url, sitemap, and breadcrumb schema all consistent
+- **FAQPage schema** on: advice.html, starter.html, ideas.html, bought-starter.html, troubleshooting.html
+- **Biggest remaining SEO lever**: backlinks - site has very few external links pointing to it
+- **GSC baseline** (Nov 2025 - Feb 2026): 8 clicks, 242 impressions, avg position 25.7

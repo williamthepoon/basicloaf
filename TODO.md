@@ -14,7 +14,7 @@
 - Add analytics/tracking for video views
 - Convert remaining JPGs to WebP with fallbacks
 - Create custom 404 page
-- Expand recipe content to include sourdough pizza dough and other sourdough-based recipes
+- Expand recipe content to include sourdough pizza dough, chocolate sourdough, and other sourdough-based recipes
 - Add "related articles" cards at bottom of each page (improves internal linking further)
 
 ## Low Priority

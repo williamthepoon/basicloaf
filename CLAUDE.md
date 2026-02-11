@@ -229,6 +229,7 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-02-11**: Lazy loading added to all below-fold images (advice.html, gear.html - others already had it)
 - **2026-02-11**: SEO overhaul (multiple commits)
   - **Technical**: Fixed canonical and og:url tags on all pages - removed .html extensions to match Google-indexed clean URLs
   - **Technical**: Fixed breadcrumb schema item URLs on index, recipe, focaccia, starter pages
@@ -274,7 +275,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-02-11
+**Last Updated**: 2026-02-11 (evening)
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

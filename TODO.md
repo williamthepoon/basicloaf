@@ -7,7 +7,6 @@
 ## High Priority
 - Build backlinks - participate in r/sourdough and r/Breadit, get mentioned in food blog roundups
 - Implement server-side redirects for old /techniques and /tips URLs (still showing impressions in GSC)
-- Add lazy loading for below-fold images
 - Conduct WCAG 2.1 AA accessibility audit (currently Level A)
 
 ## Medium Priority
@@ -23,6 +22,7 @@
 - Create downloadable sourdough diary guide PDF
 
 ## Done (Recent)
+- ✅ Add lazy loading to all below-fold images (2026-02-11)
 - ✅ SEO overhaul - canonical tags, og:url, sitemap all fixed to clean URLs (2026-02-11)
 - ✅ Cloudflare www redirect deployed (2026-02-11)
 - ✅ Keyword strategy: meta titles/descriptions updated to target "foolproof sourdough bread recipe" (2026-02-11)

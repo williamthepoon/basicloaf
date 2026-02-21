@@ -255,8 +255,8 @@ nav#main-nav ul#main-nav-list {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: nowrap;
-    /* Prevent wrapping on desktop */
     gap: 4px;
     padding-bottom: 0;
     border-bottom: none;

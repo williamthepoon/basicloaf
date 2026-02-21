@@ -191,7 +191,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
    EOF
    )"
    ```
-4. Push to remote: `git push`
+4. Push to remote: `git push` (uses GitHub CLI auth - `gh` installed at `/opt/homebrew/bin/gh`)
 
 ---
 
@@ -229,6 +229,12 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-02-21**: Added dried/dehydrated starter revival guide to bought-starter.html
+  - **Content**: New `#dried` section with 3-day rehydration instructions for customers who receive dried flakes
+  - **Content**: Updated intro paragraph to acknowledge both fresh and dried starter recipients
+  - **Content**: Added dried starter FAQ to the visible `#faq` section and FAQPage JSON-LD schema
+  - **Tooling**: Installed Homebrew and GitHub CLI (`gh`); configured git push via `gh auth login`
+  - **Docs**: Updated sitemap.xml lastmod for bought-starter to 2026-02-21
 - **2026-02-11**: Lazy loading added to all below-fold images (advice.html, gear.html - others already had it)
 - **2026-02-11**: SEO overhaul (multiple commits)
   - **Technical**: Fixed canonical and og:url tags on all pages - removed .html extensions to match Google-indexed clean URLs
@@ -275,7 +281,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-02-11 (evening)
+**Last Updated**: 2026-02-21
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

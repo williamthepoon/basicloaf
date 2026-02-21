@@ -357,6 +357,7 @@ nav#main-nav.menu-open ul#main-nav-list {
     font-size: 0.88em;
     letter-spacing: 0.1px;
     white-space: nowrap;
+    line-height: inherit;
     transition: color 0.2s ease-in-out;
 }
 

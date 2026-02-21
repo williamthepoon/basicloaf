@@ -227,8 +227,8 @@ hr {
 
 header {
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 18px;
+    padding-bottom: 14px;
 }
 
 /* Hamburger Menu Button */
@@ -958,7 +958,7 @@ img {
 
 /* Site Logo Specific Styles */
 #site-logo {
-    max-height: 60px;
+    max-height: 90px;
     width: auto;
     max-width: 90%;
     border-radius: 0;

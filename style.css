@@ -97,20 +97,16 @@ body {
     /* Smoother fonts on Firefox */
 }
 
-/* Limit content width and center it - Increased width */
+/* Limit content width and center it */
 header,
 main,
 footer {
-    max-width: 900px;
-    /* Wider for more whitespace */
+    max-width: 1100px;
     margin: 30px auto;
-    padding: 35px 45px;
-    /* More generous padding */
+    padding: 35px 40px;
     background-color: var(--content-bg);
     border-radius: 10px;
-    /* Slightly larger radius */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
-    /* Refined shadow */
 }
 
 /* Headings - Using Inter */
@@ -217,7 +213,7 @@ hr {
 /* Logo Container */
 .logo-container {
     text-align: center;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.4em;
 }
 
 .logo-link {
@@ -227,8 +223,8 @@ hr {
 
 header {
     position: relative;
-    padding-top: 18px;
-    padding-bottom: 14px;
+    padding-top: 24px;
+    padding-bottom: 20px;
 }
 
 /* Hamburger Menu Button */
@@ -958,7 +954,7 @@ img {
 
 /* Site Logo Specific Styles */
 #site-logo {
-    max-height: 115px;
+    max-height: 175px;
     width: auto;
     max-width: 90%;
     border-radius: 0;
@@ -998,13 +994,13 @@ img {
     /* Hamburger Menu Activation */
     #menu-toggle {
         display: block;
-        top: 14px;
+        top: 20px;
         right: 25px;
     }
 
     header {
-        padding-top: 12px;
-        padding-bottom: 10px;
+        padding-top: 18px;
+        padding-bottom: 14px;
     }
 
     nav#main-nav ul#main-nav-list {
@@ -1167,7 +1163,7 @@ img {
     }
 
     #menu-toggle {
-        top: 14px;
+        top: 20px;
         right: 15px;
         font-size: 1.9em;
     }

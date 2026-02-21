@@ -229,6 +229,13 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-02-21**: Bug fixes and header height reduction
+  - **Style**: Reduced header height from ~420px to ~125px - logo `max-height: 60px`, tightened padding and nav spacing
+  - **CSS fix**: `header h1+p` selector never matched (div/button between h1 and p in HTML) - corrected to `header > p`
+  - **CSS fix**: Replaced undefined `var(--accent-light)` in bought-starter.html with `#fff9f6`
+  - **HTML fix**: Fixed stray `</p>` tag and missing Instagram link in focaccia.html footer
+  - **HTML fix**: Fixed off-brand pink coaching CTA in advice.html to use site terracotta palette
+  - **Schema**: Added missing breadcrumb JSON-LD schema to gear.html
 - **2026-02-21**: Added dried/dehydrated starter revival guide to bought-starter.html
   - **Content**: New `#dried` section with 3-day rehydration instructions for customers who receive dried flakes
   - **Content**: Updated intro paragraph to acknowledge both fresh and dried starter recipients

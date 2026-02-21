@@ -136,15 +136,13 @@ h1 {
     /* Subtle tightening */
 }
 
-header h1+p {
+header > p {
     /* Tagline */
     text-align: center;
     color: var(--secondary-color);
-    margin-top: 0em;
-    /* Closer to H1 */
-    margin-bottom: 2.5em;
-    /* More space below tagline */
-    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 0.25em;
+    font-size: 0.9em;
     font-weight: 400;
 }
 
@@ -219,7 +217,7 @@ hr {
 /* Logo Container */
 .logo-container {
     text-align: center;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.2em;
 }
 
 .logo-link {
@@ -229,8 +227,8 @@ hr {
 
 header {
     position: relative;
-    padding-bottom: 15px;
-    /* Adjust padding */
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 /* Hamburger Menu Button */
@@ -254,8 +252,7 @@ header {
 
 /* Desktop Navigation */
 nav#main-nav {
-    margin-top: 1.5em;
-    /* Space above nav */
+    margin-top: 0.3em;
 }
 
 nav#main-nav ul#main-nav-list {
@@ -279,8 +276,7 @@ nav#main-nav li {
 }
 
 nav#main-nav a {
-    padding: 8px 4px;
-    /* Reduced padding */
+    padding: 5px 4px;
     border-radius: 5px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     font-family: var(--font-main);
@@ -308,13 +304,9 @@ nav#main-nav a:hover {
 nav#main-nav a.active {
     background-color: transparent;
     color: var(--accent-color);
-    /* Use accent color for active */
     font-weight: 700;
-    /* Bold active link */
     border-bottom: 2px solid var(--accent-color);
-    /* Underline effect */
-    padding-bottom: 6px;
-    /* Adjust padding for border */
+    padding-bottom: 3px;
 }
 
 nav#main-nav a.active:hover {
@@ -966,11 +958,12 @@ img {
 
 /* Site Logo Specific Styles */
 #site-logo {
-    width: 900px;
+    max-height: 60px;
+    width: auto;
     max-width: 90%;
     border-radius: 0;
     box-shadow: none;
-    margin: 0 auto 1em auto;
+    margin: 0 auto;
     mix-blend-mode: multiply;
     /* Blends white background to transparent */
 }
@@ -1005,11 +998,13 @@ img {
     /* Hamburger Menu Activation */
     #menu-toggle {
         display: block;
-        /* <<<< THIS RULE MAKES THE BUTTON VISIBLE ON MOBILE */
-        top: 30px;
-        /* Adjust position if needed */
+        top: 14px;
         right: 25px;
-        /* Adjust position if needed */
+    }
+
+    header {
+        padding-top: 12px;
+        padding-bottom: 10px;
     }
 
     nav#main-nav ul#main-nav-list {
@@ -1172,8 +1167,7 @@ img {
     }
 
     #menu-toggle {
-        top: 22px;
-        /* Adjust */
+        top: 14px;
         right: 15px;
         font-size: 1.9em;
     }

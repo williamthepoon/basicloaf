@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
             mainNav.classList.remove('menu-open');
             menuToggle.innerHTML = '☰';
             menuToggle.setAttribute('aria-expanded', 'false');
+            closeAllDropdowns();
         }
     }
 
@@ -116,6 +117,41 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 250);
         });
     }
+
+    // --- Dropdown Menu Functionality ---
+    function closeAllDropdowns() {
+        document.querySelectorAll('.dropdown.open').forEach(function (d) {
+            d.classList.remove('open');
+            var toggle = d.querySelector('.dropdown-toggle');
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+        });
+    }
+
+    document.querySelectorAll('.dropdown-toggle').forEach(function (toggle) {
+        toggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var dropdown = this.closest('.dropdown');
+            var isOpen = dropdown.classList.contains('open');
+
+            // Close any other open dropdowns first
+            document.querySelectorAll('.dropdown.open').forEach(function (d) {
+                if (d !== dropdown) {
+                    d.classList.remove('open');
+                    d.querySelector('.dropdown-toggle').setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            dropdown.classList.toggle('open', !isOpen);
+            this.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+        });
+    });
+
+    // Close dropdowns when clicking outside (desktop)
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.dropdown')) {
+            closeAllDropdowns();
+        }
+    });
 
     // --- Footer Year Update ---
     const yearElement = document.getElementById('year');

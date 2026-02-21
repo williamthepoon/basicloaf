@@ -321,7 +321,7 @@ nav#main-nav.menu-open ul#main-nav-list {
     /* Ensure it spans width */
     width: calc(100% - 60px);
     /* Adjust width considering parent padding */
-    max-width: 900px;
+    max-width: 1100px;
     /* Match container width */
     margin: 0 auto;
     /* Center */
@@ -333,6 +333,119 @@ nav#main-nav.menu-open ul#main-nav-list {
     /* Rounded bottom corners */
     border-top: 1px solid var(--border-color);
 }
+
+
+/* --- Dropdown Menus --- */
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 4px;
+    border-radius: 5px;
+    font-family: var(--font-main);
+    font-weight: 500;
+    color: var(--secondary-color);
+    font-size: 0.88em;
+    letter-spacing: 0.1px;
+    white-space: nowrap;
+    transition: color 0.2s ease-in-out;
+}
+
+.dropdown-toggle:hover {
+    color: var(--link-hover-color);
+}
+
+.dropdown-toggle:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+.dropdown-toggle:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* CSS triangle arrow */
+.dropdown-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    flex-shrink: 0;
+    position: relative;
+    top: 1px;
+    transition: transform 0.2s ease;
+}
+
+.dropdown:hover .dropdown-arrow,
+.dropdown.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    list-style: none;
+    padding: 6px 0;
+    margin: 0;
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--content-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    min-width: 175px;
+    z-index: 999;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 9px 16px;
+    color: var(--text-color);
+    font-size: 0.9em;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background-color: var(--bg-color);
+    color: var(--link-hover-color);
+    text-decoration: none;
+}
+
+.dropdown-menu a.active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Highlight the parent toggle when a child page is active */
+.dropdown.dropdown-active .dropdown-toggle {
+    color: var(--accent-color);
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 3px;
+}
+
+/* --- End Dropdown Menus --- */
 
 
 /* --- Main Content Sections --- */
@@ -1110,6 +1223,95 @@ img {
     .prereq-link.primary {
         margin-right: 0;
         margin-bottom: 0.5em;
+    }
+
+    /* --- Mobile Dropdown Overrides --- */
+
+    /* Disable CSS hover-based dropdown on touch screens */
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    /* Only open via JS .open class on mobile */
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    /* Remove the top-level li border when dropdown is open (sub-items provide their own) */
+    nav#main-nav.menu-open .dropdown.open {
+        border-bottom: none;
+    }
+
+    /* Dropdown toggle looks like a regular nav link */
+    nav#main-nav.menu-open .dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 15px 25px;
+        color: var(--heading-color);
+        font-size: 1.05em;
+        font-weight: 500;
+        background-color: transparent;
+        border-bottom: none;
+        border-radius: 0;
+    }
+
+    nav#main-nav.menu-open .dropdown-toggle:hover {
+        background-color: var(--bg-color);
+    }
+
+    nav#main-nav.menu-open .dropdown.dropdown-active .dropdown-toggle {
+        background-color: var(--accent-color);
+        color: #fff;
+        padding-bottom: 15px;
+    }
+
+    nav#main-nav.menu-open .dropdown-arrow {
+        border-top-color: var(--heading-color);
+    }
+
+    nav#main-nav.menu-open .dropdown.dropdown-active .dropdown-arrow {
+        border-top-color: #fff;
+    }
+
+    /* Inline accordion sub-menu */
+    nav#main-nav.menu-open .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-top: 1px solid var(--border-color);
+        border-radius: 0;
+        padding: 0;
+        min-width: auto;
+        background: var(--bg-color);
+    }
+
+    nav#main-nav.menu-open .dropdown-menu li {
+        display: block;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    nav#main-nav.menu-open .dropdown-menu li:last-child {
+        border-bottom: none;
+    }
+
+    nav#main-nav.menu-open .dropdown-menu a {
+        padding: 12px 25px 12px 38px;
+        font-size: 1em;
+        color: var(--heading-color);
+        background-color: transparent;
+    }
+
+    nav#main-nav.menu-open .dropdown-menu a:hover {
+        background-color: var(--border-color);
+    }
+
+    nav#main-nav.menu-open .dropdown-menu a.active {
+        color: var(--accent-color);
+        font-weight: 600;
+        background-color: transparent;
     }
 
 }

@@ -925,10 +925,7 @@ aside p:last-child {
 
 /* Prerequisites Section */
 .prerequisites-section {
-    background: var(--bg-color);
-    border-radius: 12px;
-    padding: 2.5em 2em;
-    border: 1px solid var(--border-color);
+    padding: 2em 0;
 }
 
 .prerequisites-section h4 {
@@ -949,18 +946,16 @@ aside p:last-child {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1.5em;
-    text-align: center;
-    transition: all 0.2s ease;
+    text-align: left;
+    transition: box-shadow 0.2s ease;
 }
 
 .prereq-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
 }
 
 .prereq-card.highlight {
     border-color: var(--accent-color);
-    background: linear-gradient(135deg, #fff9f6 0%, var(--content-bg) 100%);
 }
 
 .prereq-icon {
@@ -1010,10 +1005,10 @@ aside p:last-child {
 
 .prereq-links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    gap: 0.5em;
+    gap: 1em;
 }
 
 /* Footer */

@@ -165,6 +165,17 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 2. If not, add to CSS (avoid inline styles except for one-off CTA boxes)
 3. Use CSS custom properties for colors/spacing (see `:root` section)
 4. Test responsive behavior on mobile/tablet/desktop
+5. Use `replace_all: true` in Edit tool for global CSS variable renames (e.g., `#966b54` → `var(--accent-dark)`)
+
+### Callout Classes (style.css)
+Quick reference - use these instead of inline styles for CTA/info boxes:
+- `.callout-warm` - muted tip or aside (warm-bg-subtle bg, terracotta left border)
+- `.callout-highlight` - important note (accent-light bg, stronger border)
+- `.callout-accent` - CTA/promotional block (centered, box-shadow; use `.cta-link` child for the button)
+- `.callout-info` - neutral info note (warm-bg-subtle bg, grey left border)
+
+### Bulk HTML Edits
+When making the same change across multiple HTML files: read ALL target files first, then make edits. Prevents "file has not been read yet" errors and catches indentation differences (some files use 2-space indent, most use 4-space).
 
 ### Optimizing Images
 1. **For process photos**: Crop to portrait 900x1200 from originals in ~/Downloads

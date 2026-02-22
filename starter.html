@@ -9,7 +9,7 @@
     <!-- Preconnect to Google Fonts for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <meta name="description"
         content="Your complete sourdough starter guide! Learn to create, feed (no-waste method!), strengthen, check readiness, manage temperature & troubleshoot issues."
@@ -162,12 +162,9 @@
                 bacteria.
                 Treat it like a low-maintenance pet, and it will reward you with great bread forever.</p>
 
-            <aside
-                style="border-left: 4px solid var(--accent-color); background-color: #fff9f6; padding: 1.5em; margin-bottom: 2em;">
+            <aside class="callout-warm">
                 <strong>Bought a starter from me?</strong><br>
-                If you've just received or collected your fresh starter, <a href="bought-starter.html"
-                    style="font-weight: bold; text-decoration: underline;">click here for your specific setup and
-                    activation instructions</a>.
+                If you've just received or collected your fresh starter, <a href="bought-starter.html">click here for your specific setup and activation instructions</a>.
             </aside>
 
             <div class="page-toc">
@@ -337,11 +334,8 @@
                     sometimes
                     more!). This is a common method.</p>
 
-                <div
-                    style="background-color: #f0f7ff; border-left: 4px solid #0056b3; padding: 15px; margin-bottom: 20px; font-size: 0.95em;">
-                    <strong>Short on time?</strong> You can skip the 14-day process by <a
-                        href="https://basicloafsourdough.etsy.com"
-                        style="text-decoration: underline; color: #0056b3;">buying a mature starter here</a>.
+                <div class="callout-info">
+                    <strong>Short on time?</strong> You can skip the 14-day process by <a href="https://basicloafsourdough.etsy.com">buying a mature starter here</a>.
                 </div>
 
                 <h4>What You'll Need:</h4>
@@ -407,8 +401,7 @@
                 </ul>
             </section>
 
-            <section id="ready-to-bake"
-                style="text-align: center; margin-top: 4em; padding: 2em; background-color: #fff9f6; border-radius: 8px; border: 1px solid var(--accent-color);">
+            <section id="ready-to-bake" class="callout-accent">
                 <h3>Your Starter is Ready... Now What?</h3>
                 <p>If your starter is doubling reliably, it's time to put it to work! Head over to our master recipe to
                     bake your first loaf.</p>
@@ -439,12 +432,17 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> BasicLoaf.com - All Rights Reserved.</p>
-        <p><a href="https://www.etsy.com/uk/listing/4453942186/mature-live-irish-sourdough-starter" target="_blank"
-                rel="noopener">Buy Mature Starter</a></p>
-        <p><a href="https://www.etsy.com/ie/listing/4453994109/11-virtual-sourdough-coaching-3-day" target="_blank"
-                rel="noopener">Book a Coaching Session</a></p>
-        <p><a href="https://instagram.com/william_the_poon" target="_blank" rel="noopener">Follow on Instagram</a></p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <p>Basic Loaf</p>
+                <small>&copy; <span id="year"></span> Will Poon</small>
+            </div>
+            <div class="footer-links">
+                <a href="https://basicloafsourdough.etsy.com" target="_blank" rel="noopener">Shop Starter</a>
+                <a href="https://instagram.com/william_the_poon" target="_blank" rel="noopener">Instagram</a>
+                <a href="about">About</a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

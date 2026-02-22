@@ -20,7 +20,7 @@
     <!-- Preconnect to Google Fonts for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
 {
@@ -162,8 +162,7 @@
             <p>This is it. The master recipe. It's built to be flexible because life rarely goes exactly to plan. The
                 long fermentation time does all the heavy lifting for flavor, so you don't have to work hard.</p>
 
-            <aside
-                style="background-color: #fff9c4; border-left: 4px solid #fbc02d; padding: 15px; border-radius: 4px; margin: 1.5em 0;">
+            <aside class="callout-highlight">
                 <p><strong>Feeling Intimidated?</strong> If this feels like too many steps for your first bake, try our
                     <a href="focaccia.html"><strong>Easy Sourdough Focaccia</strong></a>. It has zero shaping and is
                     even more foolproof!
@@ -171,7 +170,7 @@
             </aside>
 
             <img src="images/sourdough-loaf.jpg" alt="A freshly baked round sourdough loaf with beautiful golden crust and scoring"
-                class="centered-image" width="1200" height="1009" loading="lazy">
+                class="hero-image" width="1200" height="1009" loading="lazy">
             <button class="print-recipe-btn" onclick="window.print()">Print Recipe</button>
 
             <section id="ingredients">
@@ -187,8 +186,7 @@
                 <ul>
                     <li>
                         <span id="starter-min-qty" data-base-qty="100">100</span>-<span id="starter-max-qty"
-                            data-base-qty="125">125</span>g <a href="https://basicloafsourdough.etsy.com"
-                            style="color: inherit; text-decoration: underline;">active sourdough starter</a> (anywhere in this range works)
+                            data-base-qty="125">125</span>g <a href="https://basicloafsourdough.etsy.com">active sourdough starter</a> (anywhere in this range works)
                     </li>
                     <li>
                         <span id="water-qty" data-base-qty="180">180</span>g lukewarm water (approx. 35-40°C / 95-104°F)
@@ -277,36 +275,43 @@
                         <p><strong>Signs it's ready:</strong> The surface looks smooth and bubbly, the dough wobbles when you gently shake the bowl,
                         and it has increased in size by about <strong>50-75%</strong>.</p>
                         <p><strong>Stretch &amp; Folds:</strong> During the first <strong>3-4 hours</strong> of fermentation, do at least <strong>2 sets</strong> of stretch and folds (<strong>3-4 sets</strong> is even better if you have time). This helps build structure and makes shaping easier later. <a href="advice.html#stretch-fold">See the full technique guide</a>. With wet hands, reach under one side of the dough, gently stretch it upwards, and fold it over the top. Rotate the bowl 90 degrees and repeat 3 more times (total <strong>4 stretches/folds per set</strong>). Wait <strong>45-60 minutes</strong> between sets.</p>
-                        <div style="max-width: 480px; margin: 1em auto;">
-                            <video width="480" height="272" controls preload="metadata" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <figure class="video-container">
+                            <video width="480" height="272" controls preload="metadata">
                                 <source src="videos/sourdough-stretch-and-fold-technique.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <p style="text-align: center; font-size: 0.85em; color: #666; margin-top: 0.5em; font-style: italic;">See the technique in action</p>
-                        </div>
+                            <figcaption>See the technique in action</figcaption>
+                        </figure>
                         <p><strong>Watch the gluten develop:</strong> Here's what the dough looks like after each stretch and fold set:</p>
-                        <img src="images/after-stretch-fold-1.jpg"
-                            alt="Dough after first stretch and fold showing early gluten development"
-                            width="900" height="1200" loading="lazy">
-                        <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 0.5em; font-style: italic;">After the first stretch and fold - early gluten development</p>
-                        <img src="images/after-stretch-fold-2.jpg"
-                            alt="Dough after second stretch and fold showing improved structure"
-                            width="900" height="1200" loading="lazy">
-                        <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 0.5em; font-style: italic;">After the second stretch and fold - notice the smoother surface</p>
-                        <img src="images/after-stretch-fold-3.jpg"
-                            alt="Dough after third stretch and fold showing smooth, strong structure"
-                            width="900" height="1200" loading="lazy">
-                        <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 0.5em; font-style: italic;">After the third stretch and fold - smooth, strong dough with good structure</p>
+                        <figure>
+                            <img src="images/after-stretch-fold-1.jpg"
+                                alt="Dough after first stretch and fold showing early gluten development"
+                                width="900" height="1200" loading="lazy">
+                            <figcaption>After the first stretch and fold - early gluten development</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/after-stretch-fold-2.jpg"
+                                alt="Dough after second stretch and fold showing improved structure"
+                                width="900" height="1200" loading="lazy">
+                            <figcaption>After the second stretch and fold - notice the smoother surface</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="images/after-stretch-fold-3.jpg"
+                                alt="Dough after third stretch and fold showing smooth, strong structure"
+                                width="900" height="1200" loading="lazy">
+                            <figcaption>After the third stretch and fold - smooth, strong dough with good structure</figcaption>
+                        </figure>
                         <p>Want to check your gluten development? Try the windowpane test: after your last set, take a small piece of dough and gently stretch it between your fingers. If it stretches thin enough to see light through without tearing, you've got good gluten development. <a href="advice.html#windowpane">Learn more about the windowpane test</a>.</p>
-                        <img src="images/windowpane-test.jpg"
-                            alt="Dough stretched thin between gloved fingers, showing the translucent membrane of a passed windowpane test"
-                            width="1200" height="900" loading="lazy"
-                            style="width: 100%; height: auto; border-radius: 8px; margin-top: 0.5em;">
-                        <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 0.5em; font-style: italic;">A passed windowpane test - the dough stretches thin without tearing</p>
+                        <figure>
+                            <img src="images/windowpane-test.jpg"
+                                alt="Dough stretched thin between gloved fingers, showing the translucent membrane of a passed windowpane test"
+                                width="1200" height="900" loading="lazy">
+                            <figcaption>A passed windowpane test - the dough stretches thin without tearing</figcaption>
+                        </figure>
                     </li>
                     <li id="step-day1-shape">
                         <strong>Shape:</strong> Once the dough looks ready (increased size), it's time to shape. Handle the dough gently to preserve the air bubbles you've worked so hard to create!
-                        <ol style="margin-top: 0.5em;">
+                        <ol>
                             <li>Gently tip the dough out onto a lightly floured worktop</li>
                             <li>Press the dough out slightly into a rough rectangle</li>
                             <li>Fold the top third down toward the center</li>
@@ -323,13 +328,13 @@
                         medium bowl lined with a clean, non-fluffy tea towel) with rice flour. Rice flour is key as it
                         doesn't absorb moisture like regular flour, preventing sticking. If you don't have rice flour, regular bread flour works too - just use a bit more.
                         <p><strong>CRITICAL: Gently place the shaped dough into the banneton with the SEAM SIDE UP.</strong> This is important! When you flip it out for baking, the seam side will be on the bottom, and the smooth side will be on top for scoring. Getting this wrong means you'll be trying to score the seamy bottom, which doesn't work well.</p>
-                        <div style="max-width: 480px; margin: 1em auto;">
-                            <video width="480" height="272" controls preload="metadata" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <figure class="video-container">
+                            <video width="480" height="272" controls preload="metadata">
                                 <source src="videos/sourdough-shaping-and-banneton-technique.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <p style="text-align: center; font-size: 0.85em; color: #666; margin-top: 0.5em; font-style: italic;">Watch the complete shaping and banneton process</p>
-                        </div>
+                            <figcaption>Watch the complete shaping and banneton process</figcaption>
+                        </figure>
                     </li>
                     <li id="step-day1-counter">
                         <strong>Counter Proof:</strong> Cover the banneton (a plastic bag or shower cap works well).
@@ -360,13 +365,13 @@
                         decisive score across the top of the loaf (about <strong>1-2 cm</strong> or <strong>1/2 inch deep</strong>). A simple curve or a
                         cross works well for beginners. This allows the bread to expand when baking. <a
                             href="advice.html#scoring">See scoring technique</a>.
-                        <div style="max-width: 360px; margin: 1em auto;">
-                            <video width="360" height="640" controls preload="metadata" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                        <figure class="video-container-narrow">
+                            <video width="360" height="640" controls preload="metadata">
                                 <source src="videos/sourdough-bread-scoring-technique.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <p style="text-align: center; font-size: 0.85em; color: #666; margin-top: 0.5em; font-style: italic;">Watch the scoring technique in action</p>
-                        </div>
+                            <figcaption>Watch the scoring technique in action</figcaption>
+                        </figure>
                     </li>
                     <li id="step-day2-bake-lid-on">
                         <strong>Bake (Lid On):</strong> Carefully take the <em>very hot</em> Dutch oven out of the oven. Remove the lid. Using the parchment paper as a sling, carefully lower your scored dough into the hot Dutch oven. Put the lid back on immediately. Place the Dutch oven back into the main oven. Bake at <strong>235°C (455°F)</strong> for <strong>25 minutes</strong>.
@@ -374,19 +379,23 @@
                     <li id="step-day2-bake-lid-off">
                         <strong>Bake (Lid Off):</strong> After <strong>25 minutes</strong>, carefully remove the Dutch oven lid (be
                         cautious of steam!). Your bread should look pale and puffy at this stage.
-                        <img src="images/dutch-oven-lid-off.jpg"
-                            alt="Sourdough bread after 25 minutes with lid on, showing pale risen loaf ready for final browning"
-                            width="900" height="1200" loading="lazy">
-                        <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 0.5em; font-style: italic;">This is what your loaf should look like when you remove the lid</p>
+                        <figure>
+                            <img src="images/dutch-oven-lid-off.jpg"
+                                alt="Sourdough bread after 25 minutes with lid on, showing pale risen loaf ready for final browning"
+                                width="900" height="1200" loading="lazy">
+                            <figcaption>This is what your loaf should look like when you remove the lid</figcaption>
+                        </figure>
                         <p>Reduce the oven temperature to <strong>220°C (430°F)</strong>. Continue baking with the lid <em>off</em> for another <strong>20 minutes</strong>. Watch the color change: your bread will progress from pale to medium golden, and finally to a deep golden brown. You're looking for a rich, deep color - not just light golden, but a proper toasted brown crust.</p>
                     </li>
                     <li id="step-day2-cool">
                         <strong>Cool Completely:</strong> Using oven gloves, carefully lift the baked loaf out of the
                         Dutch oven (you can use the parchment paper) and place it on a wire rack.
-                        <img src="images/baked-loaf-final.jpg"
-                            alt="Finished sourdough loaf with deep golden brown crust and beautiful ear, cooling on a surface"
-                            width="900" height="1200" loading="lazy">
-                        <p style="text-align: center; font-size: 0.9em; color: #666; margin-top: 0.5em; font-style: italic;">Your beautiful finished loaf!</p>
+                        <figure>
+                            <img src="images/baked-loaf-final.jpg"
+                                alt="Finished sourdough loaf with deep golden brown crust and beautiful ear, cooling on a surface"
+                                width="900" height="1200" loading="lazy">
+                            <figcaption>Your beautiful finished loaf!</figcaption>
+                        </figure>
                         <p>Now for the hardest part: let it cool completely! This takes <em>at least</em> <strong>30 to 45 minutes</strong> - the inside is still cooking and setting even after you remove it from the oven.
                         Slicing into hot bread will result in a gummy, doughy texture because the structure hasn't fully set. The starches need time to crystallize and the moisture needs to redistribute. Wait, and you'll get the texture you actually want.</p>
                     </li>
@@ -399,14 +408,11 @@
                     </li>
 
                 </ol>
-                <div style="background-color: #faf6f3; border: 2px solid #b07d62; border-radius: 8px; padding: 32px; margin: 40px 0; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08);">
-                    <h3 style="color: #202020; font-size: 1.6em; margin: 0 0 12px 0; font-weight: 600;">Not Getting the Results You Want?</h3>
-                    <p style="color: #333333; font-size: 1.05em; margin: 0 0 24px 0; line-height: 1.6;">Sometimes you need eyes on your specific situation. Get personalized help with your flour, kitchen temperature, and timing.</p>
+                <div class="callout-accent">
+                    <h3>Not Getting the Results You Want?</h3>
+                    <p>Sometimes you need eyes on your specific situation. Get personalized help with your flour, kitchen temperature, and timing.</p>
                     <a href="https://www.etsy.com/ie/listing/4453994109/11-virtual-sourdough-coaching-3-day"
-                        target="_blank" rel="noopener"
-                        style="display: inline-block; background-color: #b07d62; color: #ffffff; padding: 14px 32px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 1.05em; transition: background-color 0.2s, transform 0.1s; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
-                        onmouseover="this.style.backgroundColor='#a06d52'; this.style.transform='translateY(-1px)';"
-                        onmouseout="this.style.backgroundColor='#b07d62'; this.style.transform='translateY(0)';">
+                        target="_blank" rel="noopener" class="cta-link">
                         Book a 1:1 Coaching Session →
                     </a>
                 </div>
@@ -436,12 +442,17 @@
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> BasicLoaf.com - All Rights Reserved.</p>
-        <p><a href="https://www.etsy.com/uk/listing/4453942186/mature-live-irish-sourdough-starter" target="_blank"
-                rel="noopener">Buy Mature Starter</a></p>
-        <p><a href="https://www.etsy.com/ie/listing/4453994109/11-virtual-sourdough-coaching-3-day" target="_blank"
-                rel="noopener">Book a Coaching Session</a></p>
-        <p><a href="https://instagram.com/william_the_poon" target="_blank" rel="noopener">Follow on Instagram</a></p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <p>Basic Loaf</p>
+                <small>&copy; <span id="year"></span> Will Poon</small>
+            </div>
+            <div class="footer-links">
+                <a href="https://basicloafsourdough.etsy.com" target="_blank" rel="noopener">Shop Starter</a>
+                <a href="https://instagram.com/william_the_poon" target="_blank" rel="noopener">Instagram</a>
+                <a href="about">About</a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

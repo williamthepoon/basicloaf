@@ -90,7 +90,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 | Category | Technology | Details |
 |----------|-----------|---------|
 | **HTML** | Semantic HTML5 | No templating, no frameworks |
-| **CSS** | Vanilla CSS | Custom properties for theming, 'Inter' font from Google Fonts |
+| **CSS** | Vanilla CSS | Custom properties for theming, Fraunces (headings) + Source Sans 3 (body) from Google Fonts |
 | **JavaScript** | Vanilla ES6+ | Recipe scaler, mobile menu, no libraries |
 | **Build System** | None | Static site, no compilation |
 | **Deployment** | Git push | GitHub Pages or similar static host |
@@ -141,7 +141,8 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 
 ## Design Principles
 - **Clean & Simple**: No gradients (except where intentional), minimal borders, authentic feel (not "AI-generated looking")
-- **Color Palette**: Warm tan/browns (#b07d62 accent, #a06d52 links), light neutrals (#f9f9f9 background)
+- **Color Palette**: Warm tan/browns (#b07d62 accent, #a06d52 links), warm cream (#faf6f3 background), subtle warm (#f5efe9 inset elements), light terracotta (#f0e0d5 accent-light)
+- **Typography**: Fraunces serif for h1/h2/h3, Source Sans 3 for body/h4/nav - `--font-heading` and `--font-body` CSS variables
 - **User Intent First**: Classic loaf is primary goal, focaccia is alternative
 - **Empowerment Over Prescription**: No skill-level labels, users choose their path
 - **Accessibility**: Keyboard navigation, skip links, focus indicators
@@ -232,6 +233,16 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-02-22**: Design upgrade - Phase 1 & 2 of DESIGN-UPGRADE.md
+  - **Typography**: Replaced Inter with Fraunces (headings) + Source Sans 3 (body); `--font-heading` / `--font-body` CSS variables; all 11 HTML files updated
+  - **Layout**: Connected-card layout (header/main/footer as one unified card per page, rounded at top and bottom only)
+  - **Colors**: New CSS vars `--warm-bg` (#faf6f3), `--warm-bg-subtle` (#f5efe9), `--accent-light` (#f0e0d5), `--accent-dark` (#966b54); body background warmed to #faf6f3; h2 border, hr now use warm palette; all `#966b54` hardcodes replaced with `var(--accent-dark)`
+  - **Footer**: New two-column `.footer-content` / `.footer-brand` / `.footer-links` structure across all 11 pages; standardized links (Shop Starter, Instagram, About)
+  - **Callouts**: New CSS classes `.callout-warm`, `.callout-accent`, `.callout-highlight`, `.callout-info`, `.callout-accent .cta-link`; replaced all blue (#1890ff, #0056b3) and yellow (#fff9c4, #fbc02d) inline styles
+  - **Inline cleanup**: Removed all `onmouseover`/`onmouseout` attributes; replaced coaching CTAs with class-based styling; `figure`/`figcaption` for all image captions; `.video-container`/`.video-container-narrow` classes for video embeds
+  - **Images**: `.hero-image` now full-bleed with negative margins; applied to first image on index.html, recipe.html, focaccia.html; `.wide-image` class added
+  - **Hero**: Homepage `#welcome` section wrapped in `.hero-section`, image moved to top; `.hero-section` CSS for centered large h2
+  - **HR**: Replaced border with warm gradient (transparent → accent-light → accent-color → accent-light → transparent)
 - **2026-02-22**: UX improvements - navigation, internal linking, print, CTAs
   - **Nav**: Converted "Starter Guide" nav link to "Starter" dropdown with "Starter Guide" and "Bought Starter" sub-items across all 11 HTML files
   - **Internal linking**: Added "Keep Reading" related content cards to bottom of 9 content pages (all except index.html and 404.html)
@@ -269,7 +280,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-02-22
+**Last Updated**: 2026-02-22 (design upgrade)
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

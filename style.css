@@ -1,12 +1,21 @@
 /* style.css - Corrected Styles for Basic Loaf (Burger Visibility Fix v3) */
 
-/* Google Font (Inter) is loaded via <link> in HTML for better performance */
+/* Google Fonts (Fraunces + Source Sans 3) are loaded via <link> in HTML for better performance */
 
 /* Define Refined Color Palette & Fonts */
 :root {
-    --font-main: 'Inter', sans-serif;
-    --bg-color: #f9f9f9;
-    /* Very light grey background */
+    --font-heading: 'Fraunces', Georgia, serif;
+    --font-body: 'Source Sans 3', sans-serif;
+    --bg-color: #faf6f3;
+    /* Warm cream background */
+    --warm-bg: #faf6f3;
+    /* Same as bg-color - explicit alias */
+    --warm-bg-subtle: #f5efe9;
+    /* Slightly deeper warm tone for inset elements */
+    --accent-light: #f0e0d5;
+    /* Light terracotta tint for highlights */
+    --accent-dark: var(--accent-dark);
+    /* Darker terracotta for hover states */
     --content-bg: #ffffff;
     /* White for content boxes */
     --text-color: #333333;
@@ -83,44 +92,42 @@ html {
 }
 
 body {
-    font-family: var(--font-main);
+    font-family: var(--font-body);
     font-weight: 400;
-    /* Regular weight */
     line-height: 1.75;
-    /* Increased for readability */
     color: var(--text-color);
     background-color: var(--bg-color);
     padding: 20px;
     -webkit-font-smoothing: antialiased;
-    /* Smoother fonts on Mac */
     -moz-osx-font-smoothing: grayscale;
-    /* Smoother fonts on Firefox */
 }
 
-/* Limit content width and center it */
+/* Limit content width and center it - connected card layout */
 header,
 main,
 footer {
     max-width: 1100px;
-    margin: 30px auto;
+    margin: 0 auto;
     padding: 35px 40px;
     background-color: var(--content-bg);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
-/* Headings - Using Inter */
+/* Headings */
 h1,
 h2,
 h3,
 h4 {
-    font-family: var(--font-main);
-    /* Use Inter */
     margin-bottom: 0.7em;
     line-height: 1.3;
     color: var(--heading-color);
     font-weight: 700;
-    /* Bold weight for headings */
+    font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
 }
 
 h1 {
@@ -144,12 +151,9 @@ header > p {
 
 h2 {
     font-size: 2.1em;
-    /* Adjusted */
-    border-bottom: 1px solid var(--border-color);
-    /* Thinner border */
+    border-bottom: 2px solid var(--accent-light);
     padding-bottom: 0.5em;
     margin-top: 2em;
-    /* Consistent top margin */
     font-weight: 700;
     letter-spacing: -0.3px;
 }
@@ -202,9 +206,16 @@ a:hover {
 /* Horizontal Rule */
 hr {
     border: none;
-    border-top: 1px solid var(--border-color);
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--accent-light) 20%,
+        var(--accent-color) 50%,
+        var(--accent-light) 80%,
+        transparent
+    );
     margin: 3em 0;
-    /* Generous spacing around separators */
 }
 
 
@@ -225,6 +236,14 @@ header {
     position: relative;
     padding-top: 24px;
     padding-bottom: 20px;
+    margin-top: 30px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05), 5px 0 15px rgba(0,0,0,0.03), -5px 0 15px rgba(0,0,0,0.03);
+}
+
+main {
+    border-radius: 0;
+    box-shadow: 5px 0 15px rgba(0,0,0,0.03), -5px 0 15px rgba(0,0,0,0.03);
 }
 
 /* Hamburger Menu Button */
@@ -276,7 +295,7 @@ nav#main-nav a {
     padding: 5px 12px;
     border-radius: 5px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    font-family: var(--font-main);
+    font-family: var(--font-body);
     font-weight: 500;
     color: var(--secondary-color);
     font-size: 0.88em;
@@ -348,7 +367,7 @@ nav#main-nav.menu-open ul#main-nav-list {
     cursor: pointer;
     padding: 5px 12px;
     border-radius: 5px;
-    font-family: var(--font-main);
+    font-family: var(--font-body);
     font-weight: 500;
     color: var(--secondary-color);
     font-size: 0.88em;
@@ -449,20 +468,15 @@ nav#main-nav.menu-open ul#main-nav-list {
 
 /* --- Main Content Sections --- */
 
-/* Hero Images */
+/* Hero Images - full bleed */
 .hero-image {
-    width: 100%;
-    border-radius: 12px;
+    width: calc(100% + 80px);
+    margin-left: -40px;
+    margin-right: -40px;
     margin-bottom: 2em;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Page Table of Contents */
-.page-toc {
-    margin-bottom: 2em;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: none;
 }
 
 /* Centered Block Images */
@@ -564,7 +578,7 @@ main li {
     /* Bold number */
     font-size: 0.9em;
     /* Slightly smaller number */
-    font-family: var(--font-main);
+    font-family: var(--font-body);
 }
 
 /* Step titles - only the first strong tag in each step */
@@ -585,8 +599,7 @@ main li {
 
 /* --- Recipe Quick Overview Box --- */
 #method-summary {
-    background-color: var(--bg-color);
-    /* Match body background */
+    background-color: var(--warm-bg-subtle);
     padding: 25px;
     /* More padding */
     border-radius: 8px;
@@ -643,7 +656,7 @@ main li {
 
 /* Notes / Aside */
 aside {
-    background-color: var(--bg-color);
+    background-color: var(--warm-bg-subtle);
     padding: 25px;
     border-radius: 8px;
     font-size: 0.95em;
@@ -671,7 +684,7 @@ aside p:last-child {
 
 /* Page Table of Contents */
 .page-toc {
-    background-color: var(--bg-color);
+    background-color: var(--warm-bg-subtle);
     padding: 20px 25px;
     border-radius: 8px;
     margin-bottom: 2em;
@@ -740,7 +753,7 @@ aside p:last-child {
     border: 1px solid var(--border-color);
     border-radius: 5px;
     font-size: 1em;
-    font-family: var(--font-main);
+    font-family: var(--font-body);
 }
 
 
@@ -759,7 +772,7 @@ aside p:last-child {
     /* Use accent color */
     cursor: pointer;
     text-align: center;
-    font-family: var(--font-main);
+    font-family: var(--font-body);
     /* Use main font */
     font-weight: 500;
     /* Medium weight */
@@ -773,7 +786,7 @@ aside p:last-child {
 .button:hover {
     text-decoration: none;
     color: var(--button-text-color);
-    background-color: #966b54;
+    background-color: var(--accent-dark);
     /* Darker accent */
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -785,7 +798,7 @@ aside p:last-child {
 }
 
 .button.primary:hover {
-    background-color: #966b54;
+    background-color: var(--accent-dark);
     /* Darker accent */
 }
 
@@ -875,7 +888,7 @@ aside p:last-child {
 }
 
 .alternative-link:hover {
-    color: #966b54;
+    color: var(--accent-dark);
     text-decoration: underline;
 }
 
@@ -906,8 +919,8 @@ aside p:last-child {
 }
 
 .card-button.primary:hover {
-    background-color: #966b54;
-    border-color: #966b54;
+    background-color: var(--accent-dark);
+    border-color: var(--accent-dark);
 }
 
 /* Prerequisites Section */
@@ -974,7 +987,7 @@ aside p:last-child {
 }
 
 .prereq-link:hover {
-    color: #966b54;
+    color: var(--accent-dark);
     text-decoration: underline;
 }
 
@@ -987,7 +1000,7 @@ aside p:last-child {
 }
 
 .prereq-link.primary:hover {
-    background: #966b54;
+    background: var(--accent-dark);
     text-decoration: none;
 }
 
@@ -1002,29 +1015,13 @@ aside p:last-child {
 /* Footer */
 footer {
     text-align: center;
-    margin-top: 50px;
-    /* More space above footer */
+    margin-bottom: 30px;
     padding: 30px;
     border-top: 1px solid var(--border-color);
     font-size: 0.9em;
     color: var(--secondary-color);
-    background-color: var(--bg-color);
-    box-shadow: none;
-}
-
-footer p {
-    margin-bottom: 0.5em;
-}
-
-/* Make links side-by-side, but keep copyright on top */
-footer p:not(:first-child) {
-    display: inline-block;
-    margin: 0 10px;
-}
-
-footer p:first-child {
-    display: block;
-    margin-bottom: 1em;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05), 5px 0 15px rgba(0,0,0,0.03), -5px 0 15px rgba(0,0,0,0.03);
 }
 
 footer a {
@@ -1032,6 +1029,51 @@ footer a {
 }
 
 footer a:hover {
+    color: var(--accent-color);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding-top: 1em;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.footer-brand p {
+    font-size: 1.1em;
+    color: var(--heading-color);
+    margin-bottom: 0.3em;
+    font-family: var(--font-heading);
+}
+
+.footer-brand small {
+    color: var(--secondary-color);
+    font-size: 0.85em;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer-links a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
     color: var(--accent-color);
 }
 
@@ -1067,7 +1109,12 @@ img {
     main,
     footer {
         padding: 25px 25px;
-        /* Adjust padding */
+    }
+
+    .hero-image {
+        width: calc(100% + 50px);
+        margin-left: -25px;
+        margin-right: -25px;
     }
 
     h1 {
@@ -1141,7 +1188,7 @@ img {
     }
 
     nav#main-nav.menu-open ul#main-nav-list a.active:hover {
-        background-color: #966b54;
+        background-color: var(--accent-dark);
         /* Darker accent */
     }
 
@@ -1310,7 +1357,6 @@ img {
     body {
         padding: 10px;
         font-size: 16px;
-        /* Ensure readable base font */
         line-height: 1.7;
     }
 
@@ -1318,9 +1364,37 @@ img {
     main,
     footer {
         padding: 20px 15px;
-        /* Adjust padding */
-        margin: 15px auto;
-        border-radius: 8px;
+    }
+
+    header {
+        margin: 15px auto 0;
+        border-radius: 8px 8px 0 0;
+    }
+
+    main {
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+    footer {
+        margin: 0 auto 15px;
+        border-radius: 0 0 8px 8px;
+    }
+
+    .hero-image {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-brand {
+        text-align: center;
     }
 
     h1 {
@@ -1425,7 +1499,7 @@ img {
 }
 
 .tip-card {
-    background-color: var(--bg-color);
+    background-color: var(--warm-bg-subtle);
     padding: 25px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
@@ -1483,7 +1557,7 @@ img {
     border: 1px solid var(--border-color);
     border-radius: 6px;
     color: var(--secondary-color);
-    font-family: var(--font-main);
+    font-family: var(--font-body);
     font-size: 0.9em;
     font-weight: 500;
     cursor: pointer;
@@ -1516,7 +1590,7 @@ img {
 }
 
 .related-card {
-    background: var(--bg-color);
+    background: var(--warm-bg-subtle);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1.5em;
@@ -1591,6 +1665,12 @@ img {
         page-break-inside: avoid;
     }
 
+    .hero-image {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     h1, h2, h3, h4 {
         page-break-after: avoid;
     }
@@ -1598,4 +1678,167 @@ img {
     #method li {
         page-break-inside: avoid;
     }
+}
+
+/* --- Quick Links (bought-starter navigation) --- */
+.quick-links {
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+/* --- Callout Boxes --- */
+
+/* Warm callout - for encouragement, tips, gentle nudges */
+.callout-warm {
+    background-color: var(--warm-bg-subtle);
+    border: 1px solid var(--accent-light);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 2em 0;
+}
+
+/* Highlight callout - for visually distinct prompts (e.g. "Feeling Intimidated?") */
+.callout-highlight {
+    background-color: var(--accent-light);
+    border: 1px solid var(--accent-color);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 2em 0;
+}
+
+/* Accent callout - for important CTAs like coaching */
+.callout-accent {
+    background-color: var(--warm-bg);
+    border: 2px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 2em;
+    margin: 2.5em 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.callout-accent h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.callout-accent p {
+    margin-bottom: 1.5em;
+}
+
+.callout-accent p:last-child {
+    margin-bottom: 0;
+}
+
+/* Info callout - for neutral informational asides */
+.callout-info {
+    background-color: var(--warm-bg-subtle);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 8px;
+    padding: 1.5em;
+    margin: 2em 0;
+}
+
+/* CTA link inside .callout-accent */
+.callout-accent .cta-link {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1.05em;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.callout-accent .cta-link:hover {
+    background-color: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(176, 125, 98, 0.3);
+    text-decoration: none;
+    color: var(--button-text-color);
+}
+
+/* --- Figure / Figcaption --- */
+
+figure {
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.88em;
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-top: 0.5em;
+}
+
+/* --- Video Container --- */
+
+.video-container {
+    max-width: 480px;
+    margin: 1em auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 0;
+}
+
+.video-container figcaption {
+    margin-top: 0.5em;
+}
+
+.video-container-narrow {
+    max-width: 400px;
+    margin: 1em auto;
+}
+
+.video-container-narrow video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 0;
+}
+
+/* --- Homepage Hero Section --- */
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.hero-section h2 {
+    font-size: 2.4em;
+    margin-bottom: 0.5em;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.hero-section > p {
+    font-size: 1.1em;
+    color: var(--secondary-color);
+    max-width: 600px;
+    margin: 0 auto 1.5em;
+}
+
+/* --- Wide Image --- */
+
+.wide-image {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    border-radius: 10px;
+    max-width: none;
 }

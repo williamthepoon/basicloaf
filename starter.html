@@ -127,7 +127,13 @@
             <ul id="main-nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipe.html">The Recipe</a></li>
-                <li><a href="starter.html" class="active">Starter Guide</a></li>
+                <li class="dropdown dropdown-active">
+                    <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Starter <span class="dropdown-arrow" aria-hidden="true"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="starter.html" class="active">Starter Guide</a></li>
+                        <li><a href="bought-starter.html">Bought Starter</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Baking Help <span class="dropdown-arrow" aria-hidden="true"></span></button>
                     <ul class="dropdown-menu">
@@ -409,6 +415,27 @@
                 <a href="recipe.html" class="button primary">Go to the Master Recipe</a>
             </section>
         </article>
+
+        <section class="related-content">
+            <h3>Keep Reading</h3>
+            <div class="related-cards">
+                <div class="related-card">
+                    <h4>Bought Starter?</h4>
+                    <p>Activation guide for fresh, dried, or posted starter cultures.</p>
+                    <a href="bought-starter.html">Activate your starter →</a>
+                </div>
+                <div class="related-card">
+                    <h4>The Recipe</h4>
+                    <p>Ready to bake? The foolproof 2-day sourdough method.</p>
+                    <a href="recipe.html">Start baking →</a>
+                </div>
+                <div class="related-card">
+                    <h4>Things You Need</h4>
+                    <p>Essential gear and nice-to-haves for sourdough baking.</p>
+                    <a href="gear.html">Check equipment →</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>

@@ -11,17 +11,19 @@
 
 ## Medium Priority
 - Add analytics/tracking for video views
-- Convert remaining JPGs to WebP with fallbacks
-- Create custom 404 page
+- Convert remaining JPGs to WebP with fallbacks (requires `brew install webp`)
 - Expand recipe content to include sourdough pizza dough, chocolate sourdough, and other sourdough-based recipes
-- Add "related articles" cards at bottom of each page (improves internal linking further)
 
 ## Low Priority
 - Add seasonal sourdough variations (whole wheat, spelt, rye)
-- Create printable recipe PDFs
 - Create downloadable sourdough diary guide PDF
 
 ## Done (Recent)
+- ✅ Add "related articles" cards at bottom of each page (2026-02-22)
+- ✅ Add bought-starter.html to main navigation as Starter dropdown (2026-02-22)
+- ✅ Add print button and print stylesheet to recipe and focaccia pages (2026-02-22)
+- ✅ Add "Ready for more?" CTA and coaching CTA to focaccia page (2026-02-22)
+- ✅ Create custom 404 page (2026-02-22)
 - ✅ Add lazy loading to all below-fold images (2026-02-11)
 - ✅ SEO overhaul - canonical tags, og:url, sitemap all fixed to clean URLs (2026-02-11)
 - ✅ Cloudflare www redirect deployed (2026-02-11)

@@ -1,7 +1,7 @@
 # Basic Loaf - Project Guidelines for Claude
 
 ## Quick Start (30-Second TL;DR)
-This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No build tools. No exceptions.** Primary files: 10 HTML pages, `style.css`, `script.js`. Check TODO.md for current tasks.
+This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No build tools. No exceptions.** Primary files: 11 HTML pages, `style.css`, `script.js`. Check TODO.md for current tasks.
 
 **Target Audience:** Complete beginners to sourdough baking looking for a flexible, forgiving recipe with minimal effort and maximum flavor.
 
@@ -111,6 +111,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 ├── gear.html               # Equipment recommendations
 ├── ideas.html              # Recipe variations and uses for bread
 ├── about.html              # About the author
+├── 404.html                # Custom 404 error page
 ├── style.css               # All styles
 ├── script.js               # All interactivity
 ├── sitemap.xml             # SEO sitemap
@@ -126,6 +127,8 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 
 ## Key Features
 - **Recipe Scaler**: Dynamic ingredient calculator in `recipe.html` and `focaccia.html`
+- **Print Recipe**: Print button and `@media print` stylesheet on recipe and focaccia pages
+- **Related Content Cards**: "Keep Reading" section at bottom of all content pages with contextual links
 - **Mobile Menu**: Hamburger navigation with escape key, auto-close, and resize handlers
 - **Skip Links**: WCAG 2.1 Level A compliant keyboard navigation
 - **Etsy Integration**: Subtle shop links for mature starter sales
@@ -150,7 +153,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 
 ### Adding a New Page
 1. Create `newpage.html` following existing structure (header, nav, main, footer)
-2. Add to navigation in all 10 HTML files (`<nav id="main-nav">`)
+2. Add to navigation in all 11 HTML files (`<nav id="main-nav">`)
 3. Add to `sitemap.xml` with current date in `<lastmod>`
 4. Update `llms.txt` if content is significant
 5. Test mobile menu and skip-to-content link
@@ -229,6 +232,14 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-02-22**: UX improvements - navigation, internal linking, print, CTAs
+  - **Nav**: Converted "Starter Guide" nav link to "Starter" dropdown with "Starter Guide" and "Bought Starter" sub-items across all 11 HTML files
+  - **Internal linking**: Added "Keep Reading" related content cards to bottom of 9 content pages (all except index.html and 404.html)
+  - **Print**: Added print button and `@media print` stylesheet to recipe.html and focaccia.html
+  - **Focaccia CTAs**: Added "Ready for the Next Challenge?" nudge to classic loaf and coaching CTA box
+  - **404 page**: Created 404.html with on-brand design and navigation links
+  - **CSS**: New `.print-recipe-btn`, `.related-content`, `.related-cards`, `.related-card` classes and print media query
+  - **Sitemap**: Updated all lastmod dates to 2026-02-22
 - **2026-02-21**: Bug fixes and header height reduction
   - **Style**: Reduced header height from ~420px to ~125px - logo `max-height: 60px`, tightened padding and nav spacing
   - **CSS fix**: `header h1+p` selector never matched (div/button between h1 and p in HTML) - corrected to `header > p`
@@ -258,7 +269,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-02-21
+**Last Updated**: 2026-02-22
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

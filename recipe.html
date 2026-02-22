@@ -128,7 +128,13 @@
             <ul id="main-nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="recipe.html" class="active">The Recipe</a></li>
-                <li><a href="starter.html">Starter Guide</a></li>
+                <li class="dropdown">
+                    <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Starter <span class="dropdown-arrow" aria-hidden="true"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="starter.html">Starter Guide</a></li>
+                        <li><a href="bought-starter.html">Bought Starter</a></li>
+                    </ul>
+                </li>
                 <li class="dropdown">
                     <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Baking Help <span class="dropdown-arrow" aria-hidden="true"></span></button>
                     <ul class="dropdown-menu">
@@ -166,6 +172,8 @@
 
             <img src="images/sourdough-loaf.jpg" alt="A freshly baked round sourdough loaf with beautiful golden crust and scoring"
                 class="centered-image" width="1200" height="1009" loading="lazy">
+            <button class="print-recipe-btn" onclick="window.print()">Print Recipe</button>
+
             <section id="ingredients">
                 <h3>Ingredients (for <span id="loaf-count">1</span> Loaf)</h3>
 
@@ -404,6 +412,27 @@
                 </div>
             </section>
         </article>
+
+        <section class="related-content">
+            <h3>Keep Reading</h3>
+            <div class="related-cards">
+                <div class="related-card">
+                    <h4>Troubleshooting</h4>
+                    <p>Loaf not turning out right? Common problems and how to fix them.</p>
+                    <a href="troubleshooting.html">Fix common issues →</a>
+                </div>
+                <div class="related-card">
+                    <h4>What to Do with Your Bread</h4>
+                    <p>Sandwich ideas, uses for stale bread, and how to store your loaf.</p>
+                    <a href="ideas.html">Get ideas →</a>
+                </div>
+                <div class="related-card">
+                    <h4>Easy Focaccia</h4>
+                    <p>A simpler sourdough bake with no shaping required.</p>
+                    <a href="focaccia.html">Try focaccia →</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>

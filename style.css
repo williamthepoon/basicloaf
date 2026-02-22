@@ -813,9 +813,6 @@ aside p:last-child {
 
 /* Primary Recipe Card */
 .recipe-primary {
-    display: flex;
-    gap: 1.5em;
-    align-items: center;
     background: var(--content-bg);
     border-left: 4px solid var(--accent-color);
     border-top: 1px solid var(--border-color);
@@ -825,23 +822,13 @@ aside p:last-child {
     margin-bottom: 1.5em;
 }
 
-.recipe-icon {
-    font-size: 4em;
-    line-height: 1;
-    flex-shrink: 0;
-}
-
-.recipe-content {
-    flex: 1;
-}
-
-.recipe-content h4 {
+.recipe-primary h4 {
     font-size: 1.6em;
     margin: 0 0 0.5em 0;
     color: var(--heading-color);
 }
 
-.recipe-content p {
+.recipe-primary p {
     color: var(--secondary-color);
     line-height: 1.6;
     margin-bottom: 1.25em;
@@ -1166,17 +1153,10 @@ img {
 
     /* Recipe Cards - Adjust for Mobile */
     .recipe-primary {
-        flex-direction: column;
         padding: 1.5em;
-        text-align: center;
-        gap: 1em;
     }
 
-    .recipe-icon {
-        font-size: 3em;
-    }
-
-    .recipe-content h4 {
+    .recipe-primary h4 {
         font-size: 1.3em;
     }
 
@@ -1319,7 +1299,7 @@ img {
         gap: 1.25em;
     }
 
-    .recipe-content h4 {
+    .recipe-primary h4 {
         font-size: 1.4em;
     }
 }

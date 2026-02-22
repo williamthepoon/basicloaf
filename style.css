@@ -841,7 +841,7 @@ aside p:last-child {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1em 1.5em;
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
     display: flex;
     align-items: center;
     gap: 1em;
@@ -912,11 +912,12 @@ aside p:last-child {
 
 /* Prerequisites Section */
 .prerequisites-section {
-    padding: 2em 0;
+    padding: 0.5em 0;
 }
 
 .prerequisites-section h4 {
     text-align: center;
+    margin-top: 0;
     margin-bottom: 1.5em;
     font-size: 1.3em;
     color: var(--heading-color);

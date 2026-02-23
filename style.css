@@ -14,7 +14,7 @@
     /* Slightly deeper warm tone for inset elements */
     --accent-light: #f0e0d5;
     /* Light terracotta tint for highlights */
-    --accent-dark: var(--accent-dark);
+    --accent-dark: #966b54;
     /* Darker terracotta for hover states */
     --content-bg: #ffffff;
     /* White for content boxes */

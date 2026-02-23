@@ -269,6 +269,14 @@ python3 -m http.server 8001  # Try different port
   - **HTML fix**: Fixed stray `</p>` tag and missing Instagram link in focaccia.html footer
   - **HTML fix**: Fixed off-brand pink coaching CTA in advice.html to use site terracotta palette
   - **Schema**: Added missing breadcrumb JSON-LD schema to gear.html
+- **2026-02-23**: CSS bug fix - `--accent-dark` circular variable reference
+  - **Bug**: `--accent-dark: var(--accent-dark)` in `:root` was a self-referencing circular CSS variable, resolving to nothing (transparent). This broke all button hover states and any other element using `var(--accent-dark)` for interaction feedback site-wide.
+  - **Fix**: Changed to `--accent-dark: #966b54` (the actual darker terracotta value)
+- **2026-02-23**: bought-starter.html content refinement
+  - **Images**: Added 3 images to the `#dried` section: Kilner jar hero, equipment mise en place, and soaking/Day 1 stage
+  - **Copy**: Day 1 text updated with humorous "soggy cornflakes" consistency note
+  - **Terminology**: Section headings and quick-link buttons updated - "collected starter in person" and "received starter by post" now read "live starter in person" and "live starter by post"
+  - **Sitemap**: Updated bought-starter lastmod to 2026-02-23
 - **2026-02-21**: Added dried/dehydrated starter revival guide to bought-starter.html
   - **Content**: New `#dried` section with 3-day rehydration instructions for customers who receive dried flakes
   - **Content**: Updated intro paragraph to acknowledge both fresh and dried starter recipients
@@ -291,7 +299,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-02-22 (design upgrade)
+**Last Updated**: 2026-02-23 (bought-starter images and copy)
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

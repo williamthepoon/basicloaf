@@ -272,6 +272,8 @@ python3 -m http.server 8001  # Try different port
 - **2026-02-23**: CSS bug fix - `--accent-dark` circular variable reference
   - **Bug**: `--accent-dark: var(--accent-dark)` in `:root` was a self-referencing circular CSS variable, resolving to nothing (transparent). This broke all button hover states and any other element using `var(--accent-dark)` for interaction feedback site-wide.
   - **Fix**: Changed to `--accent-dark: #966b54` (the actual darker terracotta value)
+- **2026-02-24**: bought-starter.html rehydration photo set completed
+  - **Images**: Added 3 more images to the `#dried` section: paste-after-breakdown (Day 1), first bubbles forming (Day 2), active bubbling (Day 3) - all 900x675 landscape, 110-140KB
 - **2026-02-23**: bought-starter.html content refinement
   - **Images**: Added 3 images to the `#dried` section: Kilner jar hero, equipment mise en place, and soaking/Day 1 stage
   - **Copy**: Day 1 text updated with humorous "soggy cornflakes" consistency note
@@ -299,7 +301,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-02-23 (bought-starter images and copy)
+**Last Updated**: 2026-02-24 (bought-starter rehydration photo set)
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

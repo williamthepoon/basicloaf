@@ -112,6 +112,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 ├── ideas.html              # Recipe variations and uses for bread
 ├── about.html              # About the author
 ├── 404.html                # Custom 404 error page
+├── privacy-policy.html     # Privacy policy (noindex - for Pinterest app review)
 ├── style.css               # All styles
 ├── script.js               # All interactivity
 ├── sitemap.xml             # SEO sitemap
@@ -301,7 +302,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-02-24 (bought-starter rehydration photo set)
+**Last Updated**: 2026-02-28 (privacy policy page added)
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

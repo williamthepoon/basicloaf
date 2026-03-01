@@ -153,6 +153,11 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 
 ## Common Tasks
 
+### Adding Utility Pages (Privacy Policy, Terms, etc.)
+- Set `<meta name="robots" content="noindex">` - these shouldn't appear in search results
+- No need to add to sitemap.xml or site navigation
+- URL to reference externally: `https://basicloaf.com/[filename-without-extension]`
+
 ### Adding a New Page
 1. Create `newpage.html` following existing structure (header, nav, main, footer)
 2. Add to navigation in all 11 HTML files (`<nav id="main-nav">`)

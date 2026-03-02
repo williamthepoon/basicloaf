@@ -250,6 +250,12 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-03-02**: SEO improvements based on GSC audit
+  - **recipe.html**: Updated title to lead with exact phrase "Foolproof Sourdough Bread Recipe"; updated H1 to match; updated meta/og description; fixed schema `recipeInstructions` step URLs from `recipe.html#` to `recipe#`; improved anchor text on ideas page link
+  - **ideas.html**: Updated title, H1, meta/og description to lead with stale bread use case (primary ranking queries); updated stale section H2 to "Recipes Using Stale Sourdough Bread"; added `#revive` subsection with bread revival method (featured snippet target for position-10 "revive stale sourdough" query)
+  - **gear.html**: Removed HTML `<em>` tags from meta description and og:description content attributes
+  - **advice.html, troubleshooting.html, about.html, ideas.html**: Added missing `BreadcrumbList` JSON-LD schema
+  - **ideas.html**: Added `ItemList` JSON-LD schema covering 8 stale bread recipe ideas
 - **2026-03-02**: Fixed all internal links to use clean URLs (SEO fix)
   - **Problem**: Every nav/content link used `.html` extensions (e.g. `recipe.html`) while canonical URLs are clean (`/recipe`). Google was discovering and crawling all `.html` redirect URLs via internal links, causing 17 "Page with redirect" and 23 "not indexed" entries in GSC, wasting crawl budget and diluting link equity.
   - **Fix**: Updated all `href="*.html"` internal links to clean URLs across all 11 HTML files, including anchor links (e.g. `advice.html#stretch-fold` → `advice#stretch-fold`) and JSON-LD schema URLs in focaccia.html.
@@ -311,7 +317,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-03-02 (fixed internal links to use clean URLs)
+**Last Updated**: 2026-03-02 (SEO audit fixes - schema, titles, meta descriptions, clean URLs)
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

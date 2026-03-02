@@ -328,3 +328,11 @@ python3 -m http.server 8001  # Try different port
 - **FAQPage schema** on: advice.html, starter.html, ideas.html, bought-starter.html, troubleshooting.html
 - **Biggest remaining SEO lever**: backlinks - site has very few external links pointing to it
 - **GSC baseline** (Nov 2025 - Feb 2026): 8 clicks, 242 impressions, avg position 25.7
+
+## GSC Review Log
+Review GSC every 4 weeks. Export Queries, Pages, and Coverage CSVs each time. Key metrics to track: clicks, impressions, avg position for target keywords, indexed page count, redirect/error count.
+
+| Date | Clicks | Impressions | Avg Position | Notes |
+|------|--------|-------------|--------------|-------|
+| 2026-03-02 | 12 | 500 | ~15 | Baseline after audit. Fixed: internal .html links, schema, titles, meta descriptions. Pages indexed: 10. Non-indexed: 23 (mostly .html redirects). |
+| 2026-03-30 | - | - | - | Next review due. Watch: recipe.html for "foolproof sourdough bread recipe", ideas.html CTR, indexed count. |

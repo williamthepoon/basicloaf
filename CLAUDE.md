@@ -250,6 +250,10 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-03-02**: Fixed all internal links to use clean URLs (SEO fix)
+  - **Problem**: Every nav/content link used `.html` extensions (e.g. `recipe.html`) while canonical URLs are clean (`/recipe`). Google was discovering and crawling all `.html` redirect URLs via internal links, causing 17 "Page with redirect" and 23 "not indexed" entries in GSC, wasting crawl budget and diluting link equity.
+  - **Fix**: Updated all `href="*.html"` internal links to clean URLs across all 11 HTML files, including anchor links (e.g. `advice.html#stretch-fold` → `advice#stretch-fold`) and JSON-LD schema URLs in focaccia.html.
+  - **Rule going forward**: Never use `.html` extensions in internal links. Use `recipe`, `advice`, `starter`, etc. (or `/` for the homepage).
 - **2026-02-22**: Design upgrade - Phase 1 & 2 of DESIGN-UPGRADE.md
   - **Typography**: Replaced Inter with Fraunces (headings) + Source Sans 3 (body); `--font-heading` / `--font-body` CSS variables; all 11 HTML files updated
   - **Layout**: Connected-card layout (header/main/footer as one unified card per page, rounded at top and bottom only)
@@ -307,7 +311,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-02-28 (privacy policy page added)
+**Last Updated**: 2026-03-02 (fixed internal links to use clean URLs)
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

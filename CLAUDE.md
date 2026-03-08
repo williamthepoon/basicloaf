@@ -250,6 +250,7 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-03-08**: Updated dried flakes quantity from 25g to 30g throughout bought-starter.html `#dried` section (matches new Etsy listing); added intro sentence clarifying packet is 30g and to use the whole thing
 - **2026-03-02**: SEO improvements based on GSC audit
   - **recipe.html**: Updated title to lead with exact phrase "Foolproof Sourdough Bread Recipe"; updated H1 to match; updated meta/og description; fixed schema `recipeInstructions` step URLs from `recipe.html#` to `recipe#`; improved anchor text on ideas page link
   - **ideas.html**: Updated title, H1, meta/og description to lead with stale bread use case (primary ranking queries); updated stale section H2 to "Recipes Using Stale Sourdough Bread"; added `#revive` subsection with bread revival method (featured snippet target for position-10 "revive stale sourdough" query)

@@ -1831,6 +1831,7 @@ figcaption {
     color: var(--secondary-color);
     max-width: 600px;
     margin: 0 auto 1.5em;
+    text-align: left;
 }
 
 /* --- Wide Image --- */

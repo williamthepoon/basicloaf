@@ -1077,6 +1077,20 @@ footer a:hover {
     color: var(--accent-color);
 }
 
+.footer-links a.footer-ig {
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+    padding: 0.3em 1em;
+    color: var(--accent-color);
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.footer-links a.footer-ig:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
 
 /* Image Styling (Uncomment when adding images) */
 

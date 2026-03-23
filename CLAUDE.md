@@ -135,6 +135,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 - **Skip Links**: WCAG 2.1 Level A compliant keyboard navigation
 - **Etsy Integration**: Subtle shop links for mature starter sales
 - **Coaching Links**: 1:1 sourdough coaching offering
+- **Testimonials**: Etsy review quotes on index.html and about.html
 - **Schema Markup**: Optimized for Google rich results
 - **Image Optimization**: All images compressed (<400KB, portrait 900x1200)
 - **Video Demonstrations**: Embedded technique videos - scoring (1.1MB), stretch & fold (2.9MB), and shaping/banneton (9.9MB)
@@ -161,7 +162,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 
 ### Adding a New Page
 1. Create `newpage.html` following existing structure (header, nav, main, footer)
-2. Add to navigation in all 11 HTML files (`<nav id="main-nav">`)
+2. Add to navigation in all HTML files including privacy-policy.html (`<nav id="main-nav">`)
 3. Add to `sitemap.xml` with current date in `<lastmod>`
 4. Update `llms.txt` if content is significant
 5. Test mobile menu and skip-to-content link
@@ -180,6 +181,8 @@ Quick reference - use these instead of inline styles for CTA/info boxes:
 - `.callout-highlight` - important note (accent-light bg, stronger border)
 - `.callout-accent` - CTA/promotional block (centered, box-shadow; use `.cta-link` child for the button)
 - `.callout-info` - neutral info note (warm-bg-subtle bg, grey left border)
+- `.testimonial-cards` - flex container for testimonial blockquotes (3-col desktop, stacks mobile)
+- `.testimonial-card` - individual `<blockquote>` with warm-bg-subtle bg, accent-color left border, italic text
 
 ### Bulk HTML Edits
 When making the same change across multiple HTML files: read ALL target files first, then make edits. Prevents "file has not been read yet" errors and catches indentation differences (some files use 2-space indent, most use 4-space).
@@ -336,6 +339,7 @@ python3 -m http.server 8001  # Try different port
 - **All URLs are clean** (no .html extension) - canonicals, og:url, sitemap, and breadcrumb schema all consistent
 - **FAQPage schema** on: advice.html, starter.html, ideas.html, bought-starter.html, troubleshooting.html
 - **Biggest remaining SEO lever**: backlinks - site has very few external links pointing to it
+- **Cloudflare Redirect Rules**: `/techniques`, `/tips` (and .html variants) → 301 → `/advice` (configured 2026-03-23)
 - **GSC baseline** (Nov 2025 - Feb 2026): 8 clicks, 242 impressions, avg position 25.7
 
 ## GSC Review Log

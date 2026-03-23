@@ -6,13 +6,14 @@
 
 ## High Priority
 - Build backlinks - participate in r/sourdough and r/Breadit, get mentioned in food blog roundups
-- Implement server-side redirects for old /techniques and /tips URLs (still showing impressions in GSC)
+- ~~Implement server-side redirects for old /techniques and /tips URLs~~ Done 2026-03-23 via Cloudflare Redirect Rule (301 to /advice)
 - Conduct WCAG 2.1 AA accessibility audit (currently Level A)
 
 ## Medium Priority
 - Add analytics/tracking for video views
 - Convert remaining JPGs to WebP with fallbacks (requires `brew install webp`)
-- Expand recipe content to include sourdough pizza dough, chocolate sourdough, and other sourdough-based recipes
+- Expand recipe content to include chocolate sourdough and other sourdough-based recipes (pizza dough now covered in discard.html)
+- Add more testimonials as new Etsy reviews come in
 
 ## Low Priority
 - Add seasonal sourdough variations (whole wheat, spelt, rye)

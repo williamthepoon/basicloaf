@@ -12,6 +12,7 @@ A project dedicated to making sourdough baking accessible for beginners and busy
 - [Advice](https://basicloaf.com/advice.html): Expert advice including key techniques (shaping, scoring) and troubleshooting tips.
 - [Essential Gear](https://basicloaf.com/gear.html): Minimal equipment list for success.
 - [Recipe Ideas](https://basicloaf.com/ideas.html): Variations and inspiration for using your sourdough.
+- [Discard Recipes](https://basicloaf.com/discard.html): 8 easy recipes for sourdough discard - pancakes, crackers, pizza dough, banana bread, waffles, flatbread, scones, and pasta.
 - [About](https://basicloaf.com/about.html): Background on the project and author Will Poon.
 
 ## Interactive Features

@@ -1842,3 +1842,38 @@ figcaption {
     border-radius: 10px;
     max-width: none;
 }
+
+/* --- Testimonials --- */
+
+.testimonial-cards {
+    display: flex;
+    gap: 1.5em;
+    margin-top: 1.5em;
+}
+
+.testimonial-card {
+    flex: 1;
+    background: var(--warm-bg-subtle);
+    border-radius: 10px;
+    padding: 1.5em;
+    margin: 0;
+    border-left: 3px solid var(--accent-color);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin: 0 0 0.75em;
+    line-height: 1.6;
+}
+
+.testimonial-card cite {
+    font-style: normal;
+    font-size: 0.9em;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .testimonial-cards {
+        flex-direction: column;
+    }
+}

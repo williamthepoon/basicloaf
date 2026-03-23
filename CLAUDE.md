@@ -110,6 +110,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 ├── bought-starter.html     # Activation guide for purchased starter
 ├── gear.html               # Equipment recommendations
 ├── ideas.html              # Recipe variations and uses for bread
+├── discard.html            # Sourdough discard recipes (8 recipes)
 ├── about.html              # About the author
 ├── 404.html                # Custom 404 error page
 ├── privacy-policy.html     # Privacy policy (noindex - for Pinterest app review)
@@ -250,6 +251,13 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-03-23**: Site improvements based on cross-functional review (content, SEO, product)
+  - **discard.html**: New page with 8 sourdough discard recipes (pancakes, crackers, pizza dough, banana bread, waffles, flatbread, scones, pasta). Includes ItemList, FAQPage, and BreadcrumbList schema. Page TOC, coaching CTA, related content cards.
+  - **Nav**: "Shop" link renamed to "Buy Starter" across all pages; "Discard Recipes" added to "More Recipes" dropdown across all pages (now 13 HTML files including discard.html and privacy-policy.html)
+  - **Social proof**: Testimonials section added to index.html and about.html with placeholder content (waiting for real Etsy reviews). New `.testimonial-cards` and `.testimonial-card` CSS classes.
+  - **Cross-links**: Discard recipe callout added to starter.html (feeding method section) and ideas.html (before related content)
+  - **sitemap.xml**: Added discard page; updated stale lastmod dates for recipe, ideas, bought-starter, advice, troubleshooting, about to reflect actual content change dates
+  - **llms.txt**: Added discard page entry
 - **2026-03-08**: Updated dried flakes quantity from 25g to 30g throughout bought-starter.html `#dried` section (matches new Etsy listing); added intro sentence clarifying packet is 30g and to use the whole thing
 - **2026-03-02**: SEO improvements based on GSC audit
   - **recipe.html**: Updated title to lead with exact phrase "Foolproof Sourdough Bread Recipe"; updated H1 to match; updated meta/og description; fixed schema `recipeInstructions` step URLs from `recipe.html#` to `recipe#`; improved anchor text on ideas page link
@@ -318,7 +326,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-03-02 (SEO audit fixes - schema, titles, meta descriptions, clean URLs)
+**Last Updated**: 2026-03-23 (discard recipes page, nav updates, social proof structure, sitemap fixes)
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

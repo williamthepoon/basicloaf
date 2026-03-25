@@ -254,6 +254,12 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-03-25**: bought-starter.html rewritten for variable packet sizes (10g, 15g, 30g)
+  - Removed hardcoded 30g quantities from `#dried` section; replaced with "match the weight" instructions that work for any packet size
+  - Day 1 and Day 2 now scale to the user's starting weight; Day 3+ stays fixed at 50g/50g
+  - Added "Can I split my packet?" FAQ with answer about storage and backup
+  - Updated FAQPage schema with new question
+  - Default path is now "weigh out how much you want to use" (not "tip the whole packet in")
 - **2026-03-23**: Site improvements based on cross-functional review (content, SEO, product)
   - **discard.html**: New page with 8 sourdough discard recipes (pancakes, crackers, pizza dough, banana bread, waffles, flatbread, scones, pasta). Includes ItemList, FAQPage, and BreadcrumbList schema. Page TOC, coaching CTA, related content cards.
   - **Nav**: "Shop" link renamed to "Buy Starter" across all pages; "Discard Recipes" added to "More Recipes" dropdown across all pages (now 13 HTML files including discard.html and privacy-policy.html)

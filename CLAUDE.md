@@ -112,6 +112,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 ├── ideas.html              # Recipe variations and uses for bread
 ├── discard.html            # Sourdough discard recipes (8 recipes)
 ├── guinness.html           # Guinness sourdough loaf (water replaced with Guinness)
+├── salami-cheese.html      # Salami and cheese inclusion loaf (covers inclusion technique)
 ├── about.html              # About the author
 ├── 404.html                # Custom 404 error page
 ├── privacy-policy.html     # Privacy policy (noindex - for Pinterest app review)
@@ -255,6 +256,13 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-05-03**: Salami and cheese inclusion sourdough page added (`salami-cheese.html`)
+  - Inclusion technique: press flat, scatter cheese + salami, roll up like Swiss roll, shape normally
+  - 170g water (10g less than classic) to account for moisture from cheese
+  - Scaler uses `class="extra-qty"` on inclusion quantity spans - picked up by existing JS automatically
+  - 6 photos + lid-off video (1.1MB, 540x960 MP4 via ffmpeg)
+  - focaccia.html nav fixed: pages with `class="active"` on their nav link don't match the bulk sed pattern used for nav updates - must edit those files manually
+  - focaccia-baked.jpg added to focaccia.html bake step (sesame focaccia on cooling rack)
 - **2026-05-03**: Guinness sourdough recipe page added (`guinness.html`)
   - New page following recipe.html structure: same 2-day method, Guinness replaces water at same weight (180g), no hydration adjustment
   - Recipe scaler uses same span IDs as recipe.html (no JS changes needed - separate page, no conflicts)

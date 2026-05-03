@@ -15,6 +15,7 @@ A project dedicated to making sourdough baking accessible for beginners and busy
 - [Discard Recipes](https://basicloaf.com/discard.html): 8 easy recipes for sourdough discard - pancakes, crackers, pizza dough, banana bread, waffles, flatbread, scones, and pasta.
 - [Guinness Sourdough](https://basicloaf.com/guinness.html): Classic sourdough loaf with Guinness replacing the water. Same quantities and method, darker crumb, deeper nuttier flavour.
 - [Salami and Cheese Sourdough](https://basicloaf.com/salami-cheese.html): Inclusion loaf with 100g grated hard cheese and 100g salami folded in at shaping. Slightly lower hydration (170g water). Covers the inclusion technique for beginners.
+- [Sourdough Pizza Dough](https://basicloaf.com/pizza.html): Two-day cold ferment pizza dough for 4 pizzas. Overnight bulk in fridge, ball in the morning, second cold rest, cook in Ooni at 400°C+. Scaler works per pizza.
 - [About](https://basicloaf.com/about.html): Background on the project and author Will Poon.
 
 ## Interactive Features

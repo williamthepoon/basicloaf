@@ -113,6 +113,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 ├── discard.html            # Sourdough discard recipes (8 recipes)
 ├── guinness.html           # Guinness sourdough loaf (water replaced with Guinness)
 ├── salami-cheese.html      # Salami and cheese inclusion loaf (covers inclusion technique)
+├── pizza.html              # Sourdough pizza dough, two-day cold ferment, Ooni-focused
 ├── about.html              # About the author
 ├── 404.html                # Custom 404 error page
 ├── privacy-policy.html     # Privacy policy (noindex - for Pinterest app review)
@@ -256,6 +257,12 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-05-03**: Sourdough pizza dough page added (`pizza.html`)
+  - Two-day process: overnight bulk in fridge → ball in morning → second cold rest → cook in Ooni at 400°C+
+  - Scaler uses per-pizza base quantities (25g starter, 94g water, 150g flour, 4.5g salt, 2.5g oil), defaulting to scale=4 (full recipe). step=1, min=1
+  - `starter-max-qty` span absent (no range for pizza starter) - JS null check on line 40 of script.js handles this safely
+  - 4 photos (hero portrait 900x1200, 3 landscape 900x675) + 2 Ooni videos (sub-1MB each via ffmpeg)
+  - Ooni callout explains home oven fallback; tempering step explains why cold dough causes underbaked base
 - **2026-05-03**: Salami and cheese inclusion sourdough page added (`salami-cheese.html`)
   - Inclusion technique: press flat, scatter cheese + salami, roll up like Swiss roll, shape normally
   - 170g water (10g less than classic) to account for moisture from cheese

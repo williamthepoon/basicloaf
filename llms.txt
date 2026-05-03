@@ -13,6 +13,7 @@ A project dedicated to making sourdough baking accessible for beginners and busy
 - [Essential Gear](https://basicloaf.com/gear.html): Minimal equipment list for success.
 - [Recipe Ideas](https://basicloaf.com/ideas.html): Variations and inspiration for using your sourdough.
 - [Discard Recipes](https://basicloaf.com/discard.html): 8 easy recipes for sourdough discard - pancakes, crackers, pizza dough, banana bread, waffles, flatbread, scones, and pasta.
+- [Guinness Sourdough](https://basicloaf.com/guinness.html): Classic sourdough loaf with Guinness replacing the water. Same quantities and method, darker crumb, deeper nuttier flavour.
 - [About](https://basicloaf.com/about.html): Background on the project and author Will Poon.
 
 ## Interactive Features

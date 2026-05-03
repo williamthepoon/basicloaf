@@ -111,6 +111,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 ├── gear.html               # Equipment recommendations
 ├── ideas.html              # Recipe variations and uses for bread
 ├── discard.html            # Sourdough discard recipes (8 recipes)
+├── guinness.html           # Guinness sourdough loaf (water replaced with Guinness)
 ├── about.html              # About the author
 ├── 404.html                # Custom 404 error page
 ├── privacy-policy.html     # Privacy policy (noindex - for Pinterest app review)
@@ -254,6 +255,13 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-05-03**: Guinness sourdough recipe page added (`guinness.html`)
+  - New page following recipe.html structure: same 2-day method, Guinness replaces water at same weight (180g), no hydration adjustment
+  - Recipe scaler uses same span IDs as recipe.html (no JS changes needed - separate page, no conflicts)
+  - 4 photos processed from HEIC originals: ingredients mise en place (landscape 900x675), mixed dough (portrait 900x1200), finished loaf hero (portrait 900x1200), crumb shot (landscape 900x675)
+  - Scoring video converted from MOV (HEVC) to MP4 via ffmpeg (1.1MB, 540x960 portrait) - `avconvert` failed silently on HEVC MOV files
+  - "Guinness Sourdough" added to "More Recipes" nav dropdown across all 14 HTML files
+  - sitemap.xml and llms.txt updated
 - **2026-03-25**: bought-starter.html rewritten for variable packet sizes (10g, 15g, 30g)
   - Removed hardcoded 30g quantities from `#dried` section; replaced with "match the weight" instructions that work for any packet size
   - Day 1 and Day 2 now scale to the user's starting weight; Day 3+ stays fixed at 50g/50g

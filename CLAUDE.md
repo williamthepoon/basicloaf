@@ -111,6 +111,7 @@ This is a vanilla HTML/CSS/JS sourdough baking website. **No frameworks. No buil
 ├── gear.html               # Equipment recommendations
 ├── ideas.html              # Recipe variations and uses for bread
 ├── discard.html            # Sourdough discard recipes (8 recipes)
+├── dehydrating-starter.html # How to dehydrate starter into flakes for backup/Etsy
 ├── guinness.html           # Guinness sourdough loaf (water replaced with Guinness)
 ├── salami-cheese.html      # Salami and cheese inclusion loaf (covers inclusion technique)
 ├── pizza.html              # Sourdough pizza dough, two-day cold ferment, Ooni-focused
@@ -257,6 +258,15 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-08-29**: Dehydrating starter guide added (`dehydrating-starter.html`)
+  - New advice-style page (not a recipe/scaler page) covering how Will dries his starter into flakes: feed 30g starter + 50g water + 50g flour, spread thin on greaseproof paper, dry overnight at ~30C oven, check for brittle/snap texture, break up and store airtight (keeps months at room temp)
+  - Follows the `advice.html` JSON-LD pattern (`BreadcrumbList` + `FAQPage`), not the `Recipe` schema used by guinness/pizza/salami-cheese
+  - Etsy CTA deep-links to the specific dried-starter listing (`https://www.etsy.com/ie/listing/4454026755`) via a `.callout-accent` box, distinct from the generic shop-homepage link used elsewhere
+  - Troubleshooting section covers bendy flakes, mould/off smells, and slow-to-revive flakes (cross-links to `bought-starter#dried`)
+  - 2 photos of finished dried flakes in a Kilner jar (`dehydrating-starter-flakes.jpg` hero, `dehydrating-starter-jar.jpg` secondary), processed from HEIC via `sips`, landscape 900x675
+  - Added "Dehydrating Starter" to the "More Recipes" nav dropdown across **all 16 HTML files** (every page in the site)
+  - Added reciprocal cross-link callout in `bought-starter.html`'s `#dried` section pointing to this new page (the two pages now link both ways - dehydrating vs. rehydrating)
+  - `sitemap.xml` and `llms.txt` updated
 - **2026-05-03**: Sourdough pizza dough page added (`pizza.html`)
   - Two-day process: overnight bulk in fridge → ball in morning → second cold rest → cook in Ooni at 400°C+
   - Scaler uses per-pizza base quantities (25g starter, 94g water, 150g flour, 4.5g salt, 2.5g oil), defaulting to scale=4 (full recipe). step=1, min=1

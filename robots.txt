@@ -2,13 +2,48 @@
 User-agent: *
 Allow: /
 
-# Specifically invite AI crawlers to help LLMs understand the site
+# Specifically invite AI crawlers and answer-engine agents to read the site
+# (Training bots and live retrieval/citation bots are listed separately below;
+# all are allowed since this site wants to be cited and acted on by AI assistants)
+
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
-User-agent: Claude-Web
+User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google (training opt-in) and Apple Intelligence (training opt-in)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (used by several labs for training)
 User-agent: CCBot
 Allow: /
 

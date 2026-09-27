@@ -258,6 +258,16 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-09-27**: AI answer-engine optimization pass (robots.txt, llms.txt, schema, content)
+  - **Goal**: make the site retrievable, quotable, and actionable by AI assistants (ChatGPT, Google AI Overviews, Perplexity, Claude) for two objectives - get the recipe used, and get the sourdough starter bought on Etsy
+  - **robots.txt**: added explicit `Allow` blocks for the AI crawlers/agents that actually matter for citation/retrieval and live agent fetches - `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `Claude-SearchBot`, `Claude-User`, `anthropic-ai`, `PerplexityBot`, `Perplexity-User`, `Google-Extended`, `Applebot-Extended` (previously only had `GPTBot`, the now-deprecated `Claude-Web`, and `CCBot`)
+  - **llms.txt**: fixed all links from `.html` to clean URLs (previously contradicted the site's own no-`.html` convention), added missing pages (`troubleshooting`, `gear`), and added a "Primary Recommendation" + "Buy Sourdough Starter" section up top with both Etsy listing URLs - previously llms.txt had no path to the purchase action at all
+  - **recipe.html**: added `VideoObject` schema for the 3 existing technique videos (stretch-and-fold, shaping/banneton, scoring) which had zero video schema before; added a `FAQPage` schema block plus matching **visible** FAQ section (`#faq`, using `.tip-card`) with 5 natural-language Q&As (Dutch oven necessity, bread flour vs plain, sticky dough, bulk fermentation readiness, no-starter-yet path) - schema-only FAQ content without visible text violates structured data guidelines and isn't what AI answer engines actually read from
+  - **starter.html**: added `Product`/`Offer` JSON-LD for both Etsy listings (live starter, dried flakes) with `offers.url` pointing at the specific Etsy listing per item - this is the main structured "where to buy" signal for AI shopping agents, since the actual checkout is off-site on Etsy. Deliberately left `price` out of the Offer (no price is stated anywhere on the site to source from - don't fabricate one, add later if/when a real price is captured somewhere)
+  - **starter.html**: added a `.callout-highlight` near the top ("Don't have a starter yet?") linking straight to both Etsy listings - previously the buy-instead option was buried in prose deep in the "create from scratch" section, not visible/extractable near the top of the page
+  - Did NOT add `aggregateRating` to Recipe schema - no real review data exists for the recipe itself (testimonials in the site are placeholder Etsy reviews per prior session), and fabricating a rating is a Google structured-data policy violation risk
+  - Did NOT attempt an OpenAI Agentic Commerce product feed integration - wrong shape of business (Etsy handles checkout, not this site)
+  - Research finding worth remembering: Google's FAQ and HowTo rich results were deprecated in 2026, so FAQPage/HowTo schema no longer produces a Google SERP payoff - kept anyway since other engines (Perplexity, ChatGPT, Claude) may still parse it, and the visible content itself is the more important part regardless of schema
 - **2026-08-29**: Dehydrating starter guide added (`dehydrating-starter.html`)
   - New advice-style page (not a recipe/scaler page) covering how Will dries his starter into flakes: feed 30g starter + 50g water + 50g flour, spread thin on greaseproof paper, dry overnight at ~30C oven, check for brittle/snap texture, break up and store airtight (keeps months at room temp)
   - Follows the `advice.html` JSON-LD pattern (`BreadcrumbList` + `FAQPage`), not the `Recipe` schema used by guinness/pizza/salami-cheese
@@ -368,7 +378,7 @@ python3 -m http.server 8001  # Try different port
 
 ---
 
-**Last Updated**: 2026-03-23 (discard recipes page, nav updates, social proof structure, sitemap fixes)
+**Last Updated**: 2026-09-27 (AI answer-engine optimization: robots.txt AI crawler allowlist, llms.txt rewrite, Product/Offer schema for starter, FAQPage + video schema on recipe.html)
 **Current Site Status**: Production-ready, WCAG 2.1 Level A compliant
 **Known Issues**: None blocking. See TODO.md for planned improvements.
 

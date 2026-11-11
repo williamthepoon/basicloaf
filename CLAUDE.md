@@ -258,6 +258,11 @@ python3 -m http.server 8001  # Try different port
 ---
 
 ## Recent Major Changes
+- **2026-11-11**: Fixed GSC Product snippets / Merchant listings "missing price" errors on `starter.html`
+  - Added `price` + `priceCurrency: EUR` to both Offers (live starter **€5.45**, dried flakes **€2.25**, taken from the Etsy shop page on this date)
+  - Live starter Offer `url` now points at its specific listing (`https://www.etsy.com/ie/listing/4453942186`) instead of the shop homepage
+  - Prices also shown visibly in the "Don't have a starter yet?" callout - Google expects schema price to match visible/landing-page price
+  - **If Etsy prices change, update both the JSON-LD and the callout in starter.html**
 - **2026-09-27**: AI answer-engine optimization pass (robots.txt, llms.txt, schema, content)
   - **Goal**: make the site retrievable, quotable, and actionable by AI assistants (ChatGPT, Google AI Overviews, Perplexity, Claude) for two objectives - get the recipe used, and get the sourdough starter bought on Etsy
   - **robots.txt**: added explicit `Allow` blocks for the AI crawlers/agents that actually matter for citation/retrieval and live agent fetches - `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `Claude-SearchBot`, `Claude-User`, `anthropic-ai`, `PerplexityBot`, `Perplexity-User`, `Google-Extended`, `Applebot-Extended` (previously only had `GPTBot`, the now-deprecated `Claude-Web`, and `CCBot`)
